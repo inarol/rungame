@@ -1,0 +1,47 @@
+{
+	"description": "",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": false,
+		"newFeature": true,
+		"nodeModules": false,
+		"autoAudits": false
+	},
+	"compileType": "game",
+	"libVersion": "2.5.1",
+	"appid": "wx30b2a86f0c6f6d61",
+	"projectname": "rungame",
+	"cloudfunctionRoot": "functions/",
+	"packOptions": {
+		"ignore": [{
+			"type": "file",
+			"value": "src/**"
+		}, {
+			"type": "glob",
+			"value": "node_modules/**"
+		}, {
+			"type": "glob",
+			"value": "typings/**"
+		}]
+	},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": []
+		}
+	}
+}
