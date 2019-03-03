@@ -46,7 +46,6 @@ export default class MusicFrame implements IMusicFrame {
     const width = MUSIC_FRAME.width;
     const height = MUSIC_FRAME.height;
     const padding = MUSIC_FRAME.padding;
-    const max = MUSIC_FRAME.max;
     // 音频波形数据
     const frequencyArray:[] = this.audioJson[this.time.toFixed(2)].split(',');
     const meshGroup = new THREE.Group();

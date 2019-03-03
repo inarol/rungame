@@ -1,4 +1,4 @@
-import { SCREEN_HEIGHT, CAMERA, RATIO, SCREEN_WIDTH } from '../constant';
+import { SCREEN_HEIGHT, CAMERA, SCREEN_WIDTH } from '../constant';
 
 /** 产生随机数 */
 export const rnd = (start: number, end: number, isInt: boolean) => {

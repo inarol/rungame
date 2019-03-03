@@ -4,50 +4,43 @@ import * as util from '../util';
 
 export interface IRank {
   /** 渲染 */
-  render: (data: any) => any;
-  /** 销毁 */
-  destroy: () => void;
-  /** 数据是否加载完 */
-  loaded: boolean;
+  render: () => any;
 }
 
 export default class Rank implements IRank {
   /** 游戏主屏的数据 */
   private data;
   /** 排行榜数据 */
-  private list: UserGameData[];
-  /** 数据是否加载完 */
-  public loaded = false;
+  private list: UserGameData[] = [];
   /** 数据加载中 */
   private loading = false;
   /** 舞台 */
   private stage: any;
   /** 元素的容器 */
   private group: any;
-  constructor() {
-    this.list = [];
+  constructor(data) {
+    this.data = data;
+    this.getFriendList();
+    this.stage = offScreenCanvas.stage;
+    this.stage.empty();
+    this.stage.scale = data.ratio;
+    this.group = new cax.Group();
+    this.stage.add(this.group);
   }
   /** 渲染 */
-  public render(data) {
-    this.data = data;
-    this.stage = offScreenCanvas.stage;
-    this.stage.scale = data.ratio;
-    this.stage.children = [];
-    this.getFriendList();
-    this.group = new cax.Group();
+  public render() {
+    this.group.empty();
     this.group.add(this.renderTitle());
     this.group.add(this.renderRect());
     if (this.loading) {
       this.group.add(this.renderTip('加载中...'));
-    }
-    if (this.loaded) {
+    } else {
       if (this.list.length) {
         this.renderAsyncRank();
       } else {
         this.group.add(this.renderTip('空空如也~'));
       }
     }
-    this.stage.add(this.group);
     this.stage.update();
   }
   /** 排行榜标题 */
@@ -55,7 +48,7 @@ export default class Rank implements IRank {
     const data = this.data;
     const fontSize = data.titleFontSize;
     const font = data.font;
-    const width = data.titleWidth;
+    const width = data.width;
     const height = data.titleHeight;
     const text = new cax.Text('\uE610 排行榜', {
       font: `${fontSize}px ${font}`,
@@ -98,36 +91,15 @@ export default class Rank implements IRank {
     text.x = width / 2;
     return text;
   }
-  /** 渲染空列表 */
-  private renderEmptyList() {
-    const data = this.data;
-    const fontSize = data.itemFontSize;
-    const width = data.width;
-    const font = data.font;
-    const text = new cax.Text('空空如也~', {
-      font: `${fontSize}px ${font}`,
-      color: '#ffffff',
-      textAlign: 'center',
-      textBaseline: 'middle',
-    });
-    const paddingTop = 30;
-    text.y = data.titleHeight + paddingTop;
-    text.x = width / 2;
-    return text;
-  }
   private async getFriendList() {
     const data = this.data;
-    if (!this.loading && !this.loaded) {
+    try {
       this.loading = true;
-      try {
-        const friendList = await util.getFriendList();
-        this.loaded = true;
-        this.loading = false;
-        this.list = util.sortScore(friendList.slice(0, data.count));
-      } catch (err) {
-        console.warn('请求榜单列表失败，重新发起请求');
-        this.loaded = false;
-      }
+      const friendList = await util.getFriendList();
+      this.loading = false;
+      this.list = util.sortScore(friendList.slice(0, data.count));
+    } catch (err) {
+      console.warn('请求榜单列表失败，重新发起请求');
     }
   }
   /** 渲染排行榜数据 */
@@ -157,11 +129,11 @@ export default class Rank implements IRank {
 
       // 渲染排行榜头像
       const { avatarUrl } = userData;
-      const bitmap = new cax.Bitmap(avatarUrl, () => {
+      const avatar = new cax.Bitmap(avatarUrl, () => {
         this.stage.update();
       });
-      bitmap.x = 60;
-      bitmap.scale = 0.25;
+      avatar.x = 60;
+      avatar.scale = 0.25;
 
       // 渲染排行榜昵称
       const { nickname } = userData;
@@ -191,15 +163,12 @@ export default class Rank implements IRank {
       });
 
       itemGroup.add(orderText);
-      itemGroup.add(bitmap);
+      itemGroup.add(avatar);
       itemGroup.add(nicknameText);
       itemGroup.add(scoreText);
       listGroup.add(itemGroup);
     }
+    listGroup.alpha = data.opacity;
     this.group.add(listGroup);
-  }
-  /** 销毁 */
-  destroy() {
-    // todo
   }
 }

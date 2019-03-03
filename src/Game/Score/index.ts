@@ -1,6 +1,8 @@
 import * as THREE from 'three';
-import { CAMERA, SCORE } from '../constant';
+import { SCORE } from '../constant';
 import { IGame } from '../../Game';
+import * as util from '../util';
+import { CommandType } from '../../openDataContext/commandType';
 
 export interface IScore {
   /** 3D模型 */
@@ -11,6 +13,8 @@ export interface IScore {
   value: number;
   /** 更新 */
   update: () => void;
+  /** 销毁分数 */
+  destroy: () => void;
 }
 
 export default class Score implements IScore {
@@ -124,5 +128,10 @@ export default class Score implements IScore {
       // 居中meshGroup
       this.mesh.position.x = meshWidthHalf - scoreWidthHalf;
     }
+  }
+  /** 销毁分数 */
+  public destroy() {
+    const scene = this.mesh.parent;
+    scene.remove(this.mesh);
   }
 }

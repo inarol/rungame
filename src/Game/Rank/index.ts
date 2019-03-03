@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { IGame } from '../../Game';
-import { EVENTS, RATIO } from '../constant';
+import { EVENTS, RATIO, SCREEN_WIDTH, CAMERA } from '../constant';
 import { CommandType } from '../../openDataContext/commandType';
 import * as util from  '../util';
 
@@ -16,14 +16,12 @@ export default class Rank implements IRank {
   private aniId = null;
   /** 游戏类 */
   private game: IGame;
-  /** 字体文件 */
+  /** 字体 */
   private font;
   /** 宽度 */
   private width = 36;
   /** 高度 */
   private height = 66;
-  /** 圆角 */
-  private radius;
   /** 3D模型 */
   public mesh: THREE.Mesh;
   constructor(params: {
@@ -53,7 +51,7 @@ export default class Rank implements IRank {
     const height = this.height;
     const position = {
       x: 0,
-      y: height / 2,
+      y: CAMERA.y + 4,
     };
     const texture = this.getTexture();
     const material = new THREE.MeshBasicMaterial({
@@ -72,7 +70,7 @@ export default class Rank implements IRank {
     const canvas2d = openDataContext.canvas;
     const sizeRatio = this.width / this.height;
     const ratio = RATIO;
-    const width = 375;
+    const width = SCREEN_WIDTH;
     const height = width / sizeRatio;
     canvas2d.width = width * ratio;
     canvas2d.height = height * ratio;
@@ -93,9 +91,7 @@ export default class Rank implements IRank {
         font: this.font,
         backgroundColor: '#333333',
         borderColor: '#444444',
-        titleWidth: width,
         titleColor: '#ffffff',
-        itemWidth: width,
         opacity: 0.9,
       },
     };

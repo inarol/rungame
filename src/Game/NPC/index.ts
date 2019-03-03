@@ -27,6 +27,8 @@ export interface INPC {
     /** 越界回调 */
     out: () => void;
   }) => any;
+  /** 销毁 */
+  destroy: () => void;
 }
 
 export default abstract class NPC implements INPC {
@@ -177,5 +179,10 @@ export default abstract class NPC implements INPC {
     return (A.min.x <= B.max.x && A.max.x >= B.min.x) &&
       (A.min.y <= B.max.y && A.max.y >= B.min.y) &&
       (A.min.z <= B.max.z && A.max.z >= B.min.z);
+  }
+  /** 销毁 */
+  public destroy() {
+    const scene = this.mesh.parent;
+    scene.remove(this.mesh);
   }
 }

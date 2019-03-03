@@ -1,21 +1,35 @@
 import Rank, { IRank } from './Rank';
+import Settlement, { ISettlement } from './Settlement';
 import { CommandType } from './commandType';
+import * as util from './util';
 
 class OpenDataContextCanvas {
   /** 排行榜 */
   private rank: IRank;
+  /** 结算页 */
+  private settlement: ISettlement;
   constructor() {}
   /** 渲染排行榜 */
   public renderRank(data) {
     if (!this.rank) {
-      this.rank = new Rank();
+      this.rank = new Rank(data);
     }
-    this.rank.render(data);
+    this.rank.render();
   }
   /** 移除排行榜 */
   public destroyRank() {
-    this.rank.loaded = false;
-    this.rank.destroy();
+    this.rank = null;
+  }
+  /** 渲染结算 */
+  public renderSettlement(data) {
+    if (!this.settlement) {
+      this.settlement = new Settlement(data);
+    }
+    this.settlement.render();
+  }
+  /** 移除结算 */
+  public destroySettlement() {
+    this.settlement = null;
   }
 }
 
@@ -29,6 +43,12 @@ wx.onMessage(({ cmd, data }: { cmd: CommandType, data: any }) => {
       break;
     case CommandType.RANK_DESTROY:
       openDataContextCanvas.destroyRank();
+      break;
+    case CommandType.SETTLEMENT_RENDER:
+      openDataContextCanvas.renderSettlement(data);
+      break;
+    case CommandType.SETTLEMENT_DESTROY:
+      openDataContextCanvas.destroySettlement();
       break;
     default:
   }

@@ -18,6 +18,7 @@ import Score, { IScore } from './Score';
 import MusicFrame, { IMusicFrame } from './MusicFrame';
 import Menu, { IMenu } from './Menu';
 import Rank, { IRank } from './Rank';
+import Settlement, { ISettlement } from './Settlement';
 
 export interface IGame {
   /** 音频文件 */
@@ -40,18 +41,24 @@ export interface IGame {
   start: () => void;
   /** 游戏结束 */
   end: () => void;
+  /** 重置游戏 */
+  reset: () => void;
   /** 显示菜单 */
   showMenu: () => void;
   /** 显示排行榜 */
   showRank: () => void;
   /** 关闭排行榜 */
   closeRank: () => void;
+  /** 分享 */
+  share: () => void;
   /** 是否是游戏中 */
   isPlaying: boolean;
   /** 静止（屏蔽一些动画）*/
   silent: boolean;
   /** 帧数（用于计时） */
   frame: number;
+  /** 用户openId */
+  openId: string;
 }
 
 /** 游戏类 */
@@ -66,6 +73,8 @@ export default class Game implements IGame {
   public audioJson: JSON;
   /** 字体文件 */
   public font;
+  /** 用户openId */
+  public openId: string;
   /** 舞台 */
   private scene: THREE.Scene;
   /** 舞台（放置顶层元素） */
@@ -88,6 +97,8 @@ export default class Game implements IGame {
   private menu: IMenu;
   /** 排行榜 */
   private rank: IRank;
+  /** 结算页 */
+  private settlement: ISettlement;
   /** 游戏主角 */
   public player: IPlayer;
   /** 跑道 */
@@ -125,8 +136,11 @@ export default class Game implements IGame {
     audioListJson: IAudioJsonList;
     /** 字体文件 */
     font: string;
+    /** 用户openId */
+    openId: string;
   }) {
-    const { audioList, audioListJson, font } = params;
+    const { audioList, audioListJson, font, openId } = params;
+    this.openId = openId;
     this.audioList = audioList;
     this.audioListJson = audioListJson;
     this.audio = audioList.begin;
@@ -143,6 +157,8 @@ export default class Game implements IGame {
     this.scene.add(this.axes);
     // 轨道控制器
     // this.orbitControls = orbitControls(this.camera);
+    // 初始化分享
+    this.initShare();
     // 游戏控制器
     this.gamePad = new Gamepad({
       game: this,
@@ -166,17 +182,13 @@ export default class Game implements IGame {
     this.scene.add(this.musicFrame.mesh);
     // ticker
     this.ticker();
-    // 异步添加元素到舞台
-    this.asyncAdd();
     // 播放音乐
     this.playAudio();
-    // 添加NPC
-    this.addNPC();
     // 显示菜单
     this.showMenu();
   }
-  /** 异步添加元素 */
-  private async asyncAdd() {
+  /** 显示分数 */
+  private async showScore() {
     this.score.mesh = await this.score.render();
     this.topScene.add(this.score.mesh);
   }
@@ -229,17 +241,38 @@ export default class Game implements IGame {
       });
     });
   }
+  /** 移除NPC */
+  private removeNPC() {
+    this.npcs.forEach((npc, index) => {
+      npc.destroy();
+    });
+    this.npcs = [];
+  }
   /** 开始游戏 */
   public start() {
     this.isPlaying = true;
+    // 添加NPC
+    this.addNPC();
+    // 显示分数
+    this.showScore();
     this.toggleAudio('bgm');
   }
   /** 游戏结束 */
   public end() {
     console.log('game end');
+    this.showSettlement();
     this.stopAudio('bgm');
+    this.score.destroy();
     this.isPlaying = false;
     this.silent = true;
+  }
+  /** 重置游戏 */
+  public reset() {
+    this.silent = false;
+    this.score.value = 0;
+    this.player.reset();
+    this.playAudio('begin');
+    this.removeNPC();
   }
   /** 显示菜单 */
   public showMenu() {
@@ -256,6 +289,14 @@ export default class Game implements IGame {
     });
     this.topScene.add(this.rank.mesh);
   }
+  /** 显示结算页面 */
+  private showSettlement() {
+    this.settlement = new Settlement({
+      game: this,
+      score: this.score.value,
+    });
+    this.topScene.add(this.settlement.mesh);
+  }
   /** 关闭排行榜 */
   public closeRank() {
     this.topScene.remove(this.rank.mesh);
@@ -269,6 +310,7 @@ export default class Game implements IGame {
   private playAudio(type: string = 'begin') {
     this.audio = this.audioList[type];
     this.audioJson = this.audioListJson[type];
+    this.audio.seek(0);
     this.audio.play();
     this.musicFrame.time = 0;
     this.audio.onEnded(() => {
@@ -285,5 +327,22 @@ export default class Game implements IGame {
   private stopAudio(type: string) {
     this.audio = this.audioList[type];
     this.audio.stop();
+  }
+  /** 初始化分享 */
+  private initShare() {
+    wx.showShareMenu();
+    wx.onShareAppMessage(() => {
+      return {
+        title: '还等什么？快来跟我一起玩有音乐节奏的跑酷游戏！',
+        imageUrl: 'assets/img/share.png',
+      };
+    });
+  }
+  /** 分享 */
+  public share() {
+    wx.shareAppMessage({
+      title: `敢不敢来挑战我？这么有节奏的音乐让我跑了${this.score.value}m`,
+      imageUrl: 'assets/img/share.png',
+    });
   }
 }

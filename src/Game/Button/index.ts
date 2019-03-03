@@ -44,6 +44,8 @@ export default class Button implements IButton {
   private fontFamily;
   /** 背景色 */
   private backgroundColor;
+  /** 边框色 */
+  private borderColor;
   /** 文本颜色 */
   private color;
   /** tap事件 */
@@ -69,6 +71,8 @@ export default class Button implements IButton {
     color?: string;
     /** 背景色 */
     backgroundColor?: string;
+    /** 边框色 */
+    borderColor?: string;
     /** 游戏类 */
     game: IGame;
     /** 点击回调 */
@@ -85,6 +89,7 @@ export default class Button implements IButton {
       fontSize = 12,
       fontFamily = 'arial',
       backgroundColor = '#ffffff',
+      borderColor,
       color = '#000000',
     } = params;
     this.game = game;
@@ -95,6 +100,7 @@ export default class Button implements IButton {
     this.radius = radius;
     this.text = text;
     this.backgroundColor = backgroundColor;
+    this.borderColor = borderColor;
     this.color = color;
     this.fontSize = fontSize;
     this.fontFamily = fontFamily;
@@ -108,6 +114,7 @@ export default class Button implements IButton {
     const material = new THREE.MeshBasicMaterial({
       map: texture,
       depthTest: false,
+      transparent: true,
     });
     const shape = this.getShape();
     const shapeGeometry: any = new THREE.ShapeGeometry(shape);
@@ -123,12 +130,13 @@ export default class Button implements IButton {
     const canvas = offScreenCanvas.canvas;
     const ratio = RATIO;
     const sizeRatio = this.width / this.height;
-    const width = 100;
+    const width = SCREEN_WIDTH;
     const height = width / sizeRatio;
     const text = this.text;
     const fontSize = this.fontSize;
     const fontFamily = this.fontFamily;
     const backgroundColor = this.backgroundColor;
+    const borderColor = this.borderColor;
     const color = this.color;
     canvas.width = width * ratio;
     canvas.height = height * ratio;
@@ -140,6 +148,7 @@ export default class Button implements IButton {
     });
     const rect = new cax.Rect(width, height, {
       fillStyle: backgroundColor,
+      strokeStyle: borderColor,
     });
     buttonText.x = width / 2;
     buttonText.y = height / 2;

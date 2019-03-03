@@ -22,6 +22,8 @@ export interface IPlayer {
   racetrackIndex: number;
   /** 更新 */
   update: () => void;
+  /** 重置 */
+  reset: () => void;
 }
 
 /** 游戏主角 */
@@ -44,6 +46,15 @@ export default class Player implements IPlayer {
   public mesh: THREE.Group;
   /** 跑道序号 */
   public racetrackIndex = 0;
+  constructor(params: {
+    game: IGame;
+  }) {
+    const { game } = params;
+    this.mesh = this.render();
+    this.bounce();
+    this.game = game;
+    this.bindGamePadEvent();
+  }
   public render() {
     const size = this.size;
     const group = new THREE.Group();
@@ -64,6 +75,11 @@ export default class Player implements IPlayer {
     group.add(line);
     group.add(box);
     return group;
+  }
+  /** 重置 */
+  public reset() {
+    this.mesh.position.x = 0;
+    this.racetrackIndex = 0;
   }
   public update() {
     if (!this.game.silent) {
@@ -147,15 +163,6 @@ export default class Player implements IPlayer {
       .easing(TWEEN.Easing.Back.Out)
       .onComplete(params.callback)
       .start();
-  }
-  constructor(params: {
-    game: IGame;
-  }) {
-    const { game } = params;
-    this.mesh = this.render();
-    this.bounce();
-    this.game = game;
-    this.bindGamePadEvent();
   }
   /** 监听事件 */
   private bindGamePadEvent() {
