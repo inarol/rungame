@@ -32,8 +32,8 @@ export default class Settlement implements ISettlement {
     this.group.empty();
     this.group.add(this.renderTitle());
     this.group.add(this.renderScore());
-    this.group.add(this.renderRect());
     if (this.loading) {
+      this.group.add(this.renderRect());
       this.group.add(this.renderTip('结算中...'));
     } else {
       if (this.list.length) {
@@ -140,9 +140,7 @@ export default class Settlement implements ISettlement {
 
       // 渲染头像
       const { avatarUrl } = userData;
-      const avatar = new cax.Bitmap(avatarUrl, () => {
-        this.stage.update();
-      });
+      const avatar = new cax.Bitmap(avatarUrl);
       avatar.x = itemRect.avatar.x;
       avatar.y = itemRect.avatar.y;
       avatar.scale = 0.5;

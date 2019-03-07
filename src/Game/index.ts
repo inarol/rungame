@@ -19,6 +19,7 @@ import MusicFrame, { IMusicFrame } from './MusicFrame';
 import Menu, { IMenu } from './Menu';
 import Rank, { IRank } from './Rank';
 import Settlement, { ISettlement } from './Settlement';
+import { INITIALIZED_SPEED } from './constant';
 
 export interface IGame {
   /** 音频文件 */
@@ -114,14 +115,14 @@ export default class Game implements IGame {
   /** 帧数（用于计时） */
   public frame: number = 0;
   /** 游戏速度 */
-  private internalSpeed = 0.3;
+  private interiorSpeed = INITIALIZED_SPEED;
   public get speed() {
-    return this.internalSpeed;
+    return this.interiorSpeed;
   }
   /** 拦截速度设置，最大值为0.7 */
   public set speed(value: number) {
     const maxValue = 0.7;
-    this.internalSpeed = value > maxValue ? maxValue : value;
+    this.interiorSpeed = value > maxValue ? maxValue : value;
   }
   /** 游戏帧率 */
   public fps: number = 60;
@@ -153,8 +154,9 @@ export default class Game implements IGame {
     // 事件总线
     this.emitter = new EventEmitter();
     // 辅助坐标系
-    this.axes = axes;
-    this.scene.add(this.axes);
+    if (wx.getSystemInfoSync().platform === 'devtools') {
+      this.scene.add(axes);
+    }
     // 轨道控制器
     // this.orbitControls = orbitControls(this.camera);
     // 初始化分享
@@ -196,9 +198,9 @@ export default class Game implements IGame {
   private ticker() {
     this.frame += 1;
     this.update();
-    this.player.update();
     this.musicFrame.update();
     if (!this.silent) {
+      this.player.update();
       this.racetrack.update({
         game: this,
       });
@@ -260,9 +262,12 @@ export default class Game implements IGame {
   /** 游戏结束 */
   public end() {
     console.log('game end');
+    // 长振动
+    wx.vibrateLong();
     this.showSettlement();
     this.stopAudio('bgm');
     this.score.destroy();
+    this.speed = INITIALIZED_SPEED;
     this.isPlaying = false;
     this.silent = true;
   }
@@ -272,6 +277,7 @@ export default class Game implements IGame {
     this.score.value = 0;
     this.player.reset();
     this.playAudio('begin');
+    this.audio.seek(0);
     this.removeNPC();
   }
   /** 显示菜单 */
@@ -310,7 +316,6 @@ export default class Game implements IGame {
   private playAudio(type: string = 'begin') {
     this.audio = this.audioList[type];
     this.audioJson = this.audioListJson[type];
-    this.audio.seek(0);
     this.audio.play();
     this.musicFrame.time = 0;
     this.audio.onEnded(() => {

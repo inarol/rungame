@@ -10,21 +10,29 @@
 		"autoAudits": false
 	},
 	"compileType": "game",
-	"libVersion": "2.5.1",
+	"libVersion": "2.6.1",
 	"appid": "wx30b2a86f0c6f6d61",
 	"projectname": "rungame",
 	"cloudfunctionRoot": "functions/",
 	"packOptions": {
-		"ignore": [{
-			"type": "file",
-			"value": "src/**"
-		}, {
-			"type": "glob",
-			"value": "node_modules/**"
-		}, {
-			"type": "glob",
-			"value": "typings/**"
-		}]
+		"ignore": [
+			{
+				"type": "folder",
+				"value": "src"
+			},
+			{
+				"type": "glob",
+				"value": "node_modules/**"
+			},
+			{
+				"type": "folder",
+				"value": "typings"
+			},
+			{
+				"type": "file",
+				"value": "package-lock.json"
+			}
+		]
 	},
 	"condition": {
 		"search": {

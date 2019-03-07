@@ -48,6 +48,8 @@ export default class Button implements IButton {
   private borderColor;
   /** 文本颜色 */
   private color;
+  /** 透明度 */
+  private opacity;
   /** tap事件 */
   public tapEvent: EventSubscription;
   /** 3D模型 */
@@ -73,6 +75,8 @@ export default class Button implements IButton {
     backgroundColor?: string;
     /** 边框色 */
     borderColor?: string;
+    /** 透明度 */
+    opacity?: number;
     /** 游戏类 */
     game: IGame;
     /** 点击回调 */
@@ -91,6 +95,7 @@ export default class Button implements IButton {
       backgroundColor = '#ffffff',
       borderColor,
       color = '#000000',
+      opacity = 1,
     } = params;
     this.game = game;
     this.callback = callback;
@@ -104,6 +109,7 @@ export default class Button implements IButton {
     this.color = color;
     this.fontSize = fontSize;
     this.fontFamily = fontFamily;
+    this.opacity = opacity;
     this.mesh = this.render();
     this.addTapEvent();
   }
@@ -115,6 +121,7 @@ export default class Button implements IButton {
       map: texture,
       depthTest: false,
       transparent: true,
+      opacity: this.opacity,
     });
     const shape = this.getShape();
     const shapeGeometry: any = new THREE.ShapeGeometry(shape);

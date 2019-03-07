@@ -34,6 +34,8 @@ export const BOUNDARY = {
 };
 /** 背景色 */
 export const BACKGROUND_COLOR = 0x33334c;
+/** 速度初始值 */
+export const INITIALIZED_SPEED = 0.3;
 /** 主角参数 */
 export const PLAYER = {
   /** 宽度 */

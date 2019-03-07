@@ -83,7 +83,6 @@ export default class Settlement implements ISettlement {
       color: 0x000000,
       opacity: 0.65,
       transparent: true,
-      depthWrite: false,
       depthTest: false,
     });
     const geometry = new THREE.PlaneGeometry(visibleSize.width, visibleSize.height);
@@ -97,7 +96,6 @@ export default class Settlement implements ISettlement {
     const height = this.mainHeight;
     const texture = this.getMainTexture();
     const material = new THREE.MeshBasicMaterial({
-      name: 'main',
       map: texture,
       depthTest: false,
       transparent: true,
@@ -171,7 +169,7 @@ export default class Settlement implements ISettlement {
         },
         backgroundColor: '#333333',
         borderColor: '#555555',
-        opacity: 0.95,
+        opacity: 0.85,
       },
     };
     util.sendCommandToOpenDataContext(message);
@@ -199,6 +197,7 @@ export default class Settlement implements ISettlement {
       color: '#ffffff',
       backgroundColor: '#333333',
       borderColor: '#555555',
+      opacity: 0.85,
       game: this.game,
       callback: () => {
         this.destroy();
@@ -219,7 +218,7 @@ export default class Settlement implements ISettlement {
       radius: 1,
       text: '\uE62A 召唤挑战者',
       fontFamily: this.font,
-      fontSize: 50,
+      fontSize: 46,
       color: '#ffffff',
       backgroundColor: '#e67e22',
       game: this.game,
@@ -240,7 +239,7 @@ export default class Settlement implements ISettlement {
       radius: 1,
       text: '\uE608 返回主菜单',
       fontFamily: this.font,
-      fontSize: 50,
+      fontSize: 46,
       borderColor: '#dedede',
       backgroundColor: '#dedede',
       game: this.game,

@@ -78,13 +78,13 @@ export default class Player implements IPlayer {
   }
   /** 重置 */
   public reset() {
-    this.mesh.position.x = 0;
+    this.mesh.position.set(0, 0, 0);
+    this.mesh.rotation.set(0, 0, 0);
     this.racetrackIndex = 0;
   }
+  /** 更新Tween */
   public update() {
-    if (!this.game.silent) {
-      this.bounceTween.update();
-    }
+    this.bounceTween.update();
     if (this.game.isPlaying) {
       this.jumpTween.update();
       this.moveTween.update();
@@ -101,6 +101,7 @@ export default class Player implements IPlayer {
       .to({ y: jumpHeight }, durations / 2)
       .easing(TWEEN.Easing.Quadratic.Out)
       .start();
+    // 落下
     const bounceTweenStep2 = new TWEEN.Tween(meshPosition, bounceTween)
       .to({ y: 0 }, durations / 2)
       .easing(TWEEN.Easing.Quadratic.In);
@@ -181,6 +182,8 @@ export default class Player implements IPlayer {
     // 点击
     this.game.emitter.addListener(EVENTS.TAP, () => {
       if (this.game.isPlaying) {
+        // 短振动
+        wx.vibrateShort();
         this.jump({
           callback: () => {
             this.jumpTween.removeAll();

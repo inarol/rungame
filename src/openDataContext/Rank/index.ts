@@ -129,9 +129,7 @@ export default class Rank implements IRank {
 
       // 渲染排行榜头像
       const { avatarUrl } = userData;
-      const avatar = new cax.Bitmap(avatarUrl, () => {
-        this.stage.update();
-      });
+      const avatar = new cax.Bitmap(avatarUrl);
       avatar.x = 60;
       avatar.scale = 0.25;
 
