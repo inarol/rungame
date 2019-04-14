@@ -24,15 +24,16 @@ wx['cloud'].init();
 
 (async () => {
   const { audioList, audioListJson, font } = await preload();
-  const openId = await getOpenId();
-  new Game({
+  const game = new Game({
     /** 音频文件 */
     audioList,
     /** 音频解析文件 */
     audioListJson,
     /** 字体文件 */
     font,
-    /** 用户openId */
-    openId,
   });
-})();
+  game.openId = await getOpenId();
+  wx.onShow(() => {
+    game.audio.play();
+  });
+})()

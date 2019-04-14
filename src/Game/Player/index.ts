@@ -80,6 +80,7 @@ export default class Player implements IPlayer {
   public reset() {
     this.mesh.position.set(0, 0, 0);
     this.mesh.rotation.set(0, 0, 0);
+    this.bounce();
     this.racetrackIndex = 0;
   }
   /** 更新Tween */
@@ -96,6 +97,7 @@ export default class Player implements IPlayer {
     const bounceTween = this.bounceTween;
     const durations = 500;
     const jumpHeight = this.size.height;
+    bounceTween.removeAll();
     // 跳跃
     const bounceTweenStep1 = new TWEEN.Tween(meshPosition, bounceTween)
       .to({ y: jumpHeight }, durations / 2)

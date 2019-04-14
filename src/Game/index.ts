@@ -137,11 +137,8 @@ export default class Game implements IGame {
     audioListJson: IAudioJsonList;
     /** 字体文件 */
     font: string;
-    /** 用户openId */
-    openId: string;
   }) {
-    const { audioList, audioListJson, font, openId } = params;
-    this.openId = openId;
+    const { audioList, audioListJson, font } = params;
     this.audioList = audioList;
     this.audioListJson = audioListJson;
     this.audio = audioList.begin;
@@ -198,8 +195,8 @@ export default class Game implements IGame {
   private ticker() {
     this.frame += 1;
     this.update();
-    this.musicFrame.update();
     if (!this.silent) {
+      this.musicFrame.update();
       this.player.update();
       this.racetrack.update({
         game: this,
@@ -273,11 +270,10 @@ export default class Game implements IGame {
   }
   /** 重置游戏 */
   public reset() {
+    this.player.reset();
     this.silent = false;
     this.score.value = 0;
-    this.player.reset();
     this.playAudio('begin');
-    this.audio.seek(0);
     this.removeNPC();
   }
   /** 显示菜单 */
@@ -316,6 +312,7 @@ export default class Game implements IGame {
   private playAudio(type: string = 'begin') {
     this.audio = this.audioList[type];
     this.audioJson = this.audioListJson[type];
+    this.audio.seek(0);
     this.audio.play();
     this.musicFrame.time = 0;
     this.audio.onEnded(() => {

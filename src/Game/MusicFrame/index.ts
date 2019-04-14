@@ -23,13 +23,11 @@ export default class MusicFrame implements IMusicFrame {
   /** 更新 */
   public update() {
     // 每0.05秒更新音频的波形图
-    if (!this.game.silent) {
-      if (this.game.frame % 3 === 0) {
-        this.time += 0.05;
-        this.updateFrame();
-      }
-      this.moveFrame();
+    if (this.game.frame % 3 === 0) {
+      this.time += 0.05;
+      this.updateFrame();
     }
+    this.moveFrame();
   }
   constructor(params: {
     /** 游戏类 */
