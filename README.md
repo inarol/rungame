@@ -1,3 +1,3 @@
-# wxgame-rungame
+# running-game
 
-*原版是：[http://gamejolt.com/games/neotrap/141779](http://gamejolt.com/games/neotrap/141779)*
+使用微信小游戏, 复刻国外 HTML5 游戏, 原 Web 版本：[http://gamejolt.com/games/neotrap/141779](http://gamejolt.com/games/neotrap/141779)
