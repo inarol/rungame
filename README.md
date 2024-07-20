@@ -1,3 +1,3 @@
-# running-game
+# wxgame-rungame
 
-![](https://narol-blog.oss-cn-beijing.aliyuncs.com/blog-img/202404261355648.gif)
+_原版是：[http://gamejolt.com/games/neotrap/141779](http://gamejolt.com/games/neotrap/141779)_

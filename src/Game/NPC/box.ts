@@ -1,7 +1,3 @@
 import NPC from '../NPC';
 
-export class BoxNPC extends NPC {
-  constructor() {
-    super();
-  }
-}
+export class BoxNPC extends NPC {}

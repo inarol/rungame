@@ -1,9 +1,10 @@
+const systemInfo = wx.getSystemInfoSync();
 /** 设备像素比  */
-export const RATIO = devicePixelRatio;
+export const RATIO = systemInfo.pixelRatio;
 /** 屏幕宽度 */
-export const SCREEN_WIDTH = window.innerWidth;
+export const SCREEN_WIDTH = systemInfo.windowWidth;
 /** 屏幕高度 */
-export const SCREEN_HEIGHT = window.innerHeight;
+export const SCREEN_HEIGHT = systemInfo.windowHeight;
 /** 摄影机参数 */
 export const CAMERA = {
   /** 视野范围（角度） */
@@ -30,10 +31,12 @@ export const BOUNDARY = {
   /** z轴起始点 */
   zStart: CAMERA.z,
   /** z轴结束点，摄影机可视最远处（需要补偿摄影机的位移`CAMERA.z`） */
-  zEnd: - CAMERA.far + CAMERA.z,
+  zEnd: -CAMERA.far + CAMERA.z,
 };
 /** 背景色 */
 export const BACKGROUND_COLOR = 0x33334c;
+/** 速度初始值 */
+export const INITIALIZED_SPEED = 0.3;
 /** 主角参数 */
 export const PLAYER = {
   /** 宽度 */
@@ -45,14 +48,14 @@ export const PLAYER = {
 };
 /** 跑道参数 */
 const RACETRACK_SEGMENTS = 5;
-export const SEGMENT_WIDTH = (PLAYER.width + 2);
+export const SEGMENT_WIDTH = PLAYER.width + 2;
 export const RACETRACK = {
   /** 跑道宽度 */
   width: SEGMENT_WIDTH * RACETRACK_SEGMENTS,
   /** 跑道高度 */
   height: CAMERA.far,
   /** 跑道y坐标 */
-  y: - PLAYER.height / 2,
+  y: -PLAYER.height / 2,
   /** 跑道分段 */
   segments: RACETRACK_SEGMENTS,
   /** 单条跑道宽度 */

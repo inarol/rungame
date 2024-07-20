@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { CAMERA, SCREEN_WIDTH, SCREEN_HEIGHT } from '../constant';
+import { CAMERA, SCREEN_HEIGHT, SCREEN_WIDTH } from '../constant';
 
 /** 摄影机 */
 const camera = new THREE.PerspectiveCamera(

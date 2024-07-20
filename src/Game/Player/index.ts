@@ -1,8 +1,8 @@
-import * as THREE from 'three';
 import * as TWEEN from '@tweenjs/tween.js';
+import * as THREE from 'three';
 import { IDirection } from '../Gamepad';
-import { PLAYER, EVENTS, RACETRACK } from '../constant';
-import { IGame } from '..';
+import { EVENTS, PLAYER, RACETRACK } from '../constant';
+import { IGame } from '../types';
 
 interface ISize {
   /** 宽度 */
@@ -22,6 +22,8 @@ export interface IPlayer {
   racetrackIndex: number;
   /** 更新 */
   update: () => void;
+  /** 重置 */
+  reset: () => void;
 }
 
 /** 游戏主角 */
@@ -35,17 +37,24 @@ export default class Player implements IPlayer {
   /** 位移补间动画 */
   private moveTween: TWEEN.Group = new TWEEN.Group();
   /** 尺寸 */
-  public size: ISize = {
+  size: ISize = {
     width: PLAYER.width,
     height: PLAYER.height,
     depth: PLAYER.depth,
   };
   /** 3D模型 */
-  public mesh: THREE.Group;
+  mesh: THREE.Group;
   /** 跑道序号 */
-  public racetrackIndex = 0;
-  public render() {
-    const size = this.size;
+  racetrackIndex = 0;
+  constructor(params: { game: IGame }) {
+    const { game } = params;
+    this.mesh = this.render();
+    this.bounce();
+    this.game = game;
+    this.bindGamePadEvent();
+  }
+  render() {
+    const { size } = this;
     const group = new THREE.Group();
     const boxGeometry = new THREE.BoxGeometry(size.width, size.height, size.depth);
     const boxMaterial = new THREE.MeshBasicMaterial({
@@ -65,10 +74,16 @@ export default class Player implements IPlayer {
     group.add(box);
     return group;
   }
-  public update() {
-    if (!this.game.silent) {
-      this.bounceTween.update();
-    }
+  /** 重置 */
+  reset() {
+    this.mesh.position.set(0, 0, 0);
+    this.mesh.rotation.set(0, 0, 0);
+    this.bounce();
+    this.racetrackIndex = 0;
+  }
+  /** 更新Tween */
+  update() {
+    this.bounceTween.update();
     if (this.game.isPlaying) {
       this.jumpTween.update();
       this.moveTween.update();
@@ -77,14 +92,16 @@ export default class Player implements IPlayer {
   /** 弹跳 */
   private bounce() {
     const meshPosition = this.mesh.position;
-    const bounceTween = this.bounceTween;
+    const { bounceTween } = this;
     const durations = 500;
     const jumpHeight = this.size.height;
+    bounceTween.removeAll();
     // 跳跃
     const bounceTweenStep1 = new TWEEN.Tween(meshPosition, bounceTween)
       .to({ y: jumpHeight }, durations / 2)
       .easing(TWEEN.Easing.Quadratic.Out)
       .start();
+    // 落下
     const bounceTweenStep2 = new TWEEN.Tween(meshPosition, bounceTween)
       .to({ y: 0 }, durations / 2)
       .easing(TWEEN.Easing.Quadratic.In);
@@ -93,13 +110,11 @@ export default class Player implements IPlayer {
     bounceTweenStep1.start();
   }
   /** 跳跃 */
-  private jump(params: {
-    callback: () => any,
-  }) {
+  private jump(params: { callback: () => any }) {
     const meshPosition = this.mesh.position;
     const meshRotation = this.mesh.rotation;
-    const bounceTween = this.bounceTween;
-    const jumpTween = this.jumpTween;
+    const { bounceTween } = this;
+    const { jumpTween } = this;
     const jumpHeight = this.size.height * 3;
     const durations = 700;
     if (bounceTween.getAll().length) {
@@ -126,17 +141,14 @@ export default class Player implements IPlayer {
       .start();
   }
   /** 移动动画 */
-  private move(params: {
-    direction: IDirection;
-    callback: () => any;
-  }) {
+  private move(params: { direction: IDirection; callback: () => any }) {
     const { direction } = params;
     const meshPosition = this.mesh.position;
-    const moveTween = this.moveTween;
+    const { moveTween } = this;
     const durations = 200;
     let moveDistance = 0;
     if (direction === 'LEFT' && this.racetrackIndex > -2) {
-      moveDistance = - RACETRACK.segmentWidth;
+      moveDistance = -RACETRACK.segmentWidth;
       this.racetrackIndex -= 1;
     } else if (direction === 'RIGHT' && this.racetrackIndex < 2) {
       moveDistance = RACETRACK.segmentWidth;
@@ -147,15 +159,6 @@ export default class Player implements IPlayer {
       .easing(TWEEN.Easing.Back.Out)
       .onComplete(params.callback)
       .start();
-  }
-  constructor(params: {
-    game: IGame;
-  }) {
-    const { game } = params;
-    this.mesh = this.render();
-    this.bounce();
-    this.game = game;
-    this.bindGamePadEvent();
   }
   /** 监听事件 */
   private bindGamePadEvent() {
@@ -174,6 +177,8 @@ export default class Player implements IPlayer {
     // 点击
     this.game.emitter.addListener(EVENTS.TAP, () => {
       if (this.game.isPlaying) {
+        // 短振动
+        wx.vibrateShort();
         this.jump({
           callback: () => {
             this.jumpTween.removeAll();
@@ -185,6 +190,6 @@ export default class Player implements IPlayer {
   }
   /** 根据位置确定跑道序号 */
   private racetrackIndex2Position(index: number) {
-    return RACETRACK.width / RACETRACK.segments * index;
+    return (RACETRACK.width / RACETRACK.segments) * index;
   }
 }

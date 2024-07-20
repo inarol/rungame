@@ -1,12 +1,27 @@
-import './lib/weapp-adapter';
-import './lib/weapp-adapter-extend';
-import './lib/threejs-shim';
-import { preload } from './preload';
 import Game from './Game';
+import { preload } from './preload';
 
-(async () => {
+/** 获取用户openId */
+const getOpenId = (): Promise<string> => {
+  return new Promise((resolve, reject) => {
+    wx.cloud.callFunction({
+      name: 'getOpenId',
+      success: ({ result }) => {
+        console.log('>', result);
+        if (result.status === 200) {
+          resolve(result.data.openId);
+        }
+      },
+      fail: reject,
+    });
+  });
+};
+
+wx.cloud.init();
+
+async function main() {
   const { audioList, audioListJson, font } = await preload();
-  new Game({
+  const game = new Game({
     /** 音频文件 */
     audioList,
     /** 音频解析文件 */
@@ -14,4 +29,10 @@ import Game from './Game';
     /** 字体文件 */
     font,
   });
-})();
+  game.openId = wx.getStorageSync('openid') || wx.setStorageSync('openid', await getOpenId());
+  wx.onShow(() => {
+    game.audio.play();
+  });
+}
+
+main();

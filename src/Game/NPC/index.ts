@@ -1,7 +1,7 @@
 import * as THREE from 'three';
-import * as util from  '../util';
-import { NPC as NPC_CONFIG, RACETRACK, PLAYER, BOUNDARY, CAMERA } from '../constant';
-import { IGame } from '../../Game';
+import { BOUNDARY, CAMERA, NPC as NPC_CONFIG, PLAYER, RACETRACK } from '../constant';
+import { IGame } from '../types';
+import * as util from '../util';
 
 export interface ISize {
   /** 宽度 */
@@ -27,6 +27,8 @@ export interface INPC {
     /** 越界回调 */
     out: () => void;
   }) => any;
+  /** 销毁 */
+  destroy: () => void;
 }
 
 export default abstract class NPC implements INPC {
@@ -41,9 +43,9 @@ export default abstract class NPC implements INPC {
   /** 跑道序号 */
   private racetrackIndex: number;
   /** 3D模型 */
-  public mesh: THREE.Group;
+  mesh: THREE.Group;
   /** 渲染 */
-  public render() {
+  render() {
     const group = new THREE.Group();
     const geometry = this.createGeometry();
     const boxMaterial = new THREE.MeshBasicMaterial({
@@ -62,16 +64,12 @@ export default abstract class NPC implements INPC {
     const position = this.generatePosition();
     group.add(line);
     group.add(box);
-    group.position.set(
-      position.x,
-      position.y,
-      position.z,
-    );
+    group.position.set(position.x, position.y, position.z);
     console.log('npc render.');
     return group;
   }
   /** 移动 */
-  public move(params: {
+  move(params: {
     /** 游戏类 */
     game: IGame;
     /** 添加NPC回调 */
@@ -79,23 +77,20 @@ export default abstract class NPC implements INPC {
     /** 越界回调 */
     out: () => void;
   }) {
-    const game = params.game;
+    const { game } = params;
     const addFn = params.add;
     const outFn = params.out;
-    const player = game.player;
+    const { player } = game;
     const playerMesh = player.mesh;
     const npcMesh = this.mesh;
     const npcMeshPosition = npcMesh.position;
     const racetrackLength = RACETRACK.height;
     // 三分之一的z坐标
     const thirdPoint = -(racetrackLength - CAMERA.z) / 1.5;
-    const moveDistance = game.speed * Math.abs(racetrackLength) / game.fps;
+    const moveDistance = (game.speed * Math.abs(racetrackLength)) / game.fps;
     npcMeshPosition.z += moveDistance;
     // 位移三分之一距离时，添加下一个NPC
-    if (
-      npcMeshPosition.z - moveDistance <= thirdPoint &&
-      npcMeshPosition.z > thirdPoint
-    ) {
+    if (npcMeshPosition.z - moveDistance <= thirdPoint && npcMeshPosition.z > thirdPoint) {
       addFn();
     }
     // np的z坐标大于摄影机的z坐标，算越界
@@ -129,17 +124,13 @@ export default abstract class NPC implements INPC {
     }
   }
   /** 重置对象属性 */
-  public reset() {
+  reset() {
     const position = this.generatePosition();
     this.racetrackIndex = this.position2RacetrackIndex(position.x);
-    this.mesh.position.set(
-      position.x,
-      position.y,
-      position.z,
-    );
+    this.mesh.position.set(position.x, position.y, position.z);
   }
   /** 获取类名 */
-  public getConstructorName() {
+  getConstructorName() {
     return this.constructor.name;
   }
   constructor() {
@@ -148,18 +139,14 @@ export default abstract class NPC implements INPC {
   }
   /** 创建几何图形 */
   protected createGeometry(): THREE.Geometry {
-    const size = this.size;
-    return new THREE.BoxGeometry(
-      size.width,
-      size.height,
-      size.depth,
-    );
+    const { size } = this;
+    return new THREE.BoxGeometry(size.width, size.height, size.depth);
   }
   /** 生成npc位置信息 */
   private generatePosition() {
-    const size = this.size;
+    const { size } = this;
     return {
-      x: RACETRACK.width / RACETRACK.segments * util.rnd(-2, 2, true),
+      x: (RACETRACK.width / RACETRACK.segments) * util.rnd(-2, 2, true),
       y: size.height / 2 - PLAYER.height / 2,
       // 起始点边界外
       z: BOUNDARY.zEnd - size.depth / 2,
@@ -174,8 +161,18 @@ export default abstract class NPC implements INPC {
    * @see https://developer.mozilla.org/zh-CN/docs/Games/Techniques/3D_collision_detection
    */
   private testAABB(A, B) {
-    return (A.min.x <= B.max.x && A.max.x >= B.min.x) &&
-      (A.min.y <= B.max.y && A.max.y >= B.min.y) &&
-      (A.min.z <= B.max.z && A.max.z >= B.min.z);
+    return (
+      A.min.x <= B.max.x &&
+      A.max.x >= B.min.x &&
+      A.min.y <= B.max.y &&
+      A.max.y >= B.min.y &&
+      A.min.z <= B.max.z &&
+      A.max.z >= B.min.z
+    );
+  }
+  /** 销毁 */
+  destroy() {
+    const scene = this.mesh.parent;
+    scene.remove(this.mesh);
   }
 }

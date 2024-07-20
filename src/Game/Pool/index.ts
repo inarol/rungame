@@ -15,7 +15,7 @@ export interface IPool {
  * 可以有效减少对象创建开销和避免频繁的垃圾回收
  * 提高游戏性能
  */
-export default class Pool implements IPool{
+export default class Pool implements IPool {
   constructor() {
     this[__.poolDic] = {};
   }
@@ -24,15 +24,19 @@ export default class Pool implements IPool{
    * 获取对应的对象池
    */
   getPoolBySign(name) {
-    return this[__.poolDic][name] || (this[__.poolDic][name] = []);
+    const sign = this[__.poolDic][name];
+    if (!sign) {
+      this[__.poolDic][name] = [];
+    }
+    return sign;
   }
   /**
    * 根据传入的对象标识符，查询对象池
    * 对象池为空创建新的类，否则从对象池中取
    */
-  getItemByClass(name, className) {
+  getItemByClass(name, ClsName) {
     const pool = this.getPoolBySign(name);
-    return pool.length ? pool.shift() : new className();
+    return pool.length ? pool.shift() : new ClsName();
   }
   /**
    * 将对象回收到对象池

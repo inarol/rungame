@@ -11,16 +11,9 @@ export class ConeNPC extends NPC {
       depth: NPC_CONFIG.width,
     };
   }
-  constructor() {
-    super();
-  }
   /** 创建几何图形 */
   protected createGeometry() {
-    const size = this.size;
-    return new THREE.ConeGeometry(
-      size.width,
-      size.height,
-      size.height / 2,
-    );
+    const { size } = this;
+    return new THREE.ConeGeometry(size.width, size.height, size.height / 2);
   }
 }

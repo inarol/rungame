@@ -1,6 +1,6 @@
 import * as THREE from 'three';
-import { RACETRACK, CAMERA, PLAYER } from '../constant';
-import { IGame } from '../../Game';
+import { CAMERA, RACETRACK } from '../constant';
+import { IGame } from '../types';
 
 export interface IRacetrack {
   /** 3D模型 */
@@ -14,16 +14,17 @@ export interface IRacetrack {
 
 /** 游戏跑道 */
 export default class Racetrack implements IRacetrack {
-  public mesh: THREE.Mesh;
-  public update(params: {
+  mesh: THREE.Mesh;
+  update(params: {
     /** 游戏类 */
     game: IGame;
   }) {
-    const game = params.game;
-    const map = this.mesh.material['map'];
+    const { game } = params;
+    const material = this.mesh.material as THREE.MeshStandardMaterial;
+    const { map } = material;
     const repeat = 10;
     // typical range is 0.0 to 1.0
-    map.offset.y += game.speed * 1 / game.fps * repeat;
+    map.offset.y += ((game.speed * 1) / game.fps) * repeat;
     map.repeat.y = repeat;
   }
   private render() {
@@ -41,7 +42,7 @@ export default class Racetrack implements IRacetrack {
     racetrackMaterial.map.wrapT = THREE.RepeatWrapping;
     const plane = new THREE.Mesh(racetrackGeometry, racetrackMaterial);
     plane.rotation.set(THREE.Math.degToRad(-90), 0, 0);
-    plane.position.set(0, RACETRACK.y, - RACETRACK.height / 2 + CAMERA.z);
+    plane.position.set(0, RACETRACK.y, -RACETRACK.height / 2 + CAMERA.z);
     return plane;
   }
   constructor() {

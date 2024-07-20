@@ -1,15 +1,52 @@
 {
-  "name": "rungame",
+  "name": "supersonic",
   "version": "1.0.0",
   "description": "the run game of music.",
-  "main": "",
-  "scripts": {
-    "start": "npm run dev",
-    "dev": "cross-env NODE_ENV=development webpack",
-    "build": "webpack"
+  "homepage": "https://github.com/narol1024/running-game#readme",
+  "bugs": {
+    "url": "https://github.com/narol1024/running-game/issues"
   },
-  "author": "narol",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/narol1024/running-game.git"
+  },
+  "funding": "https://github.com/sponsors/narol1024",
   "license": "MIT",
+  "author": "narol",
+  "main": "",
+  "engines": {
+    "node": "16.x"
+  },
+  "scripts": {
+    "build": "webpack",
+    "dev": "cross-env NODE_ENV=development webpack",
+    "lint": "eslint .",
+    "lint:fix": "prettier --write . && eslint --fix .",
+    "prepare": "husky install",
+    "start": "npm run dev"
+  },
+  "commitlint": {
+    "extends": [
+      "ali"
+    ]
+  },
+  "lint-staged": {
+    "*.{cjs,cts,js,jsx,mjs,mts,ts,tsx,vue}": "eslint --fix",
+    "*.{cjs,css,cts,html,js,json,jsx,less,md,mjs,mts,scss,ts,tsx,vue,yaml,yml}": "prettier --write"
+  },
+  "prettier": "prettier-config-ali",
+  "eslintConfig": {
+    "extends": [
+      "ali/typescript",
+      "plugin:prettier/recommended"
+    ]
+  },
+  "dependencies": {
+    "@tweenjs/tween.js": "^17.2.0",
+    "fbemitter": "^2.1.1",
+    "three": "^0.100.0",
+    "three-orbit-controls": "^82.1.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.1.5",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
@@ -17,24 +54,25 @@
     "@babel/preset-env": "^7.1.6",
     "@babel/preset-typescript": "^7.1.0",
     "@babel/runtime": "^7.2.0",
+    "@commitlint/cli": "^19.3.0",
     "@types/fbemitter": "^2.0.32",
     "@types/three": "^0.93.15",
     "@types/tween.js": "^16.9.0",
     "@types/wegame-api": "^2.3.0",
     "babel-loader": "^8.0.4",
+    "commitlint-config-ali": "^1.1.0",
     "cross-env": "^5.2.0",
-    "fork-ts-checker-webpack-plugin": "^0.4.15",
+    "eslint": "^8.57.0",
+    "eslint-config-ali": "^15.0.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
     "happypack": "^5.0.0",
-    "tslint": "^5.11.0",
-    "tslint-config-airbnb": "^5.11.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.7",
+    "prettier": "^3.3.3",
+    "prettier-config-ali": "^1.3.2",
     "typescript": "^3.1.6",
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2"
-  },
-  "dependencies": {
-    "@tweenjs/tween.js": "^17.2.0",
-    "fbemitter": "^2.1.1",
-    "three": "^0.100.0",
-    "three-orbit-controls": "^82.1.0"
   }
 }

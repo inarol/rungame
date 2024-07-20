@@ -1,6 +1,6 @@
 import { EventEmitter } from 'fbemitter';
-import { RATIO, EVENTS } from '../constant';
-import { IGame } from '../../Game';
+import { EVENTS } from '../constant';
+import { IGame } from '../types';
 
 /** 坐标 */
 interface IPoint {
@@ -12,14 +12,12 @@ interface IPoint {
 export type IDirection = 'LEFT' | 'RIGHT';
 
 /** 游戏手柄，控制主角跳跃，移动 */
-interface IGamepad { }
+interface IGamepad {}
 
 /** 游戏手柄 */
 export default class Gamepad implements IGamepad {
   private emitter: EventEmitter;
-  constructor(params: {
-    game: IGame;
-  }) {
+  constructor(params: { game: IGame }) {
     const { game } = params;
     this.emitter = game.emitter;
     this.bindTouchEvent();
@@ -47,23 +45,25 @@ export default class Gamepad implements IGamepad {
         this.emitter.emit(EVENTS.TAP, {
           position: value,
         });
-        return;
       }
     };
     wx.onTouchStart(touchStart);
     wx.onTouchEnd(touchEnd);
   }
   /** 获取点击行为 */
-  private getTouchResult = (startPoint: IPoint, endPoint): {
-    type: 'SLIDE' | 'TAP' | 'UNKNOW',
-    value: IDirection | IPoint | '',
+  private getTouchResult = (
+    startPoint: IPoint,
+    endPoint,
+  ): {
+    type: 'SLIDE' | 'TAP' | 'UNKNOW';
+    value: IDirection | IPoint | '';
   } => {
     const { x: startX, y: startY } = startPoint;
     const { x: endX, y: endY } = endPoint;
     const angX = endX - startX;
     const angY = endY - startY;
     if (Math.abs(angX) >= 10) {
-      const angle = Math.atan2(angY, angX) * 180 / Math.PI;
+      const angle = (Math.atan2(angY, angX) * 180) / Math.PI;
       if ((angle >= 135 && angle <= 180) || (angle >= -180 && angle < -135)) {
         return {
           type: 'SLIDE',
@@ -85,5 +85,5 @@ export default class Gamepad implements IGamepad {
       type: 'TAP',
       value: endPoint,
     };
-  }
+  };
 }

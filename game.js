@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.ts");
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -93,15 +93,11 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-function _assertThisInitialized(self) {
-  if (self === void 0) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return self;
+function _assertThisInitialized(e) {
+  if (void 0 === e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  return e;
 }
-
-module.exports = _assertThisInitialized;
+module.exports = _assertThisInitialized, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
 
@@ -112,43 +108,32 @@ module.exports = _assertThisInitialized;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
+function asyncGeneratorStep(n, t, e, r, o, a, c) {
   try {
-    var info = gen[key](arg);
-    var value = info.value;
-  } catch (error) {
-    reject(error);
-    return;
+    var i = n[a](c),
+      u = i.value;
+  } catch (n) {
+    return void e(n);
   }
-
-  if (info.done) {
-    resolve(value);
-  } else {
-    Promise.resolve(value).then(_next, _throw);
-  }
+  i.done ? t(u) : Promise.resolve(u).then(r, o);
 }
-
-function _asyncToGenerator(fn) {
+function _asyncToGenerator(n) {
   return function () {
-    var self = this,
-        args = arguments;
-    return new Promise(function (resolve, reject) {
-      var gen = fn.apply(self, args);
-
-      function _next(value) {
-        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
+    var t = this,
+      e = arguments;
+    return new Promise(function (r, o) {
+      var a = n.apply(t, e);
+      function _next(n) {
+        asyncGeneratorStep(a, r, o, _next, _throw, "next", n);
       }
-
-      function _throw(err) {
-        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
+      function _throw(n) {
+        asyncGeneratorStep(a, r, o, _next, _throw, "throw", n);
       }
-
-      _next(undefined);
+      _next(void 0);
     });
   };
 }
-
-module.exports = _asyncToGenerator;
+module.exports = _asyncToGenerator, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
 
@@ -159,13 +144,10 @@ module.exports = _asyncToGenerator;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
+function _classCallCheck(a, n) {
+  if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function");
 }
-
-module.exports = _classCallCheck;
+module.exports = _classCallCheck, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
 
@@ -174,25 +156,21 @@ module.exports = _classCallCheck;
   !*** ./node_modules/@babel/runtime/helpers/createClass.js ***!
   \************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
+var toPropertyKey = __webpack_require__(/*! ./toPropertyKey.js */ "./node_modules/@babel/runtime/helpers/toPropertyKey.js");
+function _defineProperties(e, r) {
+  for (var t = 0; t < r.length; t++) {
+    var o = r[t];
+    o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, toPropertyKey(o.key), o);
   }
 }
-
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  return Constructor;
+function _createClass(e, r, t) {
+  return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", {
+    writable: !1
+  }), e;
 }
-
-module.exports = _createClass;
+module.exports = _createClass, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
 
@@ -201,24 +179,18 @@ module.exports = _createClass;
   !*** ./node_modules/@babel/runtime/helpers/defineProperty.js ***!
   \***************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
+var toPropertyKey = __webpack_require__(/*! ./toPropertyKey.js */ "./node_modules/@babel/runtime/helpers/toPropertyKey.js");
+function _defineProperty(e, r, t) {
+  return (r = toPropertyKey(r)) in e ? Object.defineProperty(e, r, {
+    value: t,
+    enumerable: !0,
+    configurable: !0,
+    writable: !0
+  }) : e[r] = t, e;
 }
-
-module.exports = _defineProperty;
+module.exports = _defineProperty, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
 
@@ -229,14 +201,12 @@ module.exports = _defineProperty;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-function _getPrototypeOf(o) {
-  module.exports = _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
+function _getPrototypeOf(t) {
+  return (module.exports = _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function (t) {
+    return t.__proto__ || Object.getPrototypeOf(t);
+  }, module.exports.__esModule = true, module.exports["default"] = module.exports), _getPrototypeOf(t);
 }
-
-module.exports = _getPrototypeOf;
+module.exports = _getPrototypeOf, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
 
@@ -247,24 +217,20 @@ module.exports = _getPrototypeOf;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var setPrototypeOf = __webpack_require__(/*! ./setPrototypeOf */ "./node_modules/@babel/runtime/helpers/setPrototypeOf.js");
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function");
-  }
-
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
+var setPrototypeOf = __webpack_require__(/*! ./setPrototypeOf.js */ "./node_modules/@babel/runtime/helpers/setPrototypeOf.js");
+function _inherits(t, e) {
+  if ("function" != typeof e && null !== e) throw new TypeError("Super expression must either be null or a function");
+  t.prototype = Object.create(e && e.prototype, {
     constructor: {
-      value: subClass,
-      writable: true,
-      configurable: true
+      value: t,
+      writable: !0,
+      configurable: !0
     }
-  });
-  if (superClass) setPrototypeOf(subClass, superClass);
+  }), Object.defineProperty(t, "prototype", {
+    writable: !1
+  }), e && setPrototypeOf(t, e);
 }
-
-module.exports = _inherits;
+module.exports = _inherits, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
 
@@ -275,19 +241,328 @@ module.exports = _inherits;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _typeof = __webpack_require__(/*! ../helpers/typeof */ "./node_modules/@babel/runtime/helpers/typeof.js");
-
-var assertThisInitialized = __webpack_require__(/*! ./assertThisInitialized */ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js");
-
-function _possibleConstructorReturn(self, call) {
-  if (call && (_typeof(call) === "object" || typeof call === "function")) {
-    return call;
-  }
-
-  return assertThisInitialized(self);
+var _typeof = __webpack_require__(/*! ./typeof.js */ "./node_modules/@babel/runtime/helpers/typeof.js")["default"];
+var assertThisInitialized = __webpack_require__(/*! ./assertThisInitialized.js */ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js");
+function _possibleConstructorReturn(t, e) {
+  if (e && ("object" == _typeof(e) || "function" == typeof e)) return e;
+  if (void 0 !== e) throw new TypeError("Derived constructors may only return object or undefined");
+  return assertThisInitialized(t);
 }
+module.exports = _possibleConstructorReturn, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
-module.exports = _possibleConstructorReturn;
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/regeneratorRuntime.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/regeneratorRuntime.js ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _typeof = __webpack_require__(/*! ./typeof.js */ "./node_modules/@babel/runtime/helpers/typeof.js")["default"];
+function _regeneratorRuntime() {
+  "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
+  module.exports = _regeneratorRuntime = function _regeneratorRuntime() {
+    return e;
+  }, module.exports.__esModule = true, module.exports["default"] = module.exports;
+  var t,
+    e = {},
+    r = Object.prototype,
+    n = r.hasOwnProperty,
+    o = Object.defineProperty || function (t, e, r) {
+      t[e] = r.value;
+    },
+    i = "function" == typeof Symbol ? Symbol : {},
+    a = i.iterator || "@@iterator",
+    c = i.asyncIterator || "@@asyncIterator",
+    u = i.toStringTag || "@@toStringTag";
+  function define(t, e, r) {
+    return Object.defineProperty(t, e, {
+      value: r,
+      enumerable: !0,
+      configurable: !0,
+      writable: !0
+    }), t[e];
+  }
+  try {
+    define({}, "");
+  } catch (t) {
+    define = function define(t, e, r) {
+      return t[e] = r;
+    };
+  }
+  function wrap(t, e, r, n) {
+    var i = e && e.prototype instanceof Generator ? e : Generator,
+      a = Object.create(i.prototype),
+      c = new Context(n || []);
+    return o(a, "_invoke", {
+      value: makeInvokeMethod(t, r, c)
+    }), a;
+  }
+  function tryCatch(t, e, r) {
+    try {
+      return {
+        type: "normal",
+        arg: t.call(e, r)
+      };
+    } catch (t) {
+      return {
+        type: "throw",
+        arg: t
+      };
+    }
+  }
+  e.wrap = wrap;
+  var h = "suspendedStart",
+    l = "suspendedYield",
+    f = "executing",
+    s = "completed",
+    y = {};
+  function Generator() {}
+  function GeneratorFunction() {}
+  function GeneratorFunctionPrototype() {}
+  var p = {};
+  define(p, a, function () {
+    return this;
+  });
+  var d = Object.getPrototypeOf,
+    v = d && d(d(values([])));
+  v && v !== r && n.call(v, a) && (p = v);
+  var g = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(p);
+  function defineIteratorMethods(t) {
+    ["next", "throw", "return"].forEach(function (e) {
+      define(t, e, function (t) {
+        return this._invoke(e, t);
+      });
+    });
+  }
+  function AsyncIterator(t, e) {
+    function invoke(r, o, i, a) {
+      var c = tryCatch(t[r], t, o);
+      if ("throw" !== c.type) {
+        var u = c.arg,
+          h = u.value;
+        return h && "object" == _typeof(h) && n.call(h, "__await") ? e.resolve(h.__await).then(function (t) {
+          invoke("next", t, i, a);
+        }, function (t) {
+          invoke("throw", t, i, a);
+        }) : e.resolve(h).then(function (t) {
+          u.value = t, i(u);
+        }, function (t) {
+          return invoke("throw", t, i, a);
+        });
+      }
+      a(c.arg);
+    }
+    var r;
+    o(this, "_invoke", {
+      value: function value(t, n) {
+        function callInvokeWithMethodAndArg() {
+          return new e(function (e, r) {
+            invoke(t, n, e, r);
+          });
+        }
+        return r = r ? r.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg();
+      }
+    });
+  }
+  function makeInvokeMethod(e, r, n) {
+    var o = h;
+    return function (i, a) {
+      if (o === f) throw Error("Generator is already running");
+      if (o === s) {
+        if ("throw" === i) throw a;
+        return {
+          value: t,
+          done: !0
+        };
+      }
+      for (n.method = i, n.arg = a;;) {
+        var c = n.delegate;
+        if (c) {
+          var u = maybeInvokeDelegate(c, n);
+          if (u) {
+            if (u === y) continue;
+            return u;
+          }
+        }
+        if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) {
+          if (o === h) throw o = s, n.arg;
+          n.dispatchException(n.arg);
+        } else "return" === n.method && n.abrupt("return", n.arg);
+        o = f;
+        var p = tryCatch(e, r, n);
+        if ("normal" === p.type) {
+          if (o = n.done ? s : l, p.arg === y) continue;
+          return {
+            value: p.arg,
+            done: n.done
+          };
+        }
+        "throw" === p.type && (o = s, n.method = "throw", n.arg = p.arg);
+      }
+    };
+  }
+  function maybeInvokeDelegate(e, r) {
+    var n = r.method,
+      o = e.iterator[n];
+    if (o === t) return r.delegate = null, "throw" === n && e.iterator["return"] && (r.method = "return", r.arg = t, maybeInvokeDelegate(e, r), "throw" === r.method) || "return" !== n && (r.method = "throw", r.arg = new TypeError("The iterator does not provide a '" + n + "' method")), y;
+    var i = tryCatch(o, e.iterator, r.arg);
+    if ("throw" === i.type) return r.method = "throw", r.arg = i.arg, r.delegate = null, y;
+    var a = i.arg;
+    return a ? a.done ? (r[e.resultName] = a.value, r.next = e.nextLoc, "return" !== r.method && (r.method = "next", r.arg = t), r.delegate = null, y) : a : (r.method = "throw", r.arg = new TypeError("iterator result is not an object"), r.delegate = null, y);
+  }
+  function pushTryEntry(t) {
+    var e = {
+      tryLoc: t[0]
+    };
+    1 in t && (e.catchLoc = t[1]), 2 in t && (e.finallyLoc = t[2], e.afterLoc = t[3]), this.tryEntries.push(e);
+  }
+  function resetTryEntry(t) {
+    var e = t.completion || {};
+    e.type = "normal", delete e.arg, t.completion = e;
+  }
+  function Context(t) {
+    this.tryEntries = [{
+      tryLoc: "root"
+    }], t.forEach(pushTryEntry, this), this.reset(!0);
+  }
+  function values(e) {
+    if (e || "" === e) {
+      var r = e[a];
+      if (r) return r.call(e);
+      if ("function" == typeof e.next) return e;
+      if (!isNaN(e.length)) {
+        var o = -1,
+          i = function next() {
+            for (; ++o < e.length;) if (n.call(e, o)) return next.value = e[o], next.done = !1, next;
+            return next.value = t, next.done = !0, next;
+          };
+        return i.next = i;
+      }
+    }
+    throw new TypeError(_typeof(e) + " is not iterable");
+  }
+  return GeneratorFunction.prototype = GeneratorFunctionPrototype, o(g, "constructor", {
+    value: GeneratorFunctionPrototype,
+    configurable: !0
+  }), o(GeneratorFunctionPrototype, "constructor", {
+    value: GeneratorFunction,
+    configurable: !0
+  }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, u, "GeneratorFunction"), e.isGeneratorFunction = function (t) {
+    var e = "function" == typeof t && t.constructor;
+    return !!e && (e === GeneratorFunction || "GeneratorFunction" === (e.displayName || e.name));
+  }, e.mark = function (t) {
+    return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, define(t, u, "GeneratorFunction")), t.prototype = Object.create(g), t;
+  }, e.awrap = function (t) {
+    return {
+      __await: t
+    };
+  }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, c, function () {
+    return this;
+  }), e.AsyncIterator = AsyncIterator, e.async = function (t, r, n, o, i) {
+    void 0 === i && (i = Promise);
+    var a = new AsyncIterator(wrap(t, r, n, o), i);
+    return e.isGeneratorFunction(r) ? a : a.next().then(function (t) {
+      return t.done ? t.value : a.next();
+    });
+  }, defineIteratorMethods(g), define(g, u, "Generator"), define(g, a, function () {
+    return this;
+  }), define(g, "toString", function () {
+    return "[object Generator]";
+  }), e.keys = function (t) {
+    var e = Object(t),
+      r = [];
+    for (var n in e) r.push(n);
+    return r.reverse(), function next() {
+      for (; r.length;) {
+        var t = r.pop();
+        if (t in e) return next.value = t, next.done = !1, next;
+      }
+      return next.done = !0, next;
+    };
+  }, e.values = values, Context.prototype = {
+    constructor: Context,
+    reset: function reset(e) {
+      if (this.prev = 0, this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(resetTryEntry), !e) for (var r in this) "t" === r.charAt(0) && n.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = t);
+    },
+    stop: function stop() {
+      this.done = !0;
+      var t = this.tryEntries[0].completion;
+      if ("throw" === t.type) throw t.arg;
+      return this.rval;
+    },
+    dispatchException: function dispatchException(e) {
+      if (this.done) throw e;
+      var r = this;
+      function handle(n, o) {
+        return a.type = "throw", a.arg = e, r.next = n, o && (r.method = "next", r.arg = t), !!o;
+      }
+      for (var o = this.tryEntries.length - 1; o >= 0; --o) {
+        var i = this.tryEntries[o],
+          a = i.completion;
+        if ("root" === i.tryLoc) return handle("end");
+        if (i.tryLoc <= this.prev) {
+          var c = n.call(i, "catchLoc"),
+            u = n.call(i, "finallyLoc");
+          if (c && u) {
+            if (this.prev < i.catchLoc) return handle(i.catchLoc, !0);
+            if (this.prev < i.finallyLoc) return handle(i.finallyLoc);
+          } else if (c) {
+            if (this.prev < i.catchLoc) return handle(i.catchLoc, !0);
+          } else {
+            if (!u) throw Error("try statement without catch or finally");
+            if (this.prev < i.finallyLoc) return handle(i.finallyLoc);
+          }
+        }
+      }
+    },
+    abrupt: function abrupt(t, e) {
+      for (var r = this.tryEntries.length - 1; r >= 0; --r) {
+        var o = this.tryEntries[r];
+        if (o.tryLoc <= this.prev && n.call(o, "finallyLoc") && this.prev < o.finallyLoc) {
+          var i = o;
+          break;
+        }
+      }
+      i && ("break" === t || "continue" === t) && i.tryLoc <= e && e <= i.finallyLoc && (i = null);
+      var a = i ? i.completion : {};
+      return a.type = t, a.arg = e, i ? (this.method = "next", this.next = i.finallyLoc, y) : this.complete(a);
+    },
+    complete: function complete(t, e) {
+      if ("throw" === t.type) throw t.arg;
+      return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && e && (this.next = e), y;
+    },
+    finish: function finish(t) {
+      for (var e = this.tryEntries.length - 1; e >= 0; --e) {
+        var r = this.tryEntries[e];
+        if (r.finallyLoc === t) return this.complete(r.completion, r.afterLoc), resetTryEntry(r), y;
+      }
+    },
+    "catch": function _catch(t) {
+      for (var e = this.tryEntries.length - 1; e >= 0; --e) {
+        var r = this.tryEntries[e];
+        if (r.tryLoc === t) {
+          var n = r.completion;
+          if ("throw" === n.type) {
+            var o = n.arg;
+            resetTryEntry(r);
+          }
+          return o;
+        }
+      }
+      throw Error("illegal catch attempt");
+    },
+    delegateYield: function delegateYield(e, r, n) {
+      return this.delegate = {
+        iterator: values(e),
+        resultName: r,
+        nextLoc: n
+      }, "next" === this.method && (this.arg = t), y;
+    }
+  }, e;
+}
+module.exports = _regeneratorRuntime, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
 
@@ -298,16 +573,51 @@ module.exports = _possibleConstructorReturn;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-function _setPrototypeOf(o, p) {
-  module.exports = _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
-    o.__proto__ = p;
-    return o;
-  };
-
-  return _setPrototypeOf(o, p);
+function _setPrototypeOf(t, e) {
+  return (module.exports = _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function (t, e) {
+    return t.__proto__ = e, t;
+  }, module.exports.__esModule = true, module.exports["default"] = module.exports), _setPrototypeOf(t, e);
 }
+module.exports = _setPrototypeOf, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
-module.exports = _setPrototypeOf;
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/toPrimitive.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/toPrimitive.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _typeof = __webpack_require__(/*! ./typeof.js */ "./node_modules/@babel/runtime/helpers/typeof.js")["default"];
+function toPrimitive(t, r) {
+  if ("object" != _typeof(t) || !t) return t;
+  var e = t[Symbol.toPrimitive];
+  if (void 0 !== e) {
+    var i = e.call(t, r || "default");
+    if ("object" != _typeof(i)) return i;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r ? String : Number)(t);
+}
+module.exports = toPrimitive, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/toPropertyKey.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/toPropertyKey.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _typeof = __webpack_require__(/*! ./typeof.js */ "./node_modules/@babel/runtime/helpers/typeof.js")["default"];
+var toPrimitive = __webpack_require__(/*! ./toPrimitive.js */ "./node_modules/@babel/runtime/helpers/toPrimitive.js");
+function toPropertyKey(t) {
+  var i = toPrimitive(t, "string");
+  return "symbol" == _typeof(i) ? i : i + "";
+}
+module.exports = toPropertyKey, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
 
@@ -318,23 +628,16 @@ module.exports = _setPrototypeOf;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-function _typeof2(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof2(obj); }
+function _typeof(o) {
+  "@babel/helpers - typeof";
 
-function _typeof(obj) {
-  if (typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol") {
-    module.exports = _typeof = function _typeof(obj) {
-      return _typeof2(obj);
-    };
-  } else {
-    module.exports = _typeof = function _typeof(obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : _typeof2(obj);
-    };
-  }
-
-  return _typeof(obj);
+  return (module.exports = _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) {
+    return typeof o;
+  } : function (o) {
+    return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o;
+  }, module.exports.__esModule = true, module.exports["default"] = module.exports), _typeof(o);
 }
-
-module.exports = _typeof;
+module.exports = _typeof, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
 
@@ -345,7 +648,21 @@ module.exports = _typeof;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime-module.js");
+// TODO(Babel 8): Remove this file.
+
+var runtime = __webpack_require__(/*! ../helpers/regeneratorRuntime */ "./node_modules/@babel/runtime/helpers/regeneratorRuntime.js")();
+module.exports = runtime;
+
+// Copied from https://github.com/facebook/regenerator/blob/main/packages/runtime/runtime.js#L736=
+try {
+  regeneratorRuntime = runtime;
+} catch (accidentalStrictMode) {
+  if (typeof globalThis === "object") {
+    globalThis.regeneratorRuntime = runtime;
+  } else {
+    Function("r", "regeneratorRuntime = r")(runtime);
+  }
+}
 
 
 /***/ }),
@@ -408,6 +725,7 @@ _Group.prototype = {
 		if (tweenIds.length === 0) {
 			return false;
 		}
+
 		time = time !== undefined ? time : TWEEN.now();
 
 		// Tweens are updated in "batches". If you add a new tween during an update, then the
@@ -449,7 +767,7 @@ TWEEN.nextId = function () {
 
 // Include a performance.now polyfill.
 // In node.js, use process.hrtime.
-if (typeof (window) === 'undefined' && typeof (process) !== 'undefined') {
+if (typeof (self) === 'undefined' && typeof (process) !== 'undefined' && process.hrtime) {
 	TWEEN.now = function () {
 		var time = process.hrtime();
 
@@ -457,13 +775,13 @@ if (typeof (window) === 'undefined' && typeof (process) !== 'undefined') {
 		return time[0] * 1000 + time[1] / 1000000;
 	};
 }
-// In a browser, use window.performance.now if it is available.
-else if (typeof (window) !== 'undefined' &&
-         window.performance !== undefined &&
-		 window.performance.now !== undefined) {
+// In a browser, use self.performance.now if it is available.
+else if (typeof (self) !== 'undefined' &&
+         self.performance !== undefined &&
+		 self.performance.now !== undefined) {
 	// This must be bound, because directly assigning this function
 	// leads to an invocation exception in Chrome.
-	TWEEN.now = window.performance.now.bind(window.performance);
+	TWEEN.now = self.performance.now.bind(self.performance);
 }
 // Use Date.now if it is available.
 else if (Date.now !== undefined) {
@@ -496,6 +814,7 @@ TWEEN.Tween = function (object, group) {
 	this._onStartCallback = null;
 	this._onStartCallbackFired = false;
 	this._onUpdateCallback = null;
+	this._onRepeatCallback = null;
 	this._onCompleteCallback = null;
 	this._onStopCallback = null;
 	this._group = group || TWEEN;
@@ -504,15 +823,15 @@ TWEEN.Tween = function (object, group) {
 };
 
 TWEEN.Tween.prototype = {
-	getId: function getId() {
+	getId: function () {
 		return this._id;
 	},
 
-	isPlaying: function isPlaying() {
+	isPlaying: function () {
 		return this._isPlaying;
 	},
 
-	to: function to(properties, duration) {
+	to: function (properties, duration) {
 
 		this._valuesEnd = properties;
 
@@ -524,7 +843,12 @@ TWEEN.Tween.prototype = {
 
 	},
 
-	start: function start(time) {
+	duration: function duration(d) {
+		this._duration = d;
+		return this;
+	},
+
+	start: function (time) {
 
 		this._group.add(this);
 
@@ -570,7 +894,7 @@ TWEEN.Tween.prototype = {
 
 	},
 
-	stop: function stop() {
+	stop: function () {
 
 		if (!this._isPlaying) {
 			return this;
@@ -588,14 +912,14 @@ TWEEN.Tween.prototype = {
 
 	},
 
-	end: function end() {
+	end: function () {
 
-		this.update(this._startTime + this._duration);
+		this.update(Infinity);
 		return this;
 
 	},
 
-	stopChainedTweens: function stopChainedTweens() {
+	stopChainedTweens: function () {
 
 		for (var i = 0, numChainedTweens = this._chainedTweens.length; i < numChainedTweens; i++) {
 			this._chainedTweens[i].stop();
@@ -603,89 +927,96 @@ TWEEN.Tween.prototype = {
 
 	},
 
-	group: function group(group) {
+	group: function (group) {
 		this._group = group;
 		return this;
 	},
 
-	delay: function delay(amount) {
+	delay: function (amount) {
 
 		this._delayTime = amount;
 		return this;
 
 	},
 
-	repeat: function repeat(times) {
+	repeat: function (times) {
 
 		this._repeat = times;
 		return this;
 
 	},
 
-	repeatDelay: function repeatDelay(amount) {
+	repeatDelay: function (amount) {
 
 		this._repeatDelayTime = amount;
 		return this;
 
 	},
 
-	yoyo: function yoyo(yy) {
+	yoyo: function (yoyo) {
 
-		this._yoyo = yy;
+		this._yoyo = yoyo;
 		return this;
 
 	},
 
-	easing: function easing(eas) {
+	easing: function (easingFunction) {
 
-		this._easingFunction = eas;
+		this._easingFunction = easingFunction;
 		return this;
 
 	},
 
-	interpolation: function interpolation(inter) {
+	interpolation: function (interpolationFunction) {
 
-		this._interpolationFunction = inter;
+		this._interpolationFunction = interpolationFunction;
 		return this;
 
 	},
 
-	chain: function chain() {
+	chain: function () {
 
 		this._chainedTweens = arguments;
 		return this;
 
 	},
 
-	onStart: function onStart(callback) {
+	onStart: function (callback) {
 
 		this._onStartCallback = callback;
 		return this;
 
 	},
 
-	onUpdate: function onUpdate(callback) {
+	onUpdate: function (callback) {
 
 		this._onUpdateCallback = callback;
 		return this;
 
 	},
 
-	onComplete: function onComplete(callback) {
+	onRepeat: function onRepeat(callback) {
+
+		this._onRepeatCallback = callback;
+		return this;
+
+	},
+
+	onComplete: function (callback) {
 
 		this._onCompleteCallback = callback;
 		return this;
 
 	},
 
-	onStop: function onStop(callback) {
+	onStop: function (callback) {
 
 		this._onStopCallback = callback;
 		return this;
 
 	},
 
-	update: function update(time) {
+	update: function (time) {
 
 		var property;
 		var elapsed;
@@ -745,7 +1076,7 @@ TWEEN.Tween.prototype = {
 		}
 
 		if (this._onUpdateCallback !== null) {
-			this._onUpdateCallback(this._object);
+			this._onUpdateCallback(this._object, elapsed);
 		}
 
 		if (elapsed === 1) {
@@ -782,6 +1113,10 @@ TWEEN.Tween.prototype = {
 					this._startTime = time + this._repeatDelayTime;
 				} else {
 					this._startTime = time + this._delayTime;
+				}
+
+				if (this._onRepeatCallback !== null) {
+					this._onRepeatCallback(this._object);
 				}
 
 				return true;
@@ -2036,786 +2371,6 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
-/***/ "./node_modules/regenerator-runtime/runtime-module.js":
-/*!************************************************************!*\
-  !*** ./node_modules/regenerator-runtime/runtime-module.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/**
- * Copyright (c) 2014-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-// This method of obtaining a reference to the global object needs to be
-// kept identical to the way it is obtained in runtime.js
-var g = (function() {
-  return this || (typeof self === "object" && self);
-})() || Function("return this")();
-
-// Use `getOwnPropertyNames` because not all browsers support calling
-// `hasOwnProperty` on the global `self` object in a worker. See #183.
-var hadRuntime = g.regeneratorRuntime &&
-  Object.getOwnPropertyNames(g).indexOf("regeneratorRuntime") >= 0;
-
-// Save the old regeneratorRuntime in case it needs to be restored later.
-var oldRuntime = hadRuntime && g.regeneratorRuntime;
-
-// Force reevalutation of runtime.js.
-g.regeneratorRuntime = undefined;
-
-module.exports = __webpack_require__(/*! ./runtime */ "./node_modules/regenerator-runtime/runtime.js");
-
-if (hadRuntime) {
-  // Restore the original runtime.
-  g.regeneratorRuntime = oldRuntime;
-} else {
-  // Remove the global property added by runtime.js.
-  try {
-    delete g.regeneratorRuntime;
-  } catch(e) {
-    g.regeneratorRuntime = undefined;
-  }
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/regenerator-runtime/runtime.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/regenerator-runtime/runtime.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/**
- * Copyright (c) 2014-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-!(function(global) {
-  "use strict";
-
-  var Op = Object.prototype;
-  var hasOwn = Op.hasOwnProperty;
-  var undefined; // More compressible than void 0.
-  var $Symbol = typeof Symbol === "function" ? Symbol : {};
-  var iteratorSymbol = $Symbol.iterator || "@@iterator";
-  var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
-  var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
-
-  var inModule = typeof module === "object";
-  var runtime = global.regeneratorRuntime;
-  if (runtime) {
-    if (inModule) {
-      // If regeneratorRuntime is defined globally and we're in a module,
-      // make the exports object identical to regeneratorRuntime.
-      module.exports = runtime;
-    }
-    // Don't bother evaluating the rest of this file if the runtime was
-    // already defined globally.
-    return;
-  }
-
-  // Define the runtime globally (as expected by generated code) as either
-  // module.exports (if we're in a module) or a new, empty object.
-  runtime = global.regeneratorRuntime = inModule ? module.exports : {};
-
-  function wrap(innerFn, outerFn, self, tryLocsList) {
-    // If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
-    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator;
-    var generator = Object.create(protoGenerator.prototype);
-    var context = new Context(tryLocsList || []);
-
-    // The ._invoke method unifies the implementations of the .next,
-    // .throw, and .return methods.
-    generator._invoke = makeInvokeMethod(innerFn, self, context);
-
-    return generator;
-  }
-  runtime.wrap = wrap;
-
-  // Try/catch helper to minimize deoptimizations. Returns a completion
-  // record like context.tryEntries[i].completion. This interface could
-  // have been (and was previously) designed to take a closure to be
-  // invoked without arguments, but in all the cases we care about we
-  // already have an existing method we want to call, so there's no need
-  // to create a new function object. We can even get away with assuming
-  // the method takes exactly one argument, since that happens to be true
-  // in every case, so we don't have to touch the arguments object. The
-  // only additional allocation required is the completion record, which
-  // has a stable shape and so hopefully should be cheap to allocate.
-  function tryCatch(fn, obj, arg) {
-    try {
-      return { type: "normal", arg: fn.call(obj, arg) };
-    } catch (err) {
-      return { type: "throw", arg: err };
-    }
-  }
-
-  var GenStateSuspendedStart = "suspendedStart";
-  var GenStateSuspendedYield = "suspendedYield";
-  var GenStateExecuting = "executing";
-  var GenStateCompleted = "completed";
-
-  // Returning this object from the innerFn has the same effect as
-  // breaking out of the dispatch switch statement.
-  var ContinueSentinel = {};
-
-  // Dummy constructor functions that we use as the .constructor and
-  // .constructor.prototype properties for functions that return Generator
-  // objects. For full spec compliance, you may wish to configure your
-  // minifier not to mangle the names of these two functions.
-  function Generator() {}
-  function GeneratorFunction() {}
-  function GeneratorFunctionPrototype() {}
-
-  // This is a polyfill for %IteratorPrototype% for environments that
-  // don't natively support it.
-  var IteratorPrototype = {};
-  IteratorPrototype[iteratorSymbol] = function () {
-    return this;
-  };
-
-  var getProto = Object.getPrototypeOf;
-  var NativeIteratorPrototype = getProto && getProto(getProto(values([])));
-  if (NativeIteratorPrototype &&
-      NativeIteratorPrototype !== Op &&
-      hasOwn.call(NativeIteratorPrototype, iteratorSymbol)) {
-    // This environment has a native %IteratorPrototype%; use it instead
-    // of the polyfill.
-    IteratorPrototype = NativeIteratorPrototype;
-  }
-
-  var Gp = GeneratorFunctionPrototype.prototype =
-    Generator.prototype = Object.create(IteratorPrototype);
-  GeneratorFunction.prototype = Gp.constructor = GeneratorFunctionPrototype;
-  GeneratorFunctionPrototype.constructor = GeneratorFunction;
-  GeneratorFunctionPrototype[toStringTagSymbol] =
-    GeneratorFunction.displayName = "GeneratorFunction";
-
-  // Helper for defining the .next, .throw, and .return methods of the
-  // Iterator interface in terms of a single ._invoke method.
-  function defineIteratorMethods(prototype) {
-    ["next", "throw", "return"].forEach(function(method) {
-      prototype[method] = function(arg) {
-        return this._invoke(method, arg);
-      };
-    });
-  }
-
-  runtime.isGeneratorFunction = function(genFun) {
-    var ctor = typeof genFun === "function" && genFun.constructor;
-    return ctor
-      ? ctor === GeneratorFunction ||
-        // For the native GeneratorFunction constructor, the best we can
-        // do is to check its .name property.
-        (ctor.displayName || ctor.name) === "GeneratorFunction"
-      : false;
-  };
-
-  runtime.mark = function(genFun) {
-    if (Object.setPrototypeOf) {
-      Object.setPrototypeOf(genFun, GeneratorFunctionPrototype);
-    } else {
-      genFun.__proto__ = GeneratorFunctionPrototype;
-      if (!(toStringTagSymbol in genFun)) {
-        genFun[toStringTagSymbol] = "GeneratorFunction";
-      }
-    }
-    genFun.prototype = Object.create(Gp);
-    return genFun;
-  };
-
-  // Within the body of any async function, `await x` is transformed to
-  // `yield regeneratorRuntime.awrap(x)`, so that the runtime can test
-  // `hasOwn.call(value, "__await")` to determine if the yielded value is
-  // meant to be awaited.
-  runtime.awrap = function(arg) {
-    return { __await: arg };
-  };
-
-  function AsyncIterator(generator) {
-    function invoke(method, arg, resolve, reject) {
-      var record = tryCatch(generator[method], generator, arg);
-      if (record.type === "throw") {
-        reject(record.arg);
-      } else {
-        var result = record.arg;
-        var value = result.value;
-        if (value &&
-            typeof value === "object" &&
-            hasOwn.call(value, "__await")) {
-          return Promise.resolve(value.__await).then(function(value) {
-            invoke("next", value, resolve, reject);
-          }, function(err) {
-            invoke("throw", err, resolve, reject);
-          });
-        }
-
-        return Promise.resolve(value).then(function(unwrapped) {
-          // When a yielded Promise is resolved, its final value becomes
-          // the .value of the Promise<{value,done}> result for the
-          // current iteration.
-          result.value = unwrapped;
-          resolve(result);
-        }, function(error) {
-          // If a rejected Promise was yielded, throw the rejection back
-          // into the async generator function so it can be handled there.
-          return invoke("throw", error, resolve, reject);
-        });
-      }
-    }
-
-    var previousPromise;
-
-    function enqueue(method, arg) {
-      function callInvokeWithMethodAndArg() {
-        return new Promise(function(resolve, reject) {
-          invoke(method, arg, resolve, reject);
-        });
-      }
-
-      return previousPromise =
-        // If enqueue has been called before, then we want to wait until
-        // all previous Promises have been resolved before calling invoke,
-        // so that results are always delivered in the correct order. If
-        // enqueue has not been called before, then it is important to
-        // call invoke immediately, without waiting on a callback to fire,
-        // so that the async generator function has the opportunity to do
-        // any necessary setup in a predictable way. This predictability
-        // is why the Promise constructor synchronously invokes its
-        // executor callback, and why async functions synchronously
-        // execute code before the first await. Since we implement simple
-        // async functions in terms of async generators, it is especially
-        // important to get this right, even though it requires care.
-        previousPromise ? previousPromise.then(
-          callInvokeWithMethodAndArg,
-          // Avoid propagating failures to Promises returned by later
-          // invocations of the iterator.
-          callInvokeWithMethodAndArg
-        ) : callInvokeWithMethodAndArg();
-    }
-
-    // Define the unified helper method that is used to implement .next,
-    // .throw, and .return (see defineIteratorMethods).
-    this._invoke = enqueue;
-  }
-
-  defineIteratorMethods(AsyncIterator.prototype);
-  AsyncIterator.prototype[asyncIteratorSymbol] = function () {
-    return this;
-  };
-  runtime.AsyncIterator = AsyncIterator;
-
-  // Note that simple async functions are implemented on top of
-  // AsyncIterator objects; they just return a Promise for the value of
-  // the final result produced by the iterator.
-  runtime.async = function(innerFn, outerFn, self, tryLocsList) {
-    var iter = new AsyncIterator(
-      wrap(innerFn, outerFn, self, tryLocsList)
-    );
-
-    return runtime.isGeneratorFunction(outerFn)
-      ? iter // If outerFn is a generator, return the full iterator.
-      : iter.next().then(function(result) {
-          return result.done ? result.value : iter.next();
-        });
-  };
-
-  function makeInvokeMethod(innerFn, self, context) {
-    var state = GenStateSuspendedStart;
-
-    return function invoke(method, arg) {
-      if (state === GenStateExecuting) {
-        throw new Error("Generator is already running");
-      }
-
-      if (state === GenStateCompleted) {
-        if (method === "throw") {
-          throw arg;
-        }
-
-        // Be forgiving, per 25.3.3.3.3 of the spec:
-        // https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generatorresume
-        return doneResult();
-      }
-
-      context.method = method;
-      context.arg = arg;
-
-      while (true) {
-        var delegate = context.delegate;
-        if (delegate) {
-          var delegateResult = maybeInvokeDelegate(delegate, context);
-          if (delegateResult) {
-            if (delegateResult === ContinueSentinel) continue;
-            return delegateResult;
-          }
-        }
-
-        if (context.method === "next") {
-          // Setting context._sent for legacy support of Babel's
-          // function.sent implementation.
-          context.sent = context._sent = context.arg;
-
-        } else if (context.method === "throw") {
-          if (state === GenStateSuspendedStart) {
-            state = GenStateCompleted;
-            throw context.arg;
-          }
-
-          context.dispatchException(context.arg);
-
-        } else if (context.method === "return") {
-          context.abrupt("return", context.arg);
-        }
-
-        state = GenStateExecuting;
-
-        var record = tryCatch(innerFn, self, context);
-        if (record.type === "normal") {
-          // If an exception is thrown from innerFn, we leave state ===
-          // GenStateExecuting and loop back for another invocation.
-          state = context.done
-            ? GenStateCompleted
-            : GenStateSuspendedYield;
-
-          if (record.arg === ContinueSentinel) {
-            continue;
-          }
-
-          return {
-            value: record.arg,
-            done: context.done
-          };
-
-        } else if (record.type === "throw") {
-          state = GenStateCompleted;
-          // Dispatch the exception by looping back around to the
-          // context.dispatchException(context.arg) call above.
-          context.method = "throw";
-          context.arg = record.arg;
-        }
-      }
-    };
-  }
-
-  // Call delegate.iterator[context.method](context.arg) and handle the
-  // result, either by returning a { value, done } result from the
-  // delegate iterator, or by modifying context.method and context.arg,
-  // setting context.delegate to null, and returning the ContinueSentinel.
-  function maybeInvokeDelegate(delegate, context) {
-    var method = delegate.iterator[context.method];
-    if (method === undefined) {
-      // A .throw or .return when the delegate iterator has no .throw
-      // method always terminates the yield* loop.
-      context.delegate = null;
-
-      if (context.method === "throw") {
-        if (delegate.iterator.return) {
-          // If the delegate iterator has a return method, give it a
-          // chance to clean up.
-          context.method = "return";
-          context.arg = undefined;
-          maybeInvokeDelegate(delegate, context);
-
-          if (context.method === "throw") {
-            // If maybeInvokeDelegate(context) changed context.method from
-            // "return" to "throw", let that override the TypeError below.
-            return ContinueSentinel;
-          }
-        }
-
-        context.method = "throw";
-        context.arg = new TypeError(
-          "The iterator does not provide a 'throw' method");
-      }
-
-      return ContinueSentinel;
-    }
-
-    var record = tryCatch(method, delegate.iterator, context.arg);
-
-    if (record.type === "throw") {
-      context.method = "throw";
-      context.arg = record.arg;
-      context.delegate = null;
-      return ContinueSentinel;
-    }
-
-    var info = record.arg;
-
-    if (! info) {
-      context.method = "throw";
-      context.arg = new TypeError("iterator result is not an object");
-      context.delegate = null;
-      return ContinueSentinel;
-    }
-
-    if (info.done) {
-      // Assign the result of the finished delegate to the temporary
-      // variable specified by delegate.resultName (see delegateYield).
-      context[delegate.resultName] = info.value;
-
-      // Resume execution at the desired location (see delegateYield).
-      context.next = delegate.nextLoc;
-
-      // If context.method was "throw" but the delegate handled the
-      // exception, let the outer generator proceed normally. If
-      // context.method was "next", forget context.arg since it has been
-      // "consumed" by the delegate iterator. If context.method was
-      // "return", allow the original .return call to continue in the
-      // outer generator.
-      if (context.method !== "return") {
-        context.method = "next";
-        context.arg = undefined;
-      }
-
-    } else {
-      // Re-yield the result returned by the delegate method.
-      return info;
-    }
-
-    // The delegate iterator is finished, so forget it and continue with
-    // the outer generator.
-    context.delegate = null;
-    return ContinueSentinel;
-  }
-
-  // Define Generator.prototype.{next,throw,return} in terms of the
-  // unified ._invoke helper method.
-  defineIteratorMethods(Gp);
-
-  Gp[toStringTagSymbol] = "Generator";
-
-  // A Generator should always return itself as the iterator object when the
-  // @@iterator function is called on it. Some browsers' implementations of the
-  // iterator prototype chain incorrectly implement this, causing the Generator
-  // object to not be returned from this call. This ensures that doesn't happen.
-  // See https://github.com/facebook/regenerator/issues/274 for more details.
-  Gp[iteratorSymbol] = function() {
-    return this;
-  };
-
-  Gp.toString = function() {
-    return "[object Generator]";
-  };
-
-  function pushTryEntry(locs) {
-    var entry = { tryLoc: locs[0] };
-
-    if (1 in locs) {
-      entry.catchLoc = locs[1];
-    }
-
-    if (2 in locs) {
-      entry.finallyLoc = locs[2];
-      entry.afterLoc = locs[3];
-    }
-
-    this.tryEntries.push(entry);
-  }
-
-  function resetTryEntry(entry) {
-    var record = entry.completion || {};
-    record.type = "normal";
-    delete record.arg;
-    entry.completion = record;
-  }
-
-  function Context(tryLocsList) {
-    // The root entry object (effectively a try statement without a catch
-    // or a finally block) gives us a place to store values thrown from
-    // locations where there is no enclosing try statement.
-    this.tryEntries = [{ tryLoc: "root" }];
-    tryLocsList.forEach(pushTryEntry, this);
-    this.reset(true);
-  }
-
-  runtime.keys = function(object) {
-    var keys = [];
-    for (var key in object) {
-      keys.push(key);
-    }
-    keys.reverse();
-
-    // Rather than returning an object with a next method, we keep
-    // things simple and return the next function itself.
-    return function next() {
-      while (keys.length) {
-        var key = keys.pop();
-        if (key in object) {
-          next.value = key;
-          next.done = false;
-          return next;
-        }
-      }
-
-      // To avoid creating an additional object, we just hang the .value
-      // and .done properties off the next function object itself. This
-      // also ensures that the minifier will not anonymize the function.
-      next.done = true;
-      return next;
-    };
-  };
-
-  function values(iterable) {
-    if (iterable) {
-      var iteratorMethod = iterable[iteratorSymbol];
-      if (iteratorMethod) {
-        return iteratorMethod.call(iterable);
-      }
-
-      if (typeof iterable.next === "function") {
-        return iterable;
-      }
-
-      if (!isNaN(iterable.length)) {
-        var i = -1, next = function next() {
-          while (++i < iterable.length) {
-            if (hasOwn.call(iterable, i)) {
-              next.value = iterable[i];
-              next.done = false;
-              return next;
-            }
-          }
-
-          next.value = undefined;
-          next.done = true;
-
-          return next;
-        };
-
-        return next.next = next;
-      }
-    }
-
-    // Return an iterator with no values.
-    return { next: doneResult };
-  }
-  runtime.values = values;
-
-  function doneResult() {
-    return { value: undefined, done: true };
-  }
-
-  Context.prototype = {
-    constructor: Context,
-
-    reset: function(skipTempReset) {
-      this.prev = 0;
-      this.next = 0;
-      // Resetting context._sent for legacy support of Babel's
-      // function.sent implementation.
-      this.sent = this._sent = undefined;
-      this.done = false;
-      this.delegate = null;
-
-      this.method = "next";
-      this.arg = undefined;
-
-      this.tryEntries.forEach(resetTryEntry);
-
-      if (!skipTempReset) {
-        for (var name in this) {
-          // Not sure about the optimal order of these conditions:
-          if (name.charAt(0) === "t" &&
-              hasOwn.call(this, name) &&
-              !isNaN(+name.slice(1))) {
-            this[name] = undefined;
-          }
-        }
-      }
-    },
-
-    stop: function() {
-      this.done = true;
-
-      var rootEntry = this.tryEntries[0];
-      var rootRecord = rootEntry.completion;
-      if (rootRecord.type === "throw") {
-        throw rootRecord.arg;
-      }
-
-      return this.rval;
-    },
-
-    dispatchException: function(exception) {
-      if (this.done) {
-        throw exception;
-      }
-
-      var context = this;
-      function handle(loc, caught) {
-        record.type = "throw";
-        record.arg = exception;
-        context.next = loc;
-
-        if (caught) {
-          // If the dispatched exception was caught by a catch block,
-          // then let that catch block handle the exception normally.
-          context.method = "next";
-          context.arg = undefined;
-        }
-
-        return !! caught;
-      }
-
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        var record = entry.completion;
-
-        if (entry.tryLoc === "root") {
-          // Exception thrown outside of any try block that could handle
-          // it, so set the completion value of the entire function to
-          // throw the exception.
-          return handle("end");
-        }
-
-        if (entry.tryLoc <= this.prev) {
-          var hasCatch = hasOwn.call(entry, "catchLoc");
-          var hasFinally = hasOwn.call(entry, "finallyLoc");
-
-          if (hasCatch && hasFinally) {
-            if (this.prev < entry.catchLoc) {
-              return handle(entry.catchLoc, true);
-            } else if (this.prev < entry.finallyLoc) {
-              return handle(entry.finallyLoc);
-            }
-
-          } else if (hasCatch) {
-            if (this.prev < entry.catchLoc) {
-              return handle(entry.catchLoc, true);
-            }
-
-          } else if (hasFinally) {
-            if (this.prev < entry.finallyLoc) {
-              return handle(entry.finallyLoc);
-            }
-
-          } else {
-            throw new Error("try statement without catch or finally");
-          }
-        }
-      }
-    },
-
-    abrupt: function(type, arg) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.tryLoc <= this.prev &&
-            hasOwn.call(entry, "finallyLoc") &&
-            this.prev < entry.finallyLoc) {
-          var finallyEntry = entry;
-          break;
-        }
-      }
-
-      if (finallyEntry &&
-          (type === "break" ||
-           type === "continue") &&
-          finallyEntry.tryLoc <= arg &&
-          arg <= finallyEntry.finallyLoc) {
-        // Ignore the finally entry if control is not jumping to a
-        // location outside the try/catch block.
-        finallyEntry = null;
-      }
-
-      var record = finallyEntry ? finallyEntry.completion : {};
-      record.type = type;
-      record.arg = arg;
-
-      if (finallyEntry) {
-        this.method = "next";
-        this.next = finallyEntry.finallyLoc;
-        return ContinueSentinel;
-      }
-
-      return this.complete(record);
-    },
-
-    complete: function(record, afterLoc) {
-      if (record.type === "throw") {
-        throw record.arg;
-      }
-
-      if (record.type === "break" ||
-          record.type === "continue") {
-        this.next = record.arg;
-      } else if (record.type === "return") {
-        this.rval = this.arg = record.arg;
-        this.method = "return";
-        this.next = "end";
-      } else if (record.type === "normal" && afterLoc) {
-        this.next = afterLoc;
-      }
-
-      return ContinueSentinel;
-    },
-
-    finish: function(finallyLoc) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.finallyLoc === finallyLoc) {
-          this.complete(entry.completion, entry.afterLoc);
-          resetTryEntry(entry);
-          return ContinueSentinel;
-        }
-      }
-    },
-
-    "catch": function(tryLoc) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.tryLoc === tryLoc) {
-          var record = entry.completion;
-          if (record.type === "throw") {
-            var thrown = record.arg;
-            resetTryEntry(entry);
-          }
-          return thrown;
-        }
-      }
-
-      // The context.catch method must only be called with a location
-      // argument that corresponds to a known catch block.
-      throw new Error("illegal catch attempt");
-    },
-
-    delegateYield: function(iterable, resultName, nextLoc) {
-      this.delegate = {
-        iterator: values(iterable),
-        resultName: resultName,
-        nextLoc: nextLoc
-      };
-
-      if (this.method === "next") {
-        // Deliberately forget the last sent value so that we don't
-        // accidentally pass it on to the delegate.
-        this.arg = undefined;
-      }
-
-      return ContinueSentinel;
-    }
-  };
-})(
-  // In sloppy mode, unbound `this` refers to the global object, fallback to
-  // Function constructor if we're in global strict mode. That is sadly a form
-  // of indirect eval which violates Content Security Policy.
-  (function() {
-    return this || (typeof self === "object" && self);
-  })() || Function("return this")()
-);
-
-
-/***/ }),
-
 /***/ "./node_modules/three/build/three.min.js":
 /*!***********************************************!*\
   !*** ./node_modules/three/build/three.min.js ***!
@@ -3833,155 +3388,162 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var three__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.min.js");
 /* harmony import */ var three__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(three__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _constant__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../constant */ "./src/Game/constant.ts");
+/* harmony import */ var _lib_cax__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../lib/cax */ "./src/lib/cax.js");
+/* harmony import */ var _lib_cax__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_lib_cax__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _constant__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../constant */ "./src/Game/constant.ts");
+/* harmony import */ var _offScreenCanvas__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../offScreenCanvas */ "./src/Game/offScreenCanvas/index.ts");
+/* harmony import */ var _Shape_RoundedRect__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Shape/RoundedRect */ "./src/Game/Shape/RoundedRect.ts");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../util */ "./src/Game/util/index.ts");
 
 
 
 
 
 
-var Button =
-/*#__PURE__*/
-function () {
-  /** 游戏类 */
 
-  /** 点击回调 */
 
-  /** 位置 */
 
-  /** 宽度 */
-
-  /** 高度 */
-
-  /** 圆角 */
-
-  /** 文本 */
-
-  /** 字体大小 */
-
-  /** 字体 */
-
-  /** 背景色 */
-
-  /** 文本颜色 */
-
-  /** 3D模型 */
-  function Button(params, options) {
+var Button = /*#__PURE__*/function () {
+  function Button(params) {
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Button);
-
+    /** 游戏类 */
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "game", void 0);
-
+    /** 点击回调 */
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "callback", void 0);
-
+    /** 位置 */
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "position", void 0);
-
+    /** 宽度 */
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "width", void 0);
-
+    /** 高度 */
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "height", void 0);
-
+    /** 圆角 */
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "radius", void 0);
-
+    /** 文本 */
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "text", void 0);
-
+    /** 字体大小 */
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "fontSize", void 0);
-
+    /** 字体 */
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "fontFamily", void 0);
-
+    /** 背景色 */
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "backgroundColor", void 0);
-
+    /** 边框色 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "borderColor", void 0);
+    /** 文本颜色 */
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "color", void 0);
-
+    /** 透明度 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "opacity", void 0);
+    /** tap事件 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "tapEvent", void 0);
+    /** 3D模型 */
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "mesh", void 0);
-
     var game = params.game,
-        callback = params.callback;
-    var _options$position = options.position,
-        position = _options$position === void 0 ? {
-      x: 0,
-      y: 0
-    } : _options$position,
-        _options$width = options.width,
-        width = _options$width === void 0 ? 0 : _options$width,
-        _options$height = options.height,
-        height = _options$height === void 0 ? 0 : _options$height,
-        _options$radius = options.radius,
-        radius = _options$radius === void 0 ? 0 : _options$radius,
-        _options$text = options.text,
-        text = _options$text === void 0 ? '' : _options$text,
-        _options$fontSize = options.fontSize,
-        fontSize = _options$fontSize === void 0 ? 12 : _options$fontSize,
-        _options$fontFamily = options.fontFamily,
-        fontFamily = _options$fontFamily === void 0 ? 'arial' : _options$fontFamily,
-        _options$backgroundCo = options.backgroundColor,
-        backgroundColor = _options$backgroundCo === void 0 ? '#ffffff' : _options$backgroundCo,
-        _options$color = options.color,
-        color = _options$color === void 0 ? '#000000' : _options$color;
+      callback = params.callback,
+      _params$position = params.position,
+      position = _params$position === void 0 ? {
+        x: 0,
+        y: 0
+      } : _params$position,
+      _params$width = params.width,
+      width = _params$width === void 0 ? 0 : _params$width,
+      _params$height = params.height,
+      height = _params$height === void 0 ? 0 : _params$height,
+      _params$radius = params.radius,
+      radius = _params$radius === void 0 ? 0 : _params$radius,
+      _params$text = params.text,
+      text = _params$text === void 0 ? '' : _params$text,
+      _params$fontSize = params.fontSize,
+      fontSize = _params$fontSize === void 0 ? 12 : _params$fontSize,
+      _params$fontFamily = params.fontFamily,
+      fontFamily = _params$fontFamily === void 0 ? 'arial' : _params$fontFamily,
+      _params$backgroundCol = params.backgroundColor,
+      backgroundColor = _params$backgroundCol === void 0 ? '#ffffff' : _params$backgroundCol,
+      borderColor = params.borderColor,
+      _params$color = params.color,
+      color = _params$color === void 0 ? '#000000' : _params$color,
+      _params$opacity = params.opacity,
+      opacity = _params$opacity === void 0 ? 1 : _params$opacity;
     this.game = game;
     this.callback = callback;
     this.position = position;
     this.width = width;
     this.height = height;
     this.radius = radius;
-    this.text = text;
+    this.text = _util__WEBPACK_IMPORTED_MODULE_8__["isDevTools"]() ? _util__WEBPACK_IMPORTED_MODULE_8__["normalizeFontText"](text) : text;
     this.backgroundColor = backgroundColor;
+    this.borderColor = borderColor;
     this.color = color;
     this.fontSize = fontSize;
     this.fontFamily = fontFamily;
+    this.opacity = opacity;
     this.mesh = this.render();
     this.addTapEvent();
   }
   /** 渲染 */
-
-
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Button, [{
+  return _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Button, [{
     key: "render",
     value: function render() {
       var position = this.position;
       var texture = this.getTexture();
       var material = new three__WEBPACK_IMPORTED_MODULE_3__["MeshBasicMaterial"]({
         map: texture,
-        depthTest: false
+        depthTest: false,
+        transparent: true,
+        opacity: this.opacity
       });
       var shape = this.getShape();
-      var shapeGeometry = new three__WEBPACK_IMPORTED_MODULE_3__["ShapeGeometry"](shape); // 为自定义图形添加uv坐标
-
+      var shapeGeometry = new three__WEBPACK_IMPORTED_MODULE_3__["ShapeGeometry"](shape);
+      // 为自定义图形添加uv坐标
       shapeGeometry.assignUVs();
       var mesh = new three__WEBPACK_IMPORTED_MODULE_3__["Mesh"](shapeGeometry, material);
       mesh.position.set(position.x, position.y, 0);
       return mesh;
     }
     /** 按钮纹理贴图 */
-
   }, {
     key: "getTexture",
     value: function getTexture() {
-      var canvas = wx.createCanvas();
-      var context = canvas.getContext('2d');
-      var scale = _constant__WEBPACK_IMPORTED_MODULE_4__["SCREEN_WIDTH"] / this.width;
-      var width = this.width * scale;
-      var height = this.height * scale;
+      var stage = _offScreenCanvas__WEBPACK_IMPORTED_MODULE_6__["default"].stage;
+      var canvas = _offScreenCanvas__WEBPACK_IMPORTED_MODULE_6__["default"].canvas;
+      var ratio = _constant__WEBPACK_IMPORTED_MODULE_5__["RATIO"];
+      var sizeRatio = this.width / this.height;
+      var width = _constant__WEBPACK_IMPORTED_MODULE_5__["SCREEN_WIDTH"];
+      var height = width / sizeRatio;
       var text = this.text;
-      var fontSize = this.fontSize * scale;
+      var fontSize = this.fontSize;
       var fontFamily = this.fontFamily;
       var backgroundColor = this.backgroundColor;
+      var borderColor = this.borderColor;
       var color = this.color;
-      canvas.width = width;
-      canvas.height = height;
-      context.save();
-      context.fillStyle = backgroundColor;
-      context.fillRect(0, 0, width, height);
-      context.fillStyle = color;
-      context.font = "".concat(fontSize, "px ").concat(fontFamily);
-      context.textAlign = 'center';
-      context.textBaseline = 'middle';
-      context.fillText(text, width / 2, height / 2);
-      context.restore();
-      var texture = new three__WEBPACK_IMPORTED_MODULE_3__["CanvasTexture"](canvas);
-      texture.minFilter = three__WEBPACK_IMPORTED_MODULE_3__["NearestFilter"];
+      canvas.width = width * ratio;
+      canvas.height = height * ratio;
+      var buttonText = new _lib_cax__WEBPACK_IMPORTED_MODULE_4___default.a.Text(text, {
+        color: color,
+        font: "".concat(fontSize, "px ").concat(fontFamily),
+        textAlign: 'center',
+        baseline: 'middle'
+      });
+      var rect = new _lib_cax__WEBPACK_IMPORTED_MODULE_4___default.a.Rect(width, height, {
+        fillStyle: backgroundColor,
+        strokeStyle: borderColor
+      });
+      buttonText.x = width / 2;
+      buttonText.y = height / 2;
+      stage.scale = ratio;
+      stage.add(rect);
+      stage.add(buttonText);
+      stage.update();
+      /**
+       * 重要！这里的CanvasTexture不可直接接收canvas，
+       * 因为微信小游戏只支持一个离屏canvas，如果不把canvas保存下来的话，
+       * 会导致canvas为覆盖的问题。
+       */
+      var image = _util__WEBPACK_IMPORTED_MODULE_8__["canvas2image"](canvas);
+      var texture = new three__WEBPACK_IMPORTED_MODULE_3__["CanvasTexture"](image);
+      texture.minFilter = three__WEBPACK_IMPORTED_MODULE_3__["LinearFilter"];
+      texture.needsUpdate = true;
       return texture;
     }
     /** 自定义shape */
-
   }, {
     key: "getShape",
     value: function getShape() {
@@ -3990,46 +3552,49 @@ function () {
       var width = this.width;
       var height = this.height;
       var radius = this.radius;
-      var roundedRectShape = new three__WEBPACK_IMPORTED_MODULE_3__["Shape"]();
-      roundedRectShape.moveTo(x, y + radius);
-      roundedRectShape.lineTo(x, y + height - radius);
-      roundedRectShape.quadraticCurveTo(x, y + height, x + radius, y + height);
-      roundedRectShape.lineTo(x + width - radius, y + height);
-      roundedRectShape.quadraticCurveTo(x + width, y + height, x + width, y + height - radius);
-      roundedRectShape.lineTo(x + width, y + radius);
-      roundedRectShape.quadraticCurveTo(x + width, y, x + width - radius, y);
-      roundedRectShape.lineTo(x + radius, y);
-      roundedRectShape.quadraticCurveTo(x, y, x, y + radius);
-      return roundedRectShape;
+      var roundedRect = new _Shape_RoundedRect__WEBPACK_IMPORTED_MODULE_7__["default"]({
+        x: x,
+        y: y,
+        width: width,
+        height: height,
+        radius: radius
+      }).render();
+      return roundedRect;
     }
     /** 给按钮添加Tap事件 */
-
   }, {
     key: "addTapEvent",
     value: function addTapEvent() {
       var _this = this;
-
       if (this.callback) {
-        this.game.emitter.addListener(_constant__WEBPACK_IMPORTED_MODULE_4__["EVENTS"].TAP, function (_ref) {
+        this.tapEvent = this.game.emitter.addListener(_constant__WEBPACK_IMPORTED_MODULE_5__["EVENTS"].TAP, function (_ref) {
           var position = _ref.position;
           var raycaster = new three__WEBPACK_IMPORTED_MODULE_3__["Raycaster"]();
-          var x = 1 - position.x / (_constant__WEBPACK_IMPORTED_MODULE_4__["SCREEN_WIDTH"] / 2);
-          var y = 1 - position.y / (_constant__WEBPACK_IMPORTED_MODULE_4__["SCREEN_HEIGHT"] / 2);
+          var x = 1 - position.x / (_constant__WEBPACK_IMPORTED_MODULE_5__["SCREEN_WIDTH"] / 2);
+          var y = 1 - position.y / (_constant__WEBPACK_IMPORTED_MODULE_5__["SCREEN_HEIGHT"] / 2);
           var mouse = new three__WEBPACK_IMPORTED_MODULE_3__["Vector2"](x, y);
           raycaster.setFromCamera(mouse, _this.game.camera);
           var intersect = raycaster.intersectObject(_this.mesh);
-
           if (intersect.length) {
             _this.callback();
           }
         });
       }
     }
+    /** 销毁按钮 */
+  }, {
+    key: "destroy",
+    value: function destroy() {
+      this.removeTapEvent();
+    }
+    /** 注销按钮上的Tap事件 */
+  }, {
+    key: "removeTapEvent",
+    value: function removeTapEvent() {
+      this.tapEvent.remove();
+    }
   }]);
-
-  return Button;
 }();
-
 
 
 /***/ }),
@@ -4056,67 +3621,60 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+/** 坐标 */
+
+/** 移动方向 */
+
+/** 游戏手柄，控制主角跳跃，移动 */
 /** 游戏手柄 */
-var Gamepad =
-/*#__PURE__*/
-function () {
+var Gamepad = /*#__PURE__*/function () {
   function Gamepad(params) {
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Gamepad);
-
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "emitter", void 0);
-
+    /** 获取点击行为 */
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "getTouchResult", function (startPoint, endPoint) {
       var startX = startPoint.x,
-          startY = startPoint.y;
+        startY = startPoint.y;
       var endX = endPoint.x,
-          endY = endPoint.y;
+        endY = endPoint.y;
       var angX = endX - startX;
       var angY = endY - startY;
-
       if (Math.abs(angX) >= 10) {
         var angle = Math.atan2(angY, angX) * 180 / Math.PI;
-
         if (angle >= 135 && angle <= 180 || angle >= -180 && angle < -135) {
           return {
             type: 'SLIDE',
             value: 'LEFT'
           };
         }
-
         if (angle >= -45 && angle <= 45) {
           return {
             type: 'SLIDE',
             value: 'RIGHT'
           };
         }
-
         return {
           type: 'UNKNOW',
           value: ''
         };
       }
-
       return {
         type: 'TAP',
         value: endPoint
       };
     });
-
     var game = params.game;
     this.emitter = game.emitter;
     this.bindTouchEvent();
   }
-
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Gamepad, [{
+  return _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Gamepad, [{
     key: "bindTouchEvent",
     value: function bindTouchEvent() {
       var _this = this;
-
       var startPoint = {
         x: 0,
         y: 0
       };
-
       var touchStart = function touchStart(_ref) {
         var touches = _ref.touches;
         startPoint = {
@@ -4124,44 +3682,31 @@ function () {
           y: touches[0].clientY
         };
       };
-
       var touchEnd = function touchEnd(_ref2) {
         var changedTouches = _ref2.changedTouches;
-
         var _this$getTouchResult = _this.getTouchResult(startPoint, {
-          x: changedTouches[0].clientX,
-          y: changedTouches[0].clientY
-        }),
-            type = _this$getTouchResult.type,
-            value = _this$getTouchResult.value;
-
+            x: changedTouches[0].clientX,
+            y: changedTouches[0].clientY
+          }),
+          type = _this$getTouchResult.type,
+          value = _this$getTouchResult.value;
         if (type === 'SLIDE') {
           _this.emitter.emit(_constant__WEBPACK_IMPORTED_MODULE_3__["EVENTS"].SLIDE, {
             direction: value
           });
-
           return;
         }
-
         if (type === 'TAP') {
           _this.emitter.emit(_constant__WEBPACK_IMPORTED_MODULE_3__["EVENTS"].TAP, {
             position: value
           });
-
-          return;
         }
       };
-
       wx.onTouchStart(touchStart);
       wx.onTouchEnd(touchEnd);
     }
-    /** 获取点击行为 */
-
   }]);
-
-  return Gamepad;
 }();
-
 
 
 /***/ }),
@@ -4190,57 +3735,40 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-var Menu =
-/*#__PURE__*/
-function () {
-  /** 游戏类 */
-
-  /** 字体文件 */
-
-  /** 3D模型 */
+var Menu = /*#__PURE__*/function () {
   function Menu(params) {
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Menu);
-
+    /** 游戏类 */
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "game", void 0);
-
+    /** 字体文件 */
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "font", void 0);
-
+    /** 3D模型 */
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "mesh", void 0);
-
+    /** 开始游戏按钮 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "startButton", void 0);
+    /** 排行榜按钮 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "rankButton", void 0);
     var game = params.game;
     this.font = game.font;
     this.game = game;
     this.mesh = this.render();
   }
-
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Menu, [{
+  return _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Menu, [{
     key: "render",
     value: function render() {
       var group = new three__WEBPACK_IMPORTED_MODULE_3__["Group"]();
-      var startButton = this.renderStartButton();
-      var rankButton = this.renderRankButton();
-      group.add(startButton);
-      group.add(rankButton);
+      this.startButton = this.renderStartButton();
+      this.rankButton = this.renderRankButton();
+      group.add(this.startButton.mesh);
+      group.add(this.rankButton.mesh);
       return group;
     }
     /** 开始游戏按钮 */
-
   }, {
     key: "renderStartButton",
     value: function renderStartButton() {
       var _this = this;
-
       return new _Button__WEBPACK_IMPORTED_MODULE_4__["default"]({
-        game: this.game,
-        callback: function callback() {
-          console.log('start btn clicked');
-
-          _this.game.start();
-
-          _this.hide();
-        }
-      }, {
         position: {
           x: 0,
           y: 45
@@ -4250,22 +3778,22 @@ function () {
         radius: 1,
         text: "\uE6DE\xA0\u5F00\u59CB\u6E38\u620F",
         fontFamily: this.font,
-        fontSize: 2.2,
+        fontSize: 50,
         color: '#ffffff',
-        backgroundColor: '#e67e22'
-      }).mesh;
+        backgroundColor: '#e67e22',
+        game: this.game,
+        callback: function callback() {
+          _this.game.start();
+          _this.destroy();
+        }
+      });
     }
     /** 排行榜按钮 */
-
   }, {
     key: "renderRankButton",
     value: function renderRankButton() {
+      var _this2 = this;
       return new _Button__WEBPACK_IMPORTED_MODULE_4__["default"]({
-        game: this.game,
-        callback: function callback() {
-          console.log('rank clicked');
-        }
-      }, {
         position: {
           x: 0,
           y: 37
@@ -4275,23 +3803,33 @@ function () {
         radius: 1,
         text: "\uE6F1\xA0\u6392\u884C\u699C",
         fontFamily: this.font,
-        fontSize: 2.2,
+        fontSize: 50,
         color: '#333333',
-        backgroundColor: '#dedede'
-      }).mesh;
+        backgroundColor: '#dedede',
+        game: this.game,
+        callback: function callback() {
+          _this2.game.showRank();
+          _this2.destroy();
+        }
+      });
     }
-    /** 隐藏按钮 */
-
+    /** 销毁按钮 */
   }, {
-    key: "hide",
-    value: function hide() {
-      this.mesh.visible = false;
+    key: "destroy",
+    value: function destroy() {
+      this.startButton.destroy();
+      this.rankButton.destroy();
+      this.removeMesh();
+    }
+    /** 移除网格 */
+  }, {
+    key: "removeMesh",
+    value: function removeMesh() {
+      var scene = this.mesh.parent;
+      scene.remove(this.mesh);
     }
   }]);
-
-  return Menu;
 }();
-
 
 
 /***/ }),
@@ -4320,62 +3858,42 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-var MusicFrame =
-/*#__PURE__*/
-function () {
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(MusicFrame, [{
-    key: "update",
-
-    /** 游戏类 */
-
-    /** 3D模型 */
-
-    /** 音频解析文件 */
-
-    /** 当前播放时间 */
-
-    /** 更新 */
-    value: function update() {
-      // 每0.05秒更新音频的波形图
-      if (!this.game.silent) {
-        if (this.game.frame % 3 === 0) {
-          this.time += 0.05;
-          this.updateFrame();
-        }
-
-        this.moveFrame();
-      }
-    }
-  }]);
-
+var MusicFrame = /*#__PURE__*/function () {
   function MusicFrame(params) {
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, MusicFrame);
-
+    /** 游戏类 */
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "game", void 0);
-
+    /** 3D模型 */
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "mesh", void 0);
-
+    /** 音频解析文件 */
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "audioJson", void 0);
-
+    /** 当前播放时间 */
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "time", 0);
-
     var game = params.game;
     this.game = game;
     this.audioJson = game.audioJson;
     this.time = game.audio.currentTime;
     this.mesh = this.render();
   }
-
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(MusicFrame, [{
+  return _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(MusicFrame, [{
+    key: "update",
+    value: /** 更新 */
+    function update() {
+      // 每0.05秒更新音频的波形图
+      if (this.game.frame % 3 === 0) {
+        this.time += 0.05;
+        this.updateFrame();
+      }
+      this.moveFrame();
+    }
+  }, {
     key: "render",
     value: function render() {
       var group = new three__WEBPACK_IMPORTED_MODULE_3__["Group"]();
       var width = _constant__WEBPACK_IMPORTED_MODULE_4__["MUSIC_FRAME"].width;
       var height = _constant__WEBPACK_IMPORTED_MODULE_4__["MUSIC_FRAME"].height;
       var padding = _constant__WEBPACK_IMPORTED_MODULE_4__["MUSIC_FRAME"].padding;
-      var max = _constant__WEBPACK_IMPORTED_MODULE_4__["MUSIC_FRAME"].max; // 音频波形数据
-
+      // 音频波形数据
       var frequencyArray = this.audioJson[this.time.toFixed(2)].split(',');
       var meshGroup = new three__WEBPACK_IMPORTED_MODULE_3__["Group"]();
       var geometry = new three__WEBPACK_IMPORTED_MODULE_3__["PlaneGeometry"](width, height);
@@ -4386,36 +3904,31 @@ function () {
       });
       var mesh = new three__WEBPACK_IMPORTED_MODULE_3__["Mesh"](geometry, material);
       mesh.position.x = -_constant__WEBPACK_IMPORTED_MODULE_4__["RACETRACK"].width / 2;
-      mesh.rotation.set(0, three__WEBPACK_IMPORTED_MODULE_3__["Math"].degToRad(90), 0); // mesh镜像
-
+      mesh.rotation.set(0, three__WEBPACK_IMPORTED_MODULE_3__["Math"].degToRad(90), 0);
+      // mesh镜像
       var meshImage = mesh.clone();
       meshImage.position.x = _constant__WEBPACK_IMPORTED_MODULE_4__["RACETRACK"].width / 2;
       meshImage.rotation.set(0, three__WEBPACK_IMPORTED_MODULE_3__["Math"].degToRad(-90), 0);
       meshGroup.add(mesh);
       meshGroup.add(meshImage);
-
       for (var i = 0; i < frequencyArray.length; i += 1) {
         var meshGroupClone = meshGroup.clone();
         meshGroupClone.position.z = -(width + padding) * i;
         group.add(meshGroupClone);
       }
-
       return group;
     }
     /** 更新音频的波形图峰值 */
-
   }, {
     key: "updateFrame",
     value: function updateFrame() {
       // 音频波形数据
       var frequency = this.audioJson[this.time.toFixed(2)];
-
       if (frequency) {
         var frequencyArray = frequency.split(',');
         var frameLength = frequencyArray.length;
         var height = _constant__WEBPACK_IMPORTED_MODULE_4__["MUSIC_FRAME"].height;
         var max = _constant__WEBPACK_IMPORTED_MODULE_4__["MUSIC_FRAME"].max;
-
         for (var i = 0; i < frameLength; i += 1) {
           var meshGroup = this.mesh.children[i];
           var frequencyValue = Number(frequencyArray[i]) || 1;
@@ -4426,24 +3939,20 @@ function () {
       }
     }
     /** 移动音频波形 */
-
   }, {
     key: "moveFrame",
     value: function moveFrame() {
       var width = _constant__WEBPACK_IMPORTED_MODULE_4__["MUSIC_FRAME"].width;
       var padding = _constant__WEBPACK_IMPORTED_MODULE_4__["MUSIC_FRAME"].padding;
       var eachFrameWidth = width + padding;
-      this.mesh.position.z += this.game.speed * Math.abs(_constant__WEBPACK_IMPORTED_MODULE_4__["CAMERA"].far) / this.game.fps; // 位移一个波形的距离后，重置位置，然后一直循环，作为音频波形前进的动画。
-
+      this.mesh.position.z += this.game.speed * Math.abs(_constant__WEBPACK_IMPORTED_MODULE_4__["CAMERA"].far) / this.game.fps;
+      // 位移一个波形的距离后，重置位置，然后一直循环，作为音频波形前进的动画。
       if (this.mesh.position.z >= eachFrameWidth) {
         this.mesh.position.z = 0;
       }
     }
   }]);
-
-  return MusicFrame;
 }();
-
 
 
 /***/ }),
@@ -4458,33 +3967,33 @@ function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BoxNPC", function() { return BoxNPC; });
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _NPC__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../NPC */ "./src/Game/NPC/index.ts");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _NPC__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../NPC */ "./src/Game/NPC/index.ts");
 
 
 
 
 
-var BoxNPC =
-/*#__PURE__*/
-function (_NPC) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default()(BoxNPC, _NPC);
+function _callSuper(t, o, e) { return o = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(o), _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(t, _isNativeReflectConstruct() ? Reflect.construct(o, e || [], _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(t).constructor) : o.apply(t, e)); }
+function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); } catch (t) {} return (_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
 
+var BoxNPC = /*#__PURE__*/function (_NPC) {
   function BoxNPC() {
-    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, BoxNPC);
-
-    return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_1___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_2___default()(BoxNPC).call(this));
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default()(this, BoxNPC);
+    return _callSuper(this, BoxNPC, arguments);
   }
-
-  return BoxNPC;
-}(_NPC__WEBPACK_IMPORTED_MODULE_4__["default"]);
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(BoxNPC, _NPC);
+  return _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_0___default()(BoxNPC);
+}(_NPC__WEBPACK_IMPORTED_MODULE_5__["default"]);
 
 /***/ }),
 
@@ -4500,12 +4009,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ConeNPC", function() { return ConeNPC; });
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
 /* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var three__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.min.js");
@@ -4517,44 +4026,35 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+function _callSuper(t, o, e) { return o = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(o), _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(t, _isNativeReflectConstruct() ? Reflect.construct(o, e || [], _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(t).constructor) : o.apply(t, e)); }
+function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); } catch (t) {} return (_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
 
 
 
-var ConeNPC =
-/*#__PURE__*/
-function (_NPC) {
+var ConeNPC = /*#__PURE__*/function (_NPC) {
+  function ConeNPC() {
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, ConeNPC);
+    return _callSuper(this, ConeNPC, arguments);
+  }
   _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(ConeNPC, _NPC);
-
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default()(ConeNPC, [{
+  return _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(ConeNPC, [{
     key: "size",
-
-    /** 尺寸 */
-    get: function get() {
+    get: /** 尺寸 */
+    function get() {
       return {
         width: _constant__WEBPACK_IMPORTED_MODULE_6__["NPC"].width / 3,
         height: _constant__WEBPACK_IMPORTED_MODULE_6__["NPC"].height * 2,
         depth: _constant__WEBPACK_IMPORTED_MODULE_6__["NPC"].width
       };
     }
-  }]);
-
-  function ConeNPC() {
-    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, ConeNPC);
-
-    return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_1___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_2___default()(ConeNPC).call(this));
-  }
-  /** 创建几何图形 */
-
-
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default()(ConeNPC, [{
+    /** 创建几何图形 */
+  }, {
     key: "createGeometry",
     value: function createGeometry() {
       var size = this.size;
       return new three__WEBPACK_IMPORTED_MODULE_5__["ConeGeometry"](size.width, size.height, size.height / 2);
     }
   }]);
-
-  return ConeNPC;
 }(_NPC__WEBPACK_IMPORTED_MODULE_7__["default"]);
 
 /***/ }),
@@ -4577,23 +4077,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var three__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.min.js");
 /* harmony import */ var three__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(three__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../util */ "./src/Game/util/index.ts");
-/* harmony import */ var _constant__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../constant */ "./src/Game/constant.ts");
+/* harmony import */ var _constant__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../constant */ "./src/Game/constant.ts");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../util */ "./src/Game/util/index.ts");
 
 
 
 
 
 
-
-var NPC =
-/*#__PURE__*/
-function () {
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(NPC, [{
+var NPC = /*#__PURE__*/function () {
+  function NPC() {
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, NPC);
+    /** 跑道序号 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "racetrackIndex", void 0);
+    /** 3D模型 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "mesh", void 0);
+    this.mesh = this.render();
+    this.racetrackIndex = this.position2RacetrackIndex(this.mesh.position.x);
+  }
+  /** 创建几何图形 */
+  return _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(NPC, [{
+    key: "size",
+    get: /** 尺寸 */
+    function get() {
+      return {
+        width: _constant__WEBPACK_IMPORTED_MODULE_4__["NPC"].width,
+        height: _constant__WEBPACK_IMPORTED_MODULE_4__["NPC"].height,
+        depth: _constant__WEBPACK_IMPORTED_MODULE_4__["NPC"].depth
+      };
+    }
+  }, {
     key: "render",
-
-    /** 渲染 */
-    value: function render() {
+    value: /** 渲染 */
+    function render() {
       var group = new three__WEBPACK_IMPORTED_MODULE_3__["Group"]();
       var geometry = this.createGeometry();
       var boxMaterial = new three__WEBPACK_IMPORTED_MODULE_3__["MeshBasicMaterial"]({
@@ -4617,7 +4133,6 @@ function () {
       return group;
     }
     /** 移动 */
-
   }, {
     key: "move",
     value: function move(params) {
@@ -4628,26 +4143,23 @@ function () {
       var playerMesh = player.mesh;
       var npcMesh = this.mesh;
       var npcMeshPosition = npcMesh.position;
-      var racetrackLength = _constant__WEBPACK_IMPORTED_MODULE_5__["RACETRACK"].height; // 三分之一的z坐标
-
-      var thirdPoint = -(racetrackLength - _constant__WEBPACK_IMPORTED_MODULE_5__["CAMERA"].z) / 1.5;
+      var racetrackLength = _constant__WEBPACK_IMPORTED_MODULE_4__["RACETRACK"].height;
+      // 三分之一的z坐标
+      var thirdPoint = -(racetrackLength - _constant__WEBPACK_IMPORTED_MODULE_4__["CAMERA"].z) / 1.5;
       var moveDistance = game.speed * Math.abs(racetrackLength) / game.fps;
-      npcMeshPosition.z += moveDistance; // 位移三分之一距离时，添加下一个NPC
-
+      npcMeshPosition.z += moveDistance;
+      // 位移三分之一距离时，添加下一个NPC
       if (npcMeshPosition.z - moveDistance <= thirdPoint && npcMeshPosition.z > thirdPoint) {
         addFn();
-      } // np的z坐标大于摄影机的z坐标，算越界
-
-
-      if (npcMeshPosition.z >= _constant__WEBPACK_IMPORTED_MODULE_5__["CAMERA"].z) {
+      }
+      // np的z坐标大于摄影机的z坐标，算越界
+      if (npcMeshPosition.z >= _constant__WEBPACK_IMPORTED_MODULE_4__["CAMERA"].z) {
         outFn();
       }
       /**
        * 碰撞检测
        * 同个赛道才需要检测碰撞，提高性能
        */
-
-
       if (player.racetrackIndex === this.racetrackIndex) {
         /**
          * AABB检测法
@@ -4655,24 +4167,22 @@ function () {
         var npcAABB = new three__WEBPACK_IMPORTED_MODULE_3__["Box3"]().setFromObject(npcMesh);
         var playerAABB = new three__WEBPACK_IMPORTED_MODULE_3__["Box3"]().setFromObject(playerMesh);
         var crashedTest = this.testAABB(npcAABB, playerAABB);
-        var crashedAtNextTicker = false; // 高速运动时，存在穿透的问题，需要预先计算下一帧会不会发生碰撞
-
+        var crashedAtNextTicker = false;
+        // 高速运动时，存在穿透的问题，需要预先计算下一帧会不会发生碰撞
         if (game.speed > 5 && npcAABB.max.z + moveDistance >= playerAABB.min.z) {
           crashedAtNextTicker = true;
-        } // 发生碰撞
-
-
+        }
+        // 发生碰撞
         if (crashedTest || crashedAtNextTicker) {
           // 纠正A、B之间的距离
           var rectifyDistance = playerAABB.min.z - npcAABB.max.z;
-          npcMeshPosition.z += rectifyDistance; // 游戏结束
-
+          npcMeshPosition.z += rectifyDistance;
+          // 游戏结束
           game.end();
         }
       }
     }
     /** 重置对象属性 */
-
   }, {
     key: "reset",
     value: function reset() {
@@ -4681,81 +4191,53 @@ function () {
       this.mesh.position.set(position.x, position.y, position.z);
     }
     /** 获取类名 */
-
   }, {
     key: "getConstructorName",
     value: function getConstructorName() {
       return this.constructor.name;
     }
   }, {
-    key: "size",
-
-    /** 尺寸 */
-    get: function get() {
-      return {
-        width: _constant__WEBPACK_IMPORTED_MODULE_5__["NPC"].width,
-        height: _constant__WEBPACK_IMPORTED_MODULE_5__["NPC"].height,
-        depth: _constant__WEBPACK_IMPORTED_MODULE_5__["NPC"].depth
-      };
-    }
-    /** 跑道序号 */
-
-  }]);
-
-  function NPC() {
-    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, NPC);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "racetrackIndex", void 0);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "mesh", void 0);
-
-    this.mesh = this.render();
-    this.racetrackIndex = this.position2RacetrackIndex(this.mesh.position.x);
-  }
-  /** 创建几何图形 */
-
-
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(NPC, [{
     key: "createGeometry",
     value: function createGeometry() {
       var size = this.size;
       return new three__WEBPACK_IMPORTED_MODULE_3__["BoxGeometry"](size.width, size.height, size.depth);
     }
     /** 生成npc位置信息 */
-
   }, {
     key: "generatePosition",
     value: function generatePosition() {
       var size = this.size;
       return {
-        x: _constant__WEBPACK_IMPORTED_MODULE_5__["RACETRACK"].width / _constant__WEBPACK_IMPORTED_MODULE_5__["RACETRACK"].segments * _util__WEBPACK_IMPORTED_MODULE_4__["rnd"](-2, 2, true),
-        y: size.height / 2 - _constant__WEBPACK_IMPORTED_MODULE_5__["PLAYER"].height / 2,
+        x: _constant__WEBPACK_IMPORTED_MODULE_4__["RACETRACK"].width / _constant__WEBPACK_IMPORTED_MODULE_4__["RACETRACK"].segments * _util__WEBPACK_IMPORTED_MODULE_5__["rnd"](-2, 2, true),
+        y: size.height / 2 - _constant__WEBPACK_IMPORTED_MODULE_4__["PLAYER"].height / 2,
         // 起始点边界外
-        z: _constant__WEBPACK_IMPORTED_MODULE_5__["BOUNDARY"].zEnd - size.depth / 2
+        z: _constant__WEBPACK_IMPORTED_MODULE_4__["BOUNDARY"].zEnd - size.depth / 2
       };
     }
     /** 根据位置确定跑道序号 */
-
   }, {
     key: "position2RacetrackIndex",
     value: function position2RacetrackIndex(x) {
-      return x / (_constant__WEBPACK_IMPORTED_MODULE_5__["RACETRACK"].width / _constant__WEBPACK_IMPORTED_MODULE_5__["RACETRACK"].segments);
+      return x / (_constant__WEBPACK_IMPORTED_MODULE_4__["RACETRACK"].width / _constant__WEBPACK_IMPORTED_MODULE_4__["RACETRACK"].segments);
     }
     /**
      * AABB包围盒测试法
      * @see https://developer.mozilla.org/zh-CN/docs/Games/Techniques/3D_collision_detection
      */
-
   }, {
     key: "testAABB",
     value: function testAABB(A, B) {
       return A.min.x <= B.max.x && A.max.x >= B.min.x && A.min.y <= B.max.y && A.max.y >= B.min.y && A.min.z <= B.max.z && A.max.z >= B.min.z;
     }
+    /** 销毁 */
+  }, {
+    key: "destroy",
+    value: function destroy() {
+      var scene = this.mesh.parent;
+      scene.remove(this.mesh);
+    }
   }]);
-
-  return NPC;
 }();
-
 
 
 /***/ }),
@@ -4776,10 +4258,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.min.js");
-/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(three__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @tweenjs/tween.js */ "./node_modules/@tweenjs/tween.js/src/Tween.js");
-/* harmony import */ var _tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @tweenjs/tween.js */ "./node_modules/@tweenjs/tween.js/src/Tween.js");
+/* harmony import */ var _tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.min.js");
+/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(three__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _constant__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../constant */ "./src/Game/constant.ts");
 
 
@@ -4787,82 +4269,98 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 /** 游戏主角 */
-var Player =
-/*#__PURE__*/
-function () {
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Player, [{
-    key: "render",
-
+var Player = /*#__PURE__*/function () {
+  function Player(params) {
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Player);
     /** 游戏类 */
-
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "game", void 0);
     /** 弹跳补间动画 */
-
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "bounceTween", new _tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_3__["Group"]());
     /** 跳跃补间动画 */
-
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "jumpTween", new _tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_3__["Group"]());
     /** 位移补间动画 */
-
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "moveTween", new _tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_3__["Group"]());
     /** 尺寸 */
-
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "size", {
+      width: _constant__WEBPACK_IMPORTED_MODULE_5__["PLAYER"].width,
+      height: _constant__WEBPACK_IMPORTED_MODULE_5__["PLAYER"].height,
+      depth: _constant__WEBPACK_IMPORTED_MODULE_5__["PLAYER"].depth
+    });
     /** 3D模型 */
-
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "mesh", void 0);
     /** 跑道序号 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "racetrackIndex", 0);
+    var game = params.game;
+    this.mesh = this.render();
+    this.bounce();
+    this.game = game;
+    this.bindGamePadEvent();
+  }
+  return _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Player, [{
+    key: "render",
     value: function render() {
       var size = this.size;
-      var group = new three__WEBPACK_IMPORTED_MODULE_3__["Group"]();
-      var boxGeometry = new three__WEBPACK_IMPORTED_MODULE_3__["BoxGeometry"](size.width, size.height, size.depth);
-      var boxMaterial = new three__WEBPACK_IMPORTED_MODULE_3__["MeshBasicMaterial"]({
+      var group = new three__WEBPACK_IMPORTED_MODULE_4__["Group"]();
+      var boxGeometry = new three__WEBPACK_IMPORTED_MODULE_4__["BoxGeometry"](size.width, size.height, size.depth);
+      var boxMaterial = new three__WEBPACK_IMPORTED_MODULE_4__["MeshBasicMaterial"]({
         color: 0xe67e22,
         transparent: true,
         opacity: 0.75
       });
-      var lineMaterial = new three__WEBPACK_IMPORTED_MODULE_3__["LineBasicMaterial"]({
+      var lineMaterial = new three__WEBPACK_IMPORTED_MODULE_4__["LineBasicMaterial"]({
         color: 0xffffff,
         transparent: true,
         opacity: 0.65
       });
-      var edgesGeometry = new three__WEBPACK_IMPORTED_MODULE_3__["EdgesGeometry"](boxGeometry);
-      var line = new three__WEBPACK_IMPORTED_MODULE_3__["LineSegments"](edgesGeometry, lineMaterial);
-      var box = new three__WEBPACK_IMPORTED_MODULE_3__["Mesh"](boxGeometry, boxMaterial);
+      var edgesGeometry = new three__WEBPACK_IMPORTED_MODULE_4__["EdgesGeometry"](boxGeometry);
+      var line = new three__WEBPACK_IMPORTED_MODULE_4__["LineSegments"](edgesGeometry, lineMaterial);
+      var box = new three__WEBPACK_IMPORTED_MODULE_4__["Mesh"](boxGeometry, boxMaterial);
       group.add(line);
       group.add(box);
       return group;
     }
+    /** 重置 */
+  }, {
+    key: "reset",
+    value: function reset() {
+      this.mesh.position.set(0, 0, 0);
+      this.mesh.rotation.set(0, 0, 0);
+      this.bounce();
+      this.racetrackIndex = 0;
+    }
+    /** 更新Tween */
   }, {
     key: "update",
     value: function update() {
-      if (!this.game.silent) {
-        this.bounceTween.update();
-      }
-
+      this.bounceTween.update();
       if (this.game.isPlaying) {
         this.jumpTween.update();
         this.moveTween.update();
       }
     }
     /** 弹跳 */
-
   }, {
     key: "bounce",
     value: function bounce() {
       var meshPosition = this.mesh.position;
       var bounceTween = this.bounceTween;
       var durations = 500;
-      var jumpHeight = this.size.height; // 跳跃
-
-      var bounceTweenStep1 = new _tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_4__["Tween"](meshPosition, bounceTween).to({
+      var jumpHeight = this.size.height;
+      bounceTween.removeAll();
+      // 跳跃
+      var bounceTweenStep1 = new _tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_3__["Tween"](meshPosition, bounceTween).to({
         y: jumpHeight
-      }, durations / 2).easing(_tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_4__["Easing"].Quadratic.Out).start();
-      var bounceTweenStep2 = new _tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_4__["Tween"](meshPosition, bounceTween).to({
+      }, durations / 2).easing(_tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_3__["Easing"].Quadratic.Out).start();
+      // 落下
+      var bounceTweenStep2 = new _tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_3__["Tween"](meshPosition, bounceTween).to({
         y: 0
-      }, durations / 2).easing(_tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_4__["Easing"].Quadratic.In);
+      }, durations / 2).easing(_tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_3__["Easing"].Quadratic.In);
       bounceTweenStep1.chain(bounceTweenStep2);
       bounceTweenStep2.chain(bounceTweenStep1);
       bounceTweenStep1.start();
     }
     /** 跳跃 */
-
   }, {
     key: "jump",
     value: function jump(params) {
@@ -4872,28 +4370,24 @@ function () {
       var jumpTween = this.jumpTween;
       var jumpHeight = this.size.height * 3;
       var durations = 700;
-
       if (bounceTween.getAll().length) {
         bounceTween.removeAll();
       }
-
       if (jumpTween.getAll().length) {
         return;
-      } // 翻转动画
-
-
-      new _tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_4__["Tween"](meshRotation, jumpTween).to({
+      }
+      // 翻转动画
+      new _tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_3__["Tween"](meshRotation, jumpTween).to({
         x: meshRotation.x - Math.PI
-      }, durations).easing(_tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_4__["Easing"].Quadratic.Out).start(); // 跳跃
-
-      new _tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_4__["Tween"](meshPosition, jumpTween).to({
+      }, durations).easing(_tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_3__["Easing"].Quadratic.Out).start();
+      // 跳跃
+      new _tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_3__["Tween"](meshPosition, jumpTween).to({
         y: jumpHeight
-      }, durations / 2).chain(new _tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_4__["Tween"](meshPosition, jumpTween).to({
+      }, durations / 2).chain(new _tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_3__["Tween"](meshPosition, jumpTween).to({
         y: 0
-      }, durations / 2).easing(_tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_4__["Easing"].Quadratic.In).onComplete(params.callback)).easing(_tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_4__["Easing"].Quadratic.Out).start();
+      }, durations / 2).easing(_tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_3__["Easing"].Quadratic.In).onComplete(params.callback)).easing(_tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_3__["Easing"].Quadratic.Out).start();
     }
     /** 移动动画 */
-
   }, {
     key: "move",
     value: function move(params) {
@@ -4902,7 +4396,6 @@ function () {
       var moveTween = this.moveTween;
       var durations = 200;
       var moveDistance = 0;
-
       if (direction === 'LEFT' && this.racetrackIndex > -2) {
         moveDistance = -_constant__WEBPACK_IMPORTED_MODULE_5__["RACETRACK"].segmentWidth;
         this.racetrackIndex -= 1;
@@ -4910,70 +4403,36 @@ function () {
         moveDistance = _constant__WEBPACK_IMPORTED_MODULE_5__["RACETRACK"].segmentWidth;
         this.racetrackIndex += 1;
       }
-
-      new _tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_4__["Tween"](meshPosition, moveTween).to({
+      new _tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_3__["Tween"](meshPosition, moveTween).to({
         x: meshPosition.x + moveDistance
-      }, durations).easing(_tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_4__["Easing"].Back.Out).onComplete(params.callback).start();
+      }, durations).easing(_tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_3__["Easing"].Back.Out).onComplete(params.callback).start();
     }
-  }]);
-
-  function Player(params) {
-    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Player);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "game", void 0);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "bounceTween", new _tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_4__["Group"]());
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "jumpTween", new _tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_4__["Group"]());
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "moveTween", new _tweenjs_tween_js__WEBPACK_IMPORTED_MODULE_4__["Group"]());
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "size", {
-      width: _constant__WEBPACK_IMPORTED_MODULE_5__["PLAYER"].width,
-      height: _constant__WEBPACK_IMPORTED_MODULE_5__["PLAYER"].height,
-      depth: _constant__WEBPACK_IMPORTED_MODULE_5__["PLAYER"].depth
-    });
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "mesh", void 0);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "racetrackIndex", 0);
-
-    var game = params.game;
-    this.mesh = this.render();
-    this.bounce();
-    this.game = game;
-    this.bindGamePadEvent();
-  }
-  /** 监听事件 */
-
-
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Player, [{
+    /** 监听事件 */
+  }, {
     key: "bindGamePadEvent",
     value: function bindGamePadEvent() {
       var _this = this;
-
       // 滑动
       this.game.emitter.addListener(_constant__WEBPACK_IMPORTED_MODULE_5__["EVENTS"].SLIDE, function (_ref) {
         var direction = _ref.direction;
-
         if (_this.game.isPlaying) {
           _this.move({
             direction: direction,
             callback: function callback() {
               _this.moveTween.removeAll();
-
               _this.mesh.position.x = _this.racetrackIndex2Position(_this.racetrackIndex);
             }
           });
         }
-      }); // 点击
-
+      });
+      // 点击
       this.game.emitter.addListener(_constant__WEBPACK_IMPORTED_MODULE_5__["EVENTS"].TAP, function () {
         if (_this.game.isPlaying) {
+          // 短振动
+          wx.vibrateShort();
           _this.jump({
             callback: function callback() {
               _this.jumpTween.removeAll();
-
               _this.bounce();
             }
           });
@@ -4981,17 +4440,13 @@ function () {
       });
     }
     /** 根据位置确定跑道序号 */
-
   }, {
     key: "racetrackIndex2Position",
     value: function racetrackIndex2Position(index) {
       return _constant__WEBPACK_IMPORTED_MODULE_5__["RACETRACK"].width / _constant__WEBPACK_IMPORTED_MODULE_5__["RACETRACK"].segments * index;
     }
   }]);
-
-  return Player;
 }();
-
 
 
 /***/ }),
@@ -5015,58 +4470,51 @@ __webpack_require__.r(__webpack_exports__);
 var __ = {
   poolDic: Symbol('poolDic')
 };
-
 /**
  * 简易的对象池实现
  * 用于对象的存贮和重复使用
  * 可以有效减少对象创建开销和避免频繁的垃圾回收
  * 提高游戏性能
  */
-var Pool =
-/*#__PURE__*/
-function () {
+var Pool = /*#__PURE__*/function () {
   function Pool() {
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Pool);
-
     this[__.poolDic] = {};
   }
   /**
    * 根据对象标识符
    * 获取对应的对象池
    */
-
-
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Pool, [{
+  return _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Pool, [{
     key: "getPoolBySign",
     value: function getPoolBySign(name) {
-      return this[__.poolDic][name] || (this[__.poolDic][name] = []);
+      var sign = this[__.poolDic][name];
+      if (!sign) {
+        this[__.poolDic][name] = [];
+      }
+      return sign;
     }
     /**
      * 根据传入的对象标识符，查询对象池
      * 对象池为空创建新的类，否则从对象池中取
      */
-
   }, {
     key: "getItemByClass",
-    value: function getItemByClass(name, className) {
+    value: function getItemByClass(name, ClsName) {
       var pool = this.getPoolBySign(name);
-      return pool.length ? pool.shift() : new className();
+      return pool.length ? pool.shift() : new ClsName();
     }
     /**
      * 将对象回收到对象池
      * 方便后续继续使用
      */
-
   }, {
     key: "recover",
     value: function recover(name, instance) {
       this.getPoolBySign(name).push(instance);
     }
   }]);
-
-  return Pool;
 }();
-
 
 
 /***/ }),
@@ -5095,18 +4543,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 /** 游戏跑道 */
-var Racetrack =
-/*#__PURE__*/
-function () {
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Racetrack, [{
+var Racetrack = /*#__PURE__*/function () {
+  function Racetrack() {
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Racetrack);
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "mesh", void 0);
+    this.mesh = this.render();
+  }
+  return _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Racetrack, [{
     key: "update",
     value: function update(params) {
       var game = params.game;
-      var map = this.mesh.material['map'];
-      var repeat = 10; // typical range is 0.0 to 1.0
-
+      var material = this.mesh.material;
+      var map = material.map;
+      var repeat = 10;
+      // typical range is 0.0 to 1.0
       map.offset.y += game.speed * 1 / game.fps * repeat;
       map.repeat.y = repeat;
     }
@@ -5122,43 +4573,172 @@ function () {
        * NearestFilter是openGL的概念，表示临近过滤，默认值是LinearFilter，会糊掉纹理图片
        * @see https://learnopengl-cn.github.io/01%20Getting%20started/06%20Textures/
        */
-
-      racetrackMaterial.map.magFilter = three__WEBPACK_IMPORTED_MODULE_3__["NearestFilter"]; // 表示y轴的纹理回环方式
-
+      racetrackMaterial.map.magFilter = three__WEBPACK_IMPORTED_MODULE_3__["NearestFilter"];
+      // 表示y轴的纹理回环方式
       racetrackMaterial.map.wrapT = three__WEBPACK_IMPORTED_MODULE_3__["RepeatWrapping"];
       var plane = new three__WEBPACK_IMPORTED_MODULE_3__["Mesh"](racetrackGeometry, racetrackMaterial);
       plane.rotation.set(three__WEBPACK_IMPORTED_MODULE_3__["Math"].degToRad(-90), 0, 0);
       plane.position.set(0, _constant__WEBPACK_IMPORTED_MODULE_4__["RACETRACK"].y, -_constant__WEBPACK_IMPORTED_MODULE_4__["RACETRACK"].height / 2 + _constant__WEBPACK_IMPORTED_MODULE_4__["CAMERA"].z);
       return plane;
     }
-  }]);
-
-  function Racetrack() {
-    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Racetrack);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "mesh", void 0);
-
-    this.mesh = this.render();
-  }
-
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Racetrack, [{
+  }, {
     key: "getTexture",
     value: function getTexture() {
       var image = wx.createImage();
       var texture = new three__WEBPACK_IMPORTED_MODULE_3__["Texture"](image);
-
       image.onload = function () {
         texture.needsUpdate = true;
       };
-
       image.src = 'assets/img/racetrack-texture.png';
       return texture;
     }
   }]);
-
-  return Racetrack;
 }();
 
+
+/***/ }),
+
+/***/ "./src/Game/Rank/index.ts":
+/*!********************************!*\
+  !*** ./src/Game/Rank/index.ts ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Rank; });
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.min.js");
+/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(three__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _openDataContext_commandType__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../openDataContext/commandType */ "./src/openDataContext/commandType.ts");
+/* harmony import */ var _constant__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../constant */ "./src/Game/constant.ts");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../util */ "./src/Game/util/index.ts");
+
+
+
+
+
+
+
+var Rank = /*#__PURE__*/function () {
+  function Rank(params) {
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Rank);
+    /** 帧 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "frame", 0);
+    /** rafId */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "aniId", null);
+    /** 游戏类 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "game", void 0);
+    /** 字体 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "font", void 0);
+    /** 宽度 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "width", 36);
+    /** 高度 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "height", 66);
+    /** 3D模型 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "mesh", void 0);
+    var game = params.game;
+    this.game = game;
+    this.font = game.font;
+    this.mesh = this.render();
+    this.addTapEvent();
+    this.update();
+  }
+  /** 定时器，更新texture */
+  return _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Rank, [{
+    key: "update",
+    value: function update() {
+      this.frame += 1;
+      if (this.frame % 30 === 0) {
+        var texture = this.getTexture();
+        var material = this.mesh.material;
+        material.map = texture;
+      }
+      this.aniId = window.requestAnimationFrame(this.update.bind(this));
+    }
+    /** 渲染 */
+  }, {
+    key: "render",
+    value: function render() {
+      var width = this.width;
+      var height = this.height;
+      var position = {
+        x: 0,
+        y: _constant__WEBPACK_IMPORTED_MODULE_5__["CAMERA"].y + 4
+      };
+      var texture = this.getTexture();
+      var material = new three__WEBPACK_IMPORTED_MODULE_3__["MeshBasicMaterial"]({
+        map: texture,
+        depthTest: false,
+        transparent: true
+      });
+      var geometry = new three__WEBPACK_IMPORTED_MODULE_3__["PlaneGeometry"](width, height);
+      var mesh = new three__WEBPACK_IMPORTED_MODULE_3__["Mesh"](geometry, material);
+      mesh.position.set(position.x, position.y, 0);
+      return mesh;
+    }
+    /** 排行榜离屏画布 */
+  }, {
+    key: "getTexture",
+    value: function getTexture() {
+      var openDataContext = wx.getOpenDataContext();
+      var canvas2d = openDataContext.canvas;
+      var sizeRatio = this.width / this.height;
+      var ratio = _constant__WEBPACK_IMPORTED_MODULE_5__["RATIO"];
+      var width = _constant__WEBPACK_IMPORTED_MODULE_5__["SCREEN_WIDTH"];
+      var height = width / sizeRatio;
+      canvas2d.width = width * ratio;
+      canvas2d.height = height * ratio;
+      var message = {
+        cmd: _openDataContext_commandType__WEBPACK_IMPORTED_MODULE_4__["CommandType"].RANK_RENDER,
+        data: {
+          ratio: ratio,
+          width: width,
+          height: height,
+          radius: 6,
+          count: 10,
+          titleFontSize: 30,
+          titleHeight: 100,
+          itemHeight: 52,
+          itemFontSize: 22,
+          orderFontSize: 26,
+          scoreFontSize: 26,
+          font: this.font,
+          backgroundColor: '#333333',
+          borderColor: '#444444',
+          titleColor: '#ffffff',
+          opacity: 0.9
+        }
+      };
+      _util__WEBPACK_IMPORTED_MODULE_6__["sendCommandToOpenDataContext"](message);
+      var texture = new three__WEBPACK_IMPORTED_MODULE_3__["CanvasTexture"](canvas2d);
+      texture.minFilter = three__WEBPACK_IMPORTED_MODULE_3__["LinearFilter"];
+      texture.needsUpdate = true;
+      return texture;
+    }
+    /** 添加关闭排行榜关闭的事件 */
+  }, {
+    key: "addTapEvent",
+    value: function addTapEvent() {
+      var _this = this;
+      this.game.emitter.once(_constant__WEBPACK_IMPORTED_MODULE_5__["EVENTS"].TAP, function () {
+        _this.game.showMenu();
+        _this.game.closeRank();
+        cancelAnimationFrame(_this.aniId);
+        _util__WEBPACK_IMPORTED_MODULE_6__["sendCommandToOpenDataContext"]({
+          cmd: _openDataContext_commandType__WEBPACK_IMPORTED_MODULE_4__["CommandType"].RANK_DESTROY,
+          data: null
+        });
+      });
+    }
+  }]);
+}();
 
 
 /***/ }),
@@ -5173,16 +4753,16 @@ function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Score; });
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/asyncToGenerator.js");
-/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/asyncToGenerator.js");
+/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var three__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.min.js");
 /* harmony import */ var three__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(three__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _constant__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../constant */ "./src/Game/constant.ts");
@@ -5193,139 +4773,87 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-var Score =
-/*#__PURE__*/
-function () {
-  /** 游戏类 */
-
-  /** 3D模型 */
-
-  /** 分数值 */
-
-  /** 分数递增值 */
+var Score = /*#__PURE__*/function () {
   function Score(params) {
-    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default()(this, Score);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default()(this, "game", void 0);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default()(this, "mesh", void 0);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default()(this, "value", 0);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default()(this, "increase", 10);
-
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default()(this, Score);
+    /** 游戏类 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default()(this, "game", void 0);
+    /** 3D模型 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default()(this, "mesh", void 0);
+    /** 分数值 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default()(this, "value", 0);
+    /** 分数递增值 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default()(this, "increase", 10);
     var game = params.game;
     this.game = game;
   }
   /** 更新 */
-
-
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default()(Score, [{
+  return _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default()(Score, [{
     key: "update",
     value: function update() {
-      this.value += this.increase; // 分数每+2000，速度提升0.02
-
+      this.value += this.increase;
+      // 分数每+2000，速度提升0.02
       if (this.value % 2000 === 0) {
         this.game.speed += 0.02;
       }
-
       this.updateTexture();
     }
     /** 渲染 */
-
   }, {
     key: "render",
-    value: function () {
-      var _render = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()(
-      /*#__PURE__*/
-      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
-        var _this = this;
-
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
-          while (1) {
-            switch (_context2.prev = _context2.next) {
-              case 0:
-                return _context2.abrupt("return", new Promise(
-                /*#__PURE__*/
-                function () {
-                  var _ref = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()(
-                  /*#__PURE__*/
-                  _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(resolve) {
-                    var group, _ref2, img, width, height, texture, numberWidth, numberHeight, scoreNumberArray, totalWidthHalf, geometry, material, mesh;
-
-                    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-                      while (1) {
-                        switch (_context.prev = _context.next) {
-                          case 0:
-                            group = new three__WEBPACK_IMPORTED_MODULE_5__["Group"]();
-                            _context.next = 3;
-                            return _this.getNumberImage();
-
-                          case 3:
-                            _ref2 = _context.sent;
-                            img = _ref2.img;
-                            width = _ref2.width;
-                            height = _ref2.height;
-                            texture = _this.getTexture(img);
-                            numberWidth = _constant__WEBPACK_IMPORTED_MODULE_6__["SCORE"].width;
-                            numberHeight = numberWidth * (height / 10 / width);
-                            scoreNumberArray = '0000000000'.split('');
-                            totalWidthHalf = numberWidth * scoreNumberArray.length / 2;
-                            geometry = new three__WEBPACK_IMPORTED_MODULE_5__["PlaneGeometry"](numberWidth, numberHeight);
-                            material = new three__WEBPACK_IMPORTED_MODULE_5__["MeshBasicMaterial"]({
-                              map: texture,
-                              transparent: true,
-                              depthTest: false
-                            });
-                            mesh = new three__WEBPACK_IMPORTED_MODULE_5__["Mesh"](geometry, material);
-                            mesh.visible = false;
-                            scoreNumberArray.forEach(function (item, i) {
-                              var newMaterial = material.clone();
-                              var newMesh = mesh.clone();
-                              newMaterial.map = texture.clone();
-                              newMaterial.map.needsUpdate = true;
-                              newMesh.material = newMaterial;
-                              newMesh.position.set(numberWidth * i - totalWidthHalf + numberWidth / 2, _constant__WEBPACK_IMPORTED_MODULE_6__["SCORE"].y, 0);
-                              group.add(newMesh);
-                            });
-                            resolve(group);
-
-                          case 18:
-                          case "end":
-                            return _context.stop();
-                        }
-                      }
-                    }, _callee, this);
-                  }));
-
-                  return function (_x) {
-                    return _ref.apply(this, arguments);
-                  };
-                }()));
-
-              case 1:
-              case "end":
-                return _context2.stop();
-            }
+    value: (function () {
+      var _render = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_4___default.a.mark(function _callee() {
+        var group, _yield$this$getNumber, img, width, height, texture, numberWidth, numberHeight, scoreNumberArray, totalWidthHalf, geometry, material, mesh;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_4___default.a.wrap(function _callee$(_context) {
+          while (1) switch (_context.prev = _context.next) {
+            case 0:
+              group = new three__WEBPACK_IMPORTED_MODULE_5__["Group"]();
+              _context.next = 3;
+              return this.getNumberImage();
+            case 3:
+              _yield$this$getNumber = _context.sent;
+              img = _yield$this$getNumber.img;
+              width = _yield$this$getNumber.width;
+              height = _yield$this$getNumber.height;
+              texture = this.getTexture(img);
+              numberWidth = _constant__WEBPACK_IMPORTED_MODULE_6__["SCORE"].width;
+              numberHeight = numberWidth * (height / 10 / width);
+              scoreNumberArray = '0000000000'.split('');
+              totalWidthHalf = numberWidth * scoreNumberArray.length / 2;
+              geometry = new three__WEBPACK_IMPORTED_MODULE_5__["PlaneGeometry"](numberWidth, numberHeight);
+              material = new three__WEBPACK_IMPORTED_MODULE_5__["MeshBasicMaterial"]({
+                map: texture,
+                transparent: true,
+                depthTest: false
+              });
+              mesh = new three__WEBPACK_IMPORTED_MODULE_5__["Mesh"](geometry, material);
+              mesh.visible = false;
+              scoreNumberArray.forEach(function (item, i) {
+                var newMaterial = material.clone();
+                var newMesh = mesh.clone();
+                newMaterial.map = texture.clone();
+                newMaterial.map.needsUpdate = true;
+                newMesh.material = newMaterial;
+                newMesh.position.set(numberWidth * i - totalWidthHalf + numberWidth / 2, _constant__WEBPACK_IMPORTED_MODULE_6__["SCORE"].y, 0);
+                group.add(newMesh);
+              });
+              return _context.abrupt("return", group);
+            case 18:
+            case "end":
+              return _context.stop();
           }
-        }, _callee2, this);
+        }, _callee, this);
       }));
-
       function render() {
         return _render.apply(this, arguments);
       }
-
       return render;
-    }()
-    /** 获取数字图片 */
-
+    }() /** 获取数字图片 */)
   }, {
     key: "getNumberImage",
     value: function getNumberImage() {
       return new Promise(function (resolve) {
         var image = wx.createImage();
-
         image.onload = function () {
           resolve({
             img: image,
@@ -5333,12 +4861,10 @@ function () {
             height: image.height
           });
         };
-
         image.src = 'assets/img/number-texture.png';
       });
     }
     /** 获取纹理图片 */
-
   }, {
     key: "getTexture",
     value: function getTexture(img) {
@@ -5350,7 +4876,6 @@ function () {
       return texture;
     }
     /** 更新纹理图片 */
-
   }, {
     key: "updateTexture",
     value: function updateTexture() {
@@ -5361,29 +4886,404 @@ function () {
         var numberWidth = _constant__WEBPACK_IMPORTED_MODULE_6__["SCORE"].width;
         var meshWidthHalf = meshList.length * numberWidth / 2;
         var scoreWidthHalf = scoreNumberArray.length * numberWidth / 2;
-
         for (var i = scoreNumberArray.length - 1; i >= 0; i -= 1) {
           var number = Number(scoreNumberArray[i]);
-          var _mesh = meshList[i];
-          var map = _mesh['material'].map;
-          _mesh.visible = true; // 个位数不更新
-
+          var mesh = meshList[i];
+          var material = mesh.material;
+          var map = material.map;
+          mesh.visible = true;
+          // 个位数不更新
           if (i === scoreNumberArray.length - 1) {
             continue;
           }
-
           map.offset.y = 1 - (number + 1) * 0.1;
-        } // 居中meshGroup
-
-
+        }
+        // 居中meshGroup
         this.mesh.position.x = meshWidthHalf - scoreWidthHalf;
       }
     }
+    /** 销毁分数 */
+  }, {
+    key: "destroy",
+    value: function destroy() {
+      var scene = this.mesh.parent;
+      scene.remove(this.mesh);
+    }
   }]);
-
-  return Score;
 }();
 
+
+/***/ }),
+
+/***/ "./src/Game/Settlement/index.ts":
+/*!**************************************!*\
+  !*** ./src/Game/Settlement/index.ts ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Settlement; });
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.min.js");
+/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(three__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _openDataContext_commandType__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../openDataContext/commandType */ "./src/openDataContext/commandType.ts");
+/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Button */ "./src/Game/Button/index.ts");
+/* harmony import */ var _constant__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../constant */ "./src/Game/constant.ts");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../util */ "./src/Game/util/index.ts");
+
+
+
+
+
+
+
+
+var Settlement = /*#__PURE__*/function () {
+  function Settlement(params) {
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Settlement);
+    /** 帧 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "frame", 0);
+    /** rafId */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "aniId", null);
+    /** 3D模型 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "mesh", void 0);
+    /** 游戏类 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "game", void 0);
+    /** 字体 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "font", void 0);
+    /** 分数 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "score", void 0);
+    /** 宽度 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "width", 36);
+    /** 高度 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "mainHeight", 38);
+    /** 按钮部分高度 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "rankButtonHeight", 5);
+    /** 结算区域网格 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "mainMesh", void 0);
+    /** 排行榜按钮 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "rankButton", void 0);
+    /** 分享按钮 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "shareButton", void 0);
+    /** 回到主菜单按钮 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "homeButton", void 0);
+    var game = params.game,
+      score = params.score;
+    this.game = game;
+    this.score = score;
+    this.font = game.font;
+    this.mesh = this.render();
+    this.update();
+  }
+  /** 定时器，更新texture */
+  return _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Settlement, [{
+    key: "update",
+    value: function update() {
+      this.frame += 1;
+      if (this.frame % 30 === 0) {
+        var texture = this.getMainTexture();
+        var material = this.mainMesh.material;
+        material.map = texture;
+      }
+      this.aniId = window.requestAnimationFrame(this.update.bind(this));
+    }
+    /** 渲染 */
+  }, {
+    key: "render",
+    value: function render() {
+      var group = new three__WEBPACK_IMPORTED_MODULE_3__["Group"]();
+      var maskMesh = this.renderMask();
+      this.mainMesh = this.renderMain();
+      this.rankButton = this.renderRankButton();
+      this.shareButton = this.renderShareButton();
+      this.homeButton = this.renderHomeButton();
+      group.add(maskMesh);
+      group.add(this.mainMesh);
+      group.add(this.rankButton.mesh);
+      group.add(this.shareButton.mesh);
+      group.add(this.homeButton.mesh);
+      return group;
+    }
+    /** 遮罩层 */
+  }, {
+    key: "renderMask",
+    value: function renderMask() {
+      var visibleSize = _util__WEBPACK_IMPORTED_MODULE_7__["getVisibleSize"]();
+      var material = new three__WEBPACK_IMPORTED_MODULE_3__["MeshBasicMaterial"]({
+        color: 0x000000,
+        opacity: 0.65,
+        transparent: true,
+        depthTest: false
+      });
+      var geometry = new three__WEBPACK_IMPORTED_MODULE_3__["PlaneGeometry"](visibleSize.width, visibleSize.height);
+      var mesh = new three__WEBPACK_IMPORTED_MODULE_3__["Mesh"](geometry, material);
+      mesh.position.y = _constant__WEBPACK_IMPORTED_MODULE_6__["CAMERA"].y;
+      return mesh;
+    }
+    /** 渲染结算部分 */
+  }, {
+    key: "renderMain",
+    value: function renderMain() {
+      var width = this.width;
+      var height = this.mainHeight;
+      var texture = this.getMainTexture();
+      var material = new three__WEBPACK_IMPORTED_MODULE_3__["MeshBasicMaterial"]({
+        map: texture,
+        depthTest: false,
+        transparent: true
+      });
+      var geometry = new three__WEBPACK_IMPORTED_MODULE_3__["PlaneGeometry"](width, height);
+      var mesh = new three__WEBPACK_IMPORTED_MODULE_3__["Mesh"](geometry, material);
+      mesh.position.y = 42;
+      return mesh;
+    }
+    /** 获取结算的离屏canvas */
+  }, {
+    key: "getMainTexture",
+    value: function getMainTexture() {
+      var openDataContext = wx.getOpenDataContext();
+      var canvas2d = openDataContext.canvas;
+      var sizeRatio = this.width / this.mainHeight;
+      var score = this.score;
+      var ratio = _constant__WEBPACK_IMPORTED_MODULE_6__["RATIO"];
+      var width = _constant__WEBPACK_IMPORTED_MODULE_6__["SCREEN_WIDTH"];
+      var height = width / sizeRatio;
+      canvas2d.width = width * ratio;
+      canvas2d.height = height * ratio;
+      var message = {
+        cmd: _openDataContext_commandType__WEBPACK_IMPORTED_MODULE_4__["CommandType"].SETTLEMENT_RENDER,
+        data: {
+          ratio: ratio,
+          width: width,
+          height: height,
+          font: this.font,
+          openId: this.game.openId,
+          title: {
+            fontSize: 24,
+            y: 10
+          },
+          score: {
+            value: score,
+            fontSize: 60,
+            y: 50
+          },
+          rect: {
+            height: 250,
+            y: 150
+          },
+          itemRect: {
+            height: 250,
+            width: width / 3,
+            backgroundColor: '#333333',
+            activeBackgroundColor: '#444444',
+            y: 150,
+            order: {
+              fontSize: 30,
+              y: 20,
+              color: '#ffffff'
+            },
+            avatar: {
+              x: 28,
+              y: 70
+            },
+            nickname: {
+              y: 140,
+              fontSize: 18,
+              color: '#ffffff'
+            },
+            score: {
+              y: 190,
+              fontSize: 30,
+              color: '#ffffff'
+            }
+          },
+          tip: {
+            fontSize: 24,
+            y: 170
+          },
+          backgroundColor: '#333333',
+          borderColor: '#555555',
+          opacity: 0.85
+        }
+      };
+      _util__WEBPACK_IMPORTED_MODULE_7__["sendCommandToOpenDataContext"](message);
+      var texture = new three__WEBPACK_IMPORTED_MODULE_3__["CanvasTexture"](canvas2d);
+      texture.minFilter = three__WEBPACK_IMPORTED_MODULE_3__["LinearFilter"];
+      texture.needsUpdate = true;
+      return texture;
+    }
+    /** 渲染按钮 */
+  }, {
+    key: "renderRankButton",
+    value: function renderRankButton() {
+      var _this = this;
+      var sizeRatio = this.width / this.rankButtonHeight;
+      var width = this.width;
+      var height = width / sizeRatio;
+      return new _Button__WEBPACK_IMPORTED_MODULE_5__["default"]({
+        width: width,
+        height: height,
+        position: {
+          x: 0,
+          y: 20.5
+        },
+        radius: 0,
+        text: "\uE6F1\xA0 \u67E5\u770B\u6392\u884C\u699C",
+        fontFamily: this.font,
+        fontSize: 20,
+        color: '#ffffff',
+        backgroundColor: '#333333',
+        borderColor: '#555555',
+        opacity: 0.85,
+        game: this.game,
+        callback: function callback() {
+          _this.destroy();
+          _this.game.reset();
+          _this.game.showRank();
+        }
+      });
+    }
+    /** 分享按钮 */
+  }, {
+    key: "renderShareButton",
+    value: function renderShareButton() {
+      var _this2 = this;
+      return new _Button__WEBPACK_IMPORTED_MODULE_5__["default"]({
+        width: 16,
+        height: 5,
+        position: {
+          x: 0,
+          y: 10
+        },
+        radius: 1,
+        text: "\uE62A \u53EC\u5524\u6311\u6218\u8005",
+        fontFamily: this.font,
+        fontSize: 46,
+        color: '#ffffff',
+        backgroundColor: '#e67e22',
+        game: this.game,
+        callback: function callback() {
+          _this2.game.share();
+        }
+      });
+    }
+    /** 回到主菜单按钮 */
+  }, {
+    key: "renderHomeButton",
+    value: function renderHomeButton() {
+      var _this3 = this;
+      return new _Button__WEBPACK_IMPORTED_MODULE_5__["default"]({
+        width: 16,
+        height: 5,
+        position: {
+          x: 0,
+          y: 3
+        },
+        radius: 1,
+        text: "\uE608 \u8FD4\u56DE\u4E3B\u83DC\u5355",
+        fontFamily: this.font,
+        fontSize: 46,
+        borderColor: '#dedede',
+        backgroundColor: '#dedede',
+        game: this.game,
+        callback: function callback() {
+          _this3.destroy();
+          _this3.game.reset();
+          _this3.game.showMenu();
+        }
+      });
+    }
+    /** 销毁 */
+  }, {
+    key: "destroy",
+    value: function destroy() {
+      this.rankButton.destroy();
+      this.shareButton.destroy();
+      this.homeButton.destroy();
+      this.removeOpenDataContext();
+      this.removeMesh();
+    }
+    /** 销毁开放数据域 */
+  }, {
+    key: "removeOpenDataContext",
+    value: function removeOpenDataContext() {
+      cancelAnimationFrame(this.aniId);
+      _util__WEBPACK_IMPORTED_MODULE_7__["sendCommandToOpenDataContext"]({
+        cmd: _openDataContext_commandType__WEBPACK_IMPORTED_MODULE_4__["CommandType"].SETTLEMENT_DESTROY,
+        data: null
+      });
+    }
+    /** 移除网格 */
+  }, {
+    key: "removeMesh",
+    value: function removeMesh() {
+      var scene = this.mesh.parent;
+      scene.remove(this.mesh);
+    }
+  }]);
+}();
+
+
+/***/ }),
+
+/***/ "./src/Game/Shape/RoundedRect.ts":
+/*!***************************************!*\
+  !*** ./src/Game/Shape/RoundedRect.ts ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return RoundedRect; });
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.min.js");
+/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(three__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+var RoundedRect = /*#__PURE__*/function () {
+  function RoundedRect(options) {
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, RoundedRect);
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "options", void 0);
+    this.options = options;
+  }
+  return _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(RoundedRect, [{
+    key: "render",
+    value: function render() {
+      var _this$options = this.options,
+        x = _this$options.x,
+        y = _this$options.y,
+        width = _this$options.width,
+        height = _this$options.height,
+        radius = _this$options.radius;
+      var roundedRectShape = new three__WEBPACK_IMPORTED_MODULE_3__["Shape"]();
+      roundedRectShape.moveTo(x, y + radius);
+      roundedRectShape.lineTo(x, y + height - radius);
+      roundedRectShape.quadraticCurveTo(x, y + height, x + radius, y + height);
+      roundedRectShape.lineTo(x + width - radius, y + height);
+      roundedRectShape.quadraticCurveTo(x + width, y + height, x + width, y + height - radius);
+      roundedRectShape.lineTo(x + width, y + radius);
+      roundedRectShape.quadraticCurveTo(x + width, y, x + width - radius, y);
+      roundedRectShape.lineTo(x + radius, y);
+      roundedRectShape.quadraticCurveTo(x, y, x, y + radius);
+      return roundedRectShape;
+    }
+  }]);
+}();
 
 
 /***/ }),
@@ -5402,8 +5302,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _constant__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constant */ "./src/Game/constant.ts");
 
 
-/** 摄影机 */
 
+/** 摄影机 */
 var camera = new three__WEBPACK_IMPORTED_MODULE_0__["PerspectiveCamera"](_constant__WEBPACK_IMPORTED_MODULE_1__["CAMERA"].fov, _constant__WEBPACK_IMPORTED_MODULE_1__["SCREEN_WIDTH"] / _constant__WEBPACK_IMPORTED_MODULE_1__["SCREEN_HEIGHT"], _constant__WEBPACK_IMPORTED_MODULE_1__["CAMERA"].near, _constant__WEBPACK_IMPORTED_MODULE_1__["CAMERA"].far);
 camera.position.set(_constant__WEBPACK_IMPORTED_MODULE_1__["CAMERA"].x, _constant__WEBPACK_IMPORTED_MODULE_1__["CAMERA"].y, _constant__WEBPACK_IMPORTED_MODULE_1__["CAMERA"].z);
 camera.lookAt(_constant__WEBPACK_IMPORTED_MODULE_1__["CAMERA"].lookAt.x, _constant__WEBPACK_IMPORTED_MODULE_1__["CAMERA"].lookAt.y, _constant__WEBPACK_IMPORTED_MODULE_1__["CAMERA"].lookAt.z);
@@ -5415,7 +5315,7 @@ camera.lookAt(_constant__WEBPACK_IMPORTED_MODULE_1__["CAMERA"].lookAt.x, _consta
 /*!******************************!*\
   !*** ./src/Game/constant.ts ***!
   \******************************/
-/*! exports provided: RATIO, SCREEN_WIDTH, SCREEN_HEIGHT, CAMERA, BOUNDARY, BACKGROUND_COLOR, PLAYER, SEGMENT_WIDTH, RACETRACK, VISIBLE_AREA, NPC, EVENTS, SCORE, MUSIC_FRAME */
+/*! exports provided: RATIO, SCREEN_WIDTH, SCREEN_HEIGHT, CAMERA, BOUNDARY, BACKGROUND_COLOR, INITIALIZED_SPEED, PLAYER, SEGMENT_WIDTH, RACETRACK, VISIBLE_AREA, NPC, EVENTS, SCORE, MUSIC_FRAME */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5426,6 +5326,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CAMERA", function() { return CAMERA; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BOUNDARY", function() { return BOUNDARY; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BACKGROUND_COLOR", function() { return BACKGROUND_COLOR; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "INITIALIZED_SPEED", function() { return INITIALIZED_SPEED; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PLAYER", function() { return PLAYER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SEGMENT_WIDTH", function() { return SEGMENT_WIDTH; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RACETRACK", function() { return RACETRACK; });
@@ -5434,35 +5335,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EVENTS", function() { return EVENTS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SCORE", function() { return SCORE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MUSIC_FRAME", function() { return MUSIC_FRAME; });
+var systemInfo = wx.getSystemInfoSync();
 /** 设备像素比  */
-var RATIO = devicePixelRatio;
+var RATIO = systemInfo.pixelRatio;
 /** 屏幕宽度 */
-
-var SCREEN_WIDTH = window.innerWidth;
+var SCREEN_WIDTH = systemInfo.windowWidth;
 /** 屏幕高度 */
-
-var SCREEN_HEIGHT = window.innerHeight;
+var SCREEN_HEIGHT = systemInfo.windowHeight;
 /** 摄影机参数 */
-
 var CAMERA = {
   /** 视野范围（角度） */
   fov: 75,
-
   /** 距离相机最近的位置，最小值为0.1 */
   near: 0.1,
-
   /** 距离相机最远的位置 */
   far: 800,
-
   /** 相机位置, x轴  */
   x: 0,
-
   /** 相机位置, y轴  */
   y: 30,
-
   /** 相机位置, z轴  */
   z: 60,
-
   /** 镜头朝向 */
   lookAt: {
     x: 0,
@@ -5471,102 +5364,81 @@ var CAMERA = {
   }
 };
 /** 3D边界值（坐标值） */
-
 var BOUNDARY = {
   /** z轴起始点 */
   zStart: CAMERA.z,
-
   /** z轴结束点，摄影机可视最远处（需要补偿摄影机的位移`CAMERA.z`） */
   zEnd: -CAMERA.far + CAMERA.z
 };
 /** 背景色 */
-
 var BACKGROUND_COLOR = 0x33334c;
+/** 速度初始值 */
+var INITIALIZED_SPEED = 0.3;
 /** 主角参数 */
-
 var PLAYER = {
   /** 宽度 */
   width: 8,
-
   /** 高度 */
   height: 8,
-
   /** 深度 */
   depth: 8
 };
 /** 跑道参数 */
-
 var RACETRACK_SEGMENTS = 5;
 var SEGMENT_WIDTH = PLAYER.width + 2;
 var RACETRACK = {
   /** 跑道宽度 */
   width: SEGMENT_WIDTH * RACETRACK_SEGMENTS,
-
   /** 跑道高度 */
   height: CAMERA.far,
-
   /** 跑道y坐标 */
   y: -PLAYER.height / 2,
-
   /** 跑道分段 */
   segments: RACETRACK_SEGMENTS,
-
   /** 单条跑道宽度 */
   segmentWidth: SEGMENT_WIDTH
 };
 /** 雾化效果的可见区域 */
-
 var VISIBLE_AREA = {
   /** 起始点 */
   start: -PLAYER.depth / 2,
-
   /** 结束点 */
   end: Math.abs(BOUNDARY.zEnd)
 };
 /** NPC参数 */
-
 var NPC = {
   /** 宽度 */
   width: PLAYER.width,
-
   /** 深度 */
   height: PLAYER.height,
-
   /** 深度 */
   depth: PLAYER.depth
   /** 类型 */
-
 };
 /** 事件 */
-
 var EVENTS = {
   /** 滑动 */
   SLIDE: 'SLIDE',
-
   /** 点击 */
   TAP: 'TAP'
 };
-/** 分数 */
 
+/** 分数 */
 var SCORE = {
   /** 单个数字宽度 */
   width: 4,
-
   /** 位置 */
   y: 55
 };
-/** 音频动画 */
 
+/** 音频动画 */
 var MUSIC_FRAME = {
   /** 波形宽度 */
   width: 60,
-
   /** 波形高度 */
   height: 30,
-
   /** 波形间距 */
   padding: 8,
-
   /** 波形高峰值 */
   max: 255
 };
@@ -5587,8 +5459,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _constant__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constant */ "./src/Game/constant.ts");
 
 
-/** 辅助坐标系 */
 
+/** 辅助坐标系 */
 var axesHelper = new three__WEBPACK_IMPORTED_MODULE_0__["AxesHelper"](_constant__WEBPACK_IMPORTED_MODULE_1__["CAMERA"].far);
 /* harmony default export */ __webpack_exports__["default"] = (axesHelper);
 
@@ -5604,32 +5476,35 @@ var axesHelper = new three__WEBPACK_IMPORTED_MODULE_0__["AxesHelper"](_constant_
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Game; });
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/asyncToGenerator.js");
-/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./util */ "./src/Game/util/index.ts");
-/* harmony import */ var fbemitter__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! fbemitter */ "./node_modules/fbemitter/index.js");
-/* harmony import */ var fbemitter__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(fbemitter__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _scene__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./scene */ "./src/Game/scene/index.ts");
-/* harmony import */ var _camera__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./camera */ "./src/Game/camera/index.ts");
-/* harmony import */ var _renderer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./renderer */ "./src/Game/renderer/index.ts");
-/* harmony import */ var _helper_axes__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./helper/axes */ "./src/Game/helper/axes.ts");
-/* harmony import */ var _Pool__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./Pool */ "./src/Game/Pool/index.ts");
-/* harmony import */ var _Gamepad__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./Gamepad */ "./src/Game/Gamepad/index.ts");
-/* harmony import */ var _Player__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./Player */ "./src/Game/Player/index.ts");
-/* harmony import */ var _Racetrack__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./Racetrack */ "./src/Game/Racetrack/index.ts");
-/* harmony import */ var _NPC_box__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./NPC/box */ "./src/Game/NPC/box.ts");
-/* harmony import */ var _NPC_cone__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./NPC/cone */ "./src/Game/NPC/cone.ts");
-/* harmony import */ var _Score__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./Score */ "./src/Game/Score/index.ts");
-/* harmony import */ var _MusicFrame__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./MusicFrame */ "./src/Game/MusicFrame/index.ts");
-/* harmony import */ var _Menu__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./Menu */ "./src/Game/Menu/index.ts");
+/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/asyncToGenerator.js");
+/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var fbemitter__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! fbemitter */ "./node_modules/fbemitter/index.js");
+/* harmony import */ var fbemitter__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(fbemitter__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _camera__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./camera */ "./src/Game/camera/index.ts");
+/* harmony import */ var _helper_axes__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./helper/axes */ "./src/Game/helper/axes.ts");
+/* harmony import */ var _renderer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./renderer */ "./src/Game/renderer/index.ts");
+/* harmony import */ var _scene__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./scene */ "./src/Game/scene/index.ts");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./util */ "./src/Game/util/index.ts");
+/* harmony import */ var _Gamepad__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./Gamepad */ "./src/Game/Gamepad/index.ts");
+/* harmony import */ var _Menu__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./Menu */ "./src/Game/Menu/index.ts");
+/* harmony import */ var _MusicFrame__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./MusicFrame */ "./src/Game/MusicFrame/index.ts");
+/* harmony import */ var _NPC_box__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./NPC/box */ "./src/Game/NPC/box.ts");
+/* harmony import */ var _NPC_cone__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./NPC/cone */ "./src/Game/NPC/cone.ts");
+/* harmony import */ var _Player__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./Player */ "./src/Game/Player/index.ts");
+/* harmony import */ var _Pool__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./Pool */ "./src/Game/Pool/index.ts");
+/* harmony import */ var _Racetrack__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./Racetrack */ "./src/Game/Racetrack/index.ts");
+/* harmony import */ var _Rank__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./Rank */ "./src/Game/Rank/index.ts");
+/* harmony import */ var _Score__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./Score */ "./src/Game/Score/index.ts");
+/* harmony import */ var _Settlement__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./Settlement */ "./src/Game/Settlement/index.ts");
+/* harmony import */ var _constant__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./constant */ "./src/Game/constant.ts");
 
 
 
@@ -5640,7 +5515,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // import orbitControls from './helper/orbitControls';
+
+// import orbitControls from './helper/orbitControls';
+
 
 
 
@@ -5653,262 +5530,192 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /** 游戏类 */
-var Game =
-/*#__PURE__*/
-function () {
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default()(Game, [{
-    key: "speed",
-
-    /** 音频文件 */
-
-    /** 音频解析 */
-
-    /** 音频文件 */
-
-    /** 音频解析 */
-
-    /** 字体文件 */
-
-    /** 舞台 */
-
-    /** 舞台（放置顶层元素） */
-
-    /** 摄影机 */
-
-    /** WebGL渲染器 */
-
-    /** 事件总线 */
-
-    /** 辅助坐标 */
-
-    /** 轨道控制器 */
-
-    /** 游戏控制器 */
-
-    /** 对象池 */
-
-    /** 菜单 */
-
-    /** 游戏主角 */
-
-    /** 跑道 */
-
-    /** npc类型 */
-
-    /** npc */
-
-    /** 计分 */
-
-    /** 音乐动画 */
-
-    /** 帧数（用于计时） */
-
-    /** 游戏速度 */
-    get: function get() {
-      return this.internalSpeed;
-    }
-    /** 拦截速度设置，最大值为0.7 */
-    ,
-    set: function set(value) {
-      var maxValue = 0.7;
-      this.internalSpeed = value > maxValue ? maxValue : value;
-    }
-    /** 游戏帧率 */
-
-  }]);
-
+var Game = /*#__PURE__*/function () {
   function Game(params) {
-    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default()(this, Game);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default()(this, "audioList", void 0);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default()(this, "audioListJson", void 0);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default()(this, "audio", void 0);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default()(this, "audioJson", void 0);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default()(this, "font", void 0);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default()(this, "scene", void 0);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default()(this, "topScene", void 0);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default()(this, "camera", void 0);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default()(this, "renderer", void 0);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default()(this, "emitter", void 0);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default()(this, "axes", void 0);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default()(this, "orbitControls", void 0);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default()(this, "gamePad", void 0);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default()(this, "pool", new _Pool__WEBPACK_IMPORTED_MODULE_11__["default"]());
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default()(this, "menu", void 0);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default()(this, "player", void 0);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default()(this, "racetrack", void 0);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default()(this, "npcTypes", [_NPC_box__WEBPACK_IMPORTED_MODULE_15__["BoxNPC"], _NPC_cone__WEBPACK_IMPORTED_MODULE_16__["ConeNPC"]]);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default()(this, "npcs", []);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default()(this, "score", void 0);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default()(this, "musicFrame", void 0);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default()(this, "frame", 0);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default()(this, "internalSpeed", 0.3);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default()(this, "fps", 60);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default()(this, "isPlaying", false);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default()(this, "silent", false);
-
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default()(this, Game);
+    /** 音频文件 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default()(this, "audioList", void 0);
+    /** 音频解析 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default()(this, "audioListJson", void 0);
+    /** 音频文件 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default()(this, "audio", void 0);
+    /** 音频解析 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default()(this, "audioJson", void 0);
+    /** 字体文件 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default()(this, "font", void 0);
+    /** 用户openId */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default()(this, "openId", void 0);
+    /** 舞台 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default()(this, "scene", void 0);
+    /** 舞台（放置顶层元素） */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default()(this, "topScene", void 0);
+    /** 摄影机 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default()(this, "camera", void 0);
+    /** WebGL渲染器 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default()(this, "renderer", void 0);
+    /** 事件总线 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default()(this, "emitter", void 0);
+    /** 辅助坐标 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default()(this, "axes", void 0);
+    /** 轨道控制器 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default()(this, "orbitControls", void 0);
+    /** 游戏控制器 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default()(this, "gamePad", void 0);
+    /** 对象池 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default()(this, "pool", new _Pool__WEBPACK_IMPORTED_MODULE_17__["default"]());
+    /** 菜单 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default()(this, "menu", void 0);
+    /** 排行榜 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default()(this, "rank", void 0);
+    /** 结算页 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default()(this, "settlement", void 0);
+    /** 游戏主角 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default()(this, "player", void 0);
+    /** 跑道 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default()(this, "racetrack", void 0);
+    /** npc类型 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default()(this, "npcTypes", [_NPC_box__WEBPACK_IMPORTED_MODULE_14__["BoxNPC"], _NPC_cone__WEBPACK_IMPORTED_MODULE_15__["ConeNPC"]]);
+    /** npc */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default()(this, "npcs", []);
+    /** 计分 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default()(this, "score", void 0);
+    /** 音乐动画 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default()(this, "musicFrame", void 0);
+    /** 帧数（用于计时） */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default()(this, "frame", 0);
+    /** 游戏速度 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default()(this, "interiorSpeed", _constant__WEBPACK_IMPORTED_MODULE_22__["INITIALIZED_SPEED"]);
+    /** 游戏帧率 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default()(this, "fps", 60);
+    /** 是否是游戏中 */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default()(this, "isPlaying", false);
+    /** 静止（屏蔽一些动画） */
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3___default()(this, "silent", false);
     var audioList = params.audioList,
-        audioListJson = params.audioListJson,
-        font = params.font;
+      audioListJson = params.audioListJson,
+      font = params.font;
     this.audioList = audioList;
     this.audioListJson = audioListJson;
     this.audio = audioList.begin;
     this.audioJson = audioListJson.begin;
     this.font = font;
-    this.scene = _scene__WEBPACK_IMPORTED_MODULE_7__["scene"];
-    this.topScene = _scene__WEBPACK_IMPORTED_MODULE_7__["topScene"];
-    this.camera = _camera__WEBPACK_IMPORTED_MODULE_8__["default"];
-    this.renderer = _renderer__WEBPACK_IMPORTED_MODULE_9__["default"]; // 事件总线
-
-    this.emitter = new fbemitter__WEBPACK_IMPORTED_MODULE_6__["EventEmitter"](); // 辅助坐标系
-
-    this.axes = _helper_axes__WEBPACK_IMPORTED_MODULE_10__["default"];
-    this.scene.add(this.axes); // 轨道控制器
+    this.scene = _scene__WEBPACK_IMPORTED_MODULE_9__["scene"];
+    this.topScene = _scene__WEBPACK_IMPORTED_MODULE_9__["topScene"];
+    this.camera = _camera__WEBPACK_IMPORTED_MODULE_6__["default"];
+    this.renderer = _renderer__WEBPACK_IMPORTED_MODULE_8__["default"];
+    // 事件总线
+    this.emitter = new fbemitter__WEBPACK_IMPORTED_MODULE_5__["EventEmitter"]();
+    // 辅助坐标系
+    if (wx.getSystemInfoSync().platform === 'devtools') {
+      this.scene.add(_helper_axes__WEBPACK_IMPORTED_MODULE_7__["default"]);
+    }
+    // 轨道控制器
     // this.orbitControls = orbitControls(this.camera);
+    // 初始化分享
+    this.initShare();
     // 游戏控制器
-
-    this.gamePad = new _Gamepad__WEBPACK_IMPORTED_MODULE_12__["default"]({
-      game: this
-    }); // 游戏菜单
-
-    this.menu = new _Menu__WEBPACK_IMPORTED_MODULE_19__["default"]({
+    this.gamePad = new _Gamepad__WEBPACK_IMPORTED_MODULE_11__["default"]({
       game: this
     });
-    this.topScene.add(this.menu.mesh); // 游戏主角
-
-    this.player = new _Player__WEBPACK_IMPORTED_MODULE_13__["default"]({
+    // 游戏主角
+    this.player = new _Player__WEBPACK_IMPORTED_MODULE_16__["default"]({
       game: this
     });
-    this.scene.add(this.player.mesh); // 跑道
-
-    this.racetrack = new _Racetrack__WEBPACK_IMPORTED_MODULE_14__["default"]();
-    this.scene.add(this.racetrack.mesh); // 计分
-
-    this.score = new _Score__WEBPACK_IMPORTED_MODULE_17__["default"]({
-      game: this
-    }); // 音乐动画
-
-    this.musicFrame = new _MusicFrame__WEBPACK_IMPORTED_MODULE_18__["default"]({
+    this.scene.add(this.player.mesh);
+    // 跑道
+    this.racetrack = new _Racetrack__WEBPACK_IMPORTED_MODULE_18__["default"]();
+    this.scene.add(this.racetrack.mesh);
+    // 计分
+    this.score = new _Score__WEBPACK_IMPORTED_MODULE_20__["default"]({
       game: this
     });
-    this.scene.add(this.musicFrame.mesh); // ticker
-
-    this.ticker(); // 异步添加元素到舞台
-
-    this.asyncAdd(); // 播放音乐
-
-    this.playAudio('begin'); // 添加NPC
-
-    this.addNPC();
+    // 音乐动画
+    this.musicFrame = new _MusicFrame__WEBPACK_IMPORTED_MODULE_13__["default"]({
+      game: this
+    });
+    this.scene.add(this.musicFrame.mesh);
+    // ticker
+    this.ticker();
+    // 播放音乐
+    this.playAudio();
+    // 显示菜单
+    this.showMenu();
   }
-  /** 异步添加元素 */
-
-
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default()(Game, [{
-    key: "asyncAdd",
-    value: function () {
-      var _asyncAdd = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()(
-      /*#__PURE__*/
-      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                _context.next = 2;
-                return this.score.render();
-
-              case 2:
-                this.score.mesh = _context.sent;
-                this.topScene.add(this.score.mesh);
-
-              case 4:
-              case "end":
-                return _context.stop();
-            }
+  /** 显示分数 */
+  return _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default()(Game, [{
+    key: "speed",
+    get: function get() {
+      return this.interiorSpeed;
+    }
+    /** 拦截速度设置，最大值为0.7 */,
+    set: function set(value) {
+      var maxValue = 0.7;
+      this.interiorSpeed = value > maxValue ? maxValue : value;
+    }
+  }, {
+    key: "showScore",
+    value: (function () {
+      var _showScore = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_4___default.a.mark(function _callee() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_4___default.a.wrap(function _callee$(_context) {
+          while (1) switch (_context.prev = _context.next) {
+            case 0:
+              _context.next = 2;
+              return this.score.render();
+            case 2:
+              this.score.mesh = _context.sent;
+              this.topScene.add(this.score.mesh);
+            case 4:
+            case "end":
+              return _context.stop();
           }
         }, _callee, this);
       }));
-
-      function asyncAdd() {
-        return _asyncAdd.apply(this, arguments);
+      function showScore() {
+        return _showScore.apply(this, arguments);
       }
-
-      return asyncAdd;
-    }()
-    /** ticker */
-
+      return showScore;
+    }() /** ticker */)
   }, {
     key: "ticker",
     value: function ticker() {
       this.frame += 1;
       this.update();
-      this.player.update();
-      this.musicFrame.update();
-
       if (!this.silent) {
+        this.musicFrame.update();
+        this.player.update();
         this.racetrack.update({
           game: this
         });
       }
-
       if (this.isPlaying) {
         this.moveNPC();
         this.count();
       }
-
       window.requestAnimationFrame(this.ticker.bind(this));
     }
     /** 渲染 */
-
   }, {
     key: "update",
     value: function update() {
       this.renderer.clear();
       this.renderer.render(this.scene, this.camera);
-      this.renderer.render(this.topScene, this.camera); // this.orbitControls.update();
+      this.renderer.render(this.topScene, this.camera);
+      // this.orbitControls.update();
     }
     /** 添加NPC */
-
   }, {
     key: "addNPC",
     value: function addNPC() {
-      var rndNpc = this.npcTypes[_util__WEBPACK_IMPORTED_MODULE_5__["rnd"](0, this.npcTypes.length - 1, true)];
+      var rndNpc = this.npcTypes[_util__WEBPACK_IMPORTED_MODULE_10__["rnd"](0, this.npcTypes.length - 1, true)];
       var npc = this.pool.getItemByClass(rndNpc.name, rndNpc);
       this.scene.add(npc.mesh);
       this.npcs.push(npc);
     }
     /** 移动NPC */
-
   }, {
     key: "moveNPC",
     value: function moveNPC() {
       var _this = this;
-
       this.npcs.forEach(function (npc, index) {
         npc.move({
           game: _this,
@@ -5919,58 +5726,115 @@ function () {
           out: function out() {
             // 回收NPC对象
             npc.reset();
-
             _this.pool.recover(npc.getConstructorName(), npc);
-
             _this.npcs.splice(index, 1);
           }
         });
       });
     }
+    /** 移除NPC */
+  }, {
+    key: "removeNPC",
+    value: function removeNPC() {
+      this.npcs.forEach(function (npc) {
+        npc.destroy();
+      });
+      this.npcs = [];
+    }
     /** 开始游戏 */
-
   }, {
     key: "start",
     value: function start() {
       this.isPlaying = true;
+      // 添加NPC
+      this.addNPC();
+      // 显示分数
+      this.showScore();
       this.toggleAudio('bgm');
     }
     /** 游戏结束 */
-
   }, {
     key: "end",
     value: function end() {
       console.log('game end');
+      // 长振动
+      wx.vibrateLong();
+      this.showSettlement();
       this.stopAudio('bgm');
+      this.score.destroy();
+      this.speed = _constant__WEBPACK_IMPORTED_MODULE_22__["INITIALIZED_SPEED"];
       this.isPlaying = false;
       this.silent = true;
     }
+    /** 重置游戏 */
+  }, {
+    key: "reset",
+    value: function reset() {
+      this.player.reset();
+      this.silent = false;
+      this.score.value = 0;
+      this.playAudio('begin');
+      this.removeNPC();
+    }
+    /** 显示菜单 */
+  }, {
+    key: "showMenu",
+    value: function showMenu() {
+      // 游戏菜单
+      this.menu = new _Menu__WEBPACK_IMPORTED_MODULE_12__["default"]({
+        game: this
+      });
+      this.topScene.add(this.menu.mesh);
+    }
+    /** 显示排行榜 */
+  }, {
+    key: "showRank",
+    value: function showRank() {
+      this.rank = new _Rank__WEBPACK_IMPORTED_MODULE_19__["default"]({
+        game: this
+      });
+      this.topScene.add(this.rank.mesh);
+    }
+    /** 显示结算页面 */
+  }, {
+    key: "showSettlement",
+    value: function showSettlement() {
+      this.settlement = new _Settlement__WEBPACK_IMPORTED_MODULE_21__["default"]({
+        game: this,
+        score: this.score.value
+      });
+      this.topScene.add(this.settlement.mesh);
+    }
+    /** 关闭排行榜 */
+  }, {
+    key: "closeRank",
+    value: function closeRank() {
+      this.topScene.remove(this.rank.mesh);
+      this.rank = null;
+    }
     /** 计分 */
-
   }, {
     key: "count",
     value: function count() {
       this.score.update();
     }
     /** 播放音乐 */
-
   }, {
     key: "playAudio",
-    value: function playAudio(type) {
+    value: function playAudio() {
       var _this2 = this;
-
+      var type = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'begin';
       this.audio = this.audioList[type];
       this.audioJson = this.audioListJson[type];
+      this.audio.seek(0);
       this.audio.play();
       this.musicFrame.time = 0;
       this.audio.onEnded(function () {
         _this2.audio.play();
-
         _this2.musicFrame.time = 0;
       });
     }
     /** 切换音乐 */
-
   }, {
     key: "toggleAudio",
     value: function toggleAudio(type) {
@@ -5978,19 +5842,68 @@ function () {
       this.playAudio(type);
     }
     /** 停止播放音乐 */
-
   }, {
     key: "stopAudio",
     value: function stopAudio(type) {
       this.audio = this.audioList[type];
       this.audio.stop();
     }
+    /** 初始化分享 */
+  }, {
+    key: "initShare",
+    value: function initShare() {
+      wx.showShareMenu();
+      wx.onShareAppMessage(function () {
+        return {
+          title: '还等什么？快来跟我一起玩有音乐节奏的跑酷游戏！',
+          imageUrl: 'assets/img/share.png'
+        };
+      });
+    }
+    /** 分享 */
+  }, {
+    key: "share",
+    value: function share() {
+      wx.shareAppMessage({
+        title: "\u6562\u4E0D\u6562\u6765\u6311\u6218\u6211\uFF1F\u8FD9\u4E48\u6709\u8282\u594F\u7684\u97F3\u4E50\u8BA9\u6211\u8DD1\u4E86".concat(this.score.value, "m"),
+        imageUrl: 'assets/img/share.png'
+      });
+    }
   }]);
-
-  return Game;
 }();
 
 
+/***/ }),
+
+/***/ "./src/Game/offScreenCanvas/index.ts":
+/*!*******************************************!*\
+  !*** ./src/Game/offScreenCanvas/index.ts ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _lib_cax__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../lib/cax */ "./src/lib/cax.js");
+/* harmony import */ var _lib_cax__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_lib_cax__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+var OffScreenCanvas = /*#__PURE__*/_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_0___default()(function OffScreenCanvas() {
+  _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default()(this, OffScreenCanvas);
+  _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "stage", void 0);
+  _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(this, "canvas", void 0);
+  this.stage = new _lib_cax__WEBPACK_IMPORTED_MODULE_3___default.a.Stage();
+  this.canvas = this.stage.canvas;
+});
+/* harmony default export */ __webpack_exports__["default"] = (new OffScreenCanvas());
 
 /***/ }),
 
@@ -6008,8 +5921,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _constant__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constant */ "./src/Game/constant.ts");
 
 
-/** WebGL渲染器 */
 
+/** WebGL渲染器 */
 var renderer = new three__WEBPACK_IMPORTED_MODULE_0__["WebGLRenderer"]({
   canvas: canvas,
   alpha: true,
@@ -6040,8 +5953,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var topScene = new three__WEBPACK_IMPORTED_MODULE_0__["Scene"]();
-/** 舞台 */
 
+/** 舞台 */
 var scene = new three__WEBPACK_IMPORTED_MODULE_0__["Scene"]();
 scene.fog = new three__WEBPACK_IMPORTED_MODULE_0__["Fog"](_constant__WEBPACK_IMPORTED_MODULE_1__["BACKGROUND_COLOR"], _constant__WEBPACK_IMPORTED_MODULE_1__["VISIBLE_AREA"].start, _constant__WEBPACK_IMPORTED_MODULE_1__["VISIBLE_AREA"].end);
 
@@ -6051,19 +5964,59 @@ scene.fog = new three__WEBPACK_IMPORTED_MODULE_0__["Fog"](_constant__WEBPACK_IMP
 /*!********************************!*\
   !*** ./src/Game/util/index.ts ***!
   \********************************/
-/*! exports provided: rnd */
+/*! exports provided: rnd, normalizeFontText, isDevTools, getVisibleSize, canvas2image, sendCommandToOpenDataContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rnd", function() { return rnd; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "normalizeFontText", function() { return normalizeFontText; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isDevTools", function() { return isDevTools; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getVisibleSize", function() { return getVisibleSize; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "canvas2image", function() { return canvas2image; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sendCommandToOpenDataContext", function() { return sendCommandToOpenDataContext; });
+/* harmony import */ var _constant__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constant */ "./src/Game/constant.ts");
+
+
 /** 产生随机数 */
 var rnd = function rnd(start, end, isInt) {
   if (isInt) {
     return Math.floor(Math.random() * (end + 1 - start) + start);
   }
-
   return Math.random() * (end + 1 - start) + start;
+};
+
+// 匹配中文字符和ASCII字符
+function normalizeFontText(text) {
+  return text.replace(/[^\u4e00-\u9fa5\x00-\x7F]/g, '');
+}
+
+// 是否是开发者工具
+function isDevTools() {
+  return wx.getSystemInfoSync().platform === 'devtools';
+}
+
+/** 获取可视化区域大小 */
+var getVisibleSize = function getVisibleSize() {
+  var vFOV = _constant__WEBPACK_IMPORTED_MODULE_0__["CAMERA"].fov * Math.PI / 180;
+  var vH = Math.tan(vFOV / 2) * _constant__WEBPACK_IMPORTED_MODULE_0__["CAMERA"].z * 2;
+  return {
+    width: vH * _constant__WEBPACK_IMPORTED_MODULE_0__["SCREEN_WIDTH"] / _constant__WEBPACK_IMPORTED_MODULE_0__["SCREEN_HEIGHT"],
+    height: vH
+  };
+};
+
+/** canvas转换为图片 */
+var canvas2image = function canvas2image(canvas) {
+  var image = new Image();
+  image.src = canvas.toDataURL();
+  return image;
+};
+
+/** 发送指令给开放数据域 */
+var sendCommandToOpenDataContext = function sendCommandToOpenDataContext(message) {
+  var openDataContext = wx.getOpenDataContext();
+  openDataContext.postMessage(message);
 };
 
 /***/ }),
@@ -6077,59 +6030,6534 @@ var rnd = function rnd(start, end, isInt) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/asyncToGenerator.js");
-/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _lib_weapp_adapter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./lib/weapp-adapter */ "./src/lib/weapp-adapter.js");
-/* harmony import */ var _lib_weapp_adapter__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_lib_weapp_adapter__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _lib_weapp_adapter_extend__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./lib/weapp-adapter-extend */ "./src/lib/weapp-adapter-extend/index.js");
-/* harmony import */ var _lib_threejs_shim__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./lib/threejs-shim */ "./src/lib/threejs-shim.js");
-/* harmony import */ var _preload__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./preload */ "./src/preload/index.ts");
-/* harmony import */ var _Game__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Game */ "./src/Game/index.ts");
+/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/asyncToGenerator.js");
+/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Game__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Game */ "./src/Game/index.ts");
+/* harmony import */ var _preload__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./preload */ "./src/preload/index.ts");
 
 
 
 
 
-
-
-
-_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()(
-/*#__PURE__*/
-_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-  var _ref2, audioList, audioListJson, font;
-
-  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-    while (1) {
-      switch (_context.prev = _context.next) {
+/** 获取用户openId */
+var getOpenId = function getOpenId() {
+  return new Promise(function (resolve, reject) {
+    wx.cloud.callFunction({
+      name: 'getOpenId',
+      success: function success(_ref) {
+        var result = _ref.result;
+        console.log('>', result);
+        if (result.status === 200) {
+          resolve(result.data.openId);
+        }
+      },
+      fail: reject
+    });
+  });
+};
+wx.cloud.init();
+function main() {
+  return _main.apply(this, arguments);
+}
+function _main() {
+  _main = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
+    var _yield$preload, audioList, audioListJson, font, game;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
+      while (1) switch (_context.prev = _context.next) {
         case 0:
           _context.next = 2;
-          return Object(_preload__WEBPACK_IMPORTED_MODULE_5__["preload"])();
-
+          return Object(_preload__WEBPACK_IMPORTED_MODULE_3__["preload"])();
         case 2:
-          _ref2 = _context.sent;
-          audioList = _ref2.audioList;
-          audioListJson = _ref2.audioListJson;
-          font = _ref2.font;
-          new _Game__WEBPACK_IMPORTED_MODULE_6__["default"]({
+          _yield$preload = _context.sent;
+          audioList = _yield$preload.audioList;
+          audioListJson = _yield$preload.audioListJson;
+          font = _yield$preload.font;
+          game = new _Game__WEBPACK_IMPORTED_MODULE_2__["default"]({
             /** 音频文件 */
             audioList: audioList,
-
             /** 音频解析文件 */
             audioListJson: audioListJson,
-
             /** 字体文件 */
             font: font
           });
-
-        case 7:
+          _context.t0 = wx.getStorageSync('openid');
+          if (_context.t0) {
+            _context.next = 14;
+            break;
+          }
+          _context.t1 = wx;
+          _context.next = 12;
+          return getOpenId();
+        case 12:
+          _context.t2 = _context.sent;
+          _context.t0 = _context.t1.setStorageSync.call(_context.t1, 'openid', _context.t2);
+        case 14:
+          game.openId = _context.t0;
+          wx.onShow(function () {
+            game.audio.play();
+          });
+        case 16:
         case "end":
           return _context.stop();
       }
+    }, _callee);
+  }));
+  return _main.apply(this, arguments);
+}
+main();
+
+/***/ }),
+
+/***/ "./src/lib/cax.js":
+/*!************************!*\
+  !*** ./src/lib/cax.js ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/*!
+ *  cax v1.2.9
+ *  By https://github.com/dntzhang 
+ *  Github: https://github.com/dntzhang/cax
+ *  MIT Licensed.
+ */
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(true)
+		module.exports = factory();
+	else {}
+})(typeof self !== 'undefined' ? self : this, function() {
+return /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 16);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
+var _graphics = __webpack_require__(4);
+
+var _graphics2 = _interopRequireDefault(_graphics);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Shape = function (_Graphics) {
+  _inherits(Shape, _Graphics);
+
+  function Shape() {
+    _classCallCheck(this, Shape);
+
+    return _possibleConstructorReturn(this, (Shape.__proto__ || Object.getPrototypeOf(Shape)).apply(this, arguments));
+  }
+
+  _createClass(Shape, [{
+    key: 'draw',
+
+    // constructor() {
+    //     super()
+    // }
+
+    value: function draw() {}
+  }, {
+    key: 'render',
+    value: function render(ctx) {
+      this.clear();
+      this.draw();
+      _get(Shape.prototype.__proto__ || Object.getPrototypeOf(Shape.prototype), 'render', this).call(this, ctx);
     }
-  }, _callee, this);
-}))();
+  }]);
+
+  return Shape;
+}(_graphics2.default);
+
+exports.default = Shape;
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
+var _displayObject = __webpack_require__(3);
+
+var _displayObject2 = _interopRequireDefault(_displayObject);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Group = function (_DisplayObject) {
+  _inherits(Group, _DisplayObject);
+
+  function Group(data) {
+    _classCallCheck(this, Group);
+
+    var _this = _possibleConstructorReturn(this, (Group.__proto__ || Object.getPrototypeOf(Group)).call(this, data));
+
+    _this.children = [];
+    return _this;
+  }
+
+  _createClass(Group, [{
+    key: 'add',
+    value: function add(child) {
+      var len = arguments.length;
+
+      for (var i = 0; i < len; i++) {
+        var c = arguments[i];
+        var parent = c.parent;
+        if (parent) {
+          parent.removeChildAt(parent.children.indexOf(c));
+        }
+        this.children.push(c);
+        c.parent = this;
+      }
+    }
+  }, {
+    key: 'addChildAt',
+    value: function addChildAt(child, index) {
+      var par = child.parent;
+      par && par.removeChildAt(par.children.indexOf(child));
+      child.parent = this;
+      this.children.splice(index, 0, child);
+    }
+  }, {
+    key: 'removeChildAt',
+    value: function removeChildAt(index) {
+      var child = this.children[index];
+      if (child) {
+        child.parent = null;
+      }
+      this.children.splice(index, 1);
+    }
+  }, {
+    key: 'replace',
+    value: function replace(current, pre) {
+      var index = pre.parent.children.indexOf(pre);
+      this.removeChildAt(index);
+      this.addChildAt(current, index);
+    }
+  }, {
+    key: 'remove',
+    value: function remove(child) {
+      var len = arguments.length;
+      var cLen = this.children.length;
+
+      for (var i = 0; i < len; i++) {
+        for (var j = 0; j < cLen; j++) {
+          if (child.id === this.children[j].id) {
+            child.parent = null;
+            this.children.splice(j, 1);
+            j--;
+            cLen--;
+          }
+        }
+      }
+    }
+  }, {
+    key: 'empty',
+    value: function empty() {
+      this.children.forEach(function (child) {
+        child.parent = null;
+      });
+      this.children.length = 0;
+    }
+  }, {
+    key: 'destroy',
+    value: function destroy() {
+      this.empty();
+      // Stage does not have a parent
+      this.parent && _get(Group.prototype.__proto__ || Object.getPrototypeOf(Group.prototype), 'destroy', this).call(this);
+    }
+  }]);
+
+  return Group;
+}(_displayObject2.default);
+
+exports.default = Group;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _displayObject = __webpack_require__(3);
+
+var _displayObject2 = _interopRequireDefault(_displayObject);
+
+var _util = __webpack_require__(9);
+
+var _util2 = _interopRequireDefault(_util);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Bitmap = function (_DisplayObject) {
+  _inherits(Bitmap, _DisplayObject);
+
+  function Bitmap(img, onLoad) {
+    _classCallCheck(this, Bitmap);
+
+    var _this = _possibleConstructorReturn(this, (Bitmap.__proto__ || Object.getPrototypeOf(Bitmap)).call(this));
+
+    if (typeof img === 'string') {
+      if (Bitmap.cache[img]) {
+        if (_util2.default.isWeapp) {
+          _this.img = Bitmap.cache[img].img;
+          _this.rect = [0, 0, Bitmap.cache[img].width, Bitmap.cache[img].height];
+          _this.width = _this.rect[2];
+          _this.height = _this.rect[3];
+        } else {
+          _this.img = Bitmap.cache[img];
+          _this.rect = [0, 0, _this.img.width, _this.img.height];
+          _this.width = _this.img.width;
+          _this.height = _this.img.height;
+        }
+        onLoad && onLoad.call(_this);
+      } else if (_util2.default.isWeapp) {
+        _util2.default.getImageInWx(img, function (result) {
+          _this.img = result.img;
+          if (!_this.rect) {
+            _this.rect = [0, 0, result.width, result.height];
+          }
+          _this.width = result.width;
+          _this.height = result.height;
+          onLoad && onLoad.call(_this);
+          Bitmap.cache[img] = result;
+        });
+      } else {
+        _this.img = _util2.default.isWegame ? wx.createImage() : new window.Image();
+
+        _this.img.onload = function () {
+
+          if (!_this.rect) {
+            _this.rect = [0, 0, _this.img.width, _this.img.height];
+          }
+          _this.width = _this.img.width;
+          _this.height = _this.img.height;
+          onLoad && onLoad.call(_this);
+          Bitmap.cache[img] = _this.img;
+        };
+        _this.img.src = img;
+      }
+    } else {
+      _this.img = img;
+      _this.rect = [0, 0, img.width, img.height];
+      _this.width = img.width;
+      _this.height = img.height;
+      Bitmap.cache[img.src] = img;
+    }
+    return _this;
+  }
+
+  _createClass(Bitmap, [{
+    key: 'clone',
+    value: function clone() {
+      // 复制完img宽度0？？所以直接传字符串
+      var bitmap = new Bitmap(typeof this.img === 'string' ? this.img : this.img.src);
+      bitmap.x = this.x;
+      bitmap.y = this.y;
+      bitmap.scaleX = this.scaleX;
+      bitmap.scaleY = this.scaleY;
+      bitmap.rotation = this.rotation;
+      bitmap.skewX = this.skewX;
+      bitmap.skewY = this.skewY;
+      bitmap.originX = this.originX;
+      bitmap.originY = this.originY;
+      bitmap.width = this.width;
+      bitmap.height = this.height;
+      bitmap.cursor = this.cursor;
+
+      return bitmap;
+    }
+  }]);
+
+  return Bitmap;
+}(_displayObject2.default);
+
+Bitmap.cache = {};
+
+exports.default = Bitmap;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _matrix2d = __webpack_require__(21);
+
+var _matrix2d2 = _interopRequireDefault(_matrix2d);
+
+var _eventDispatcher = __webpack_require__(22);
+
+var _eventDispatcher2 = _interopRequireDefault(_eventDispatcher);
+
+var _uid = __webpack_require__(23);
+
+var _uid2 = _interopRequireDefault(_uid);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var DisplayObject = function (_EventDispatcher) {
+  _inherits(DisplayObject, _EventDispatcher);
+
+  function DisplayObject() {
+    _classCallCheck(this, DisplayObject);
+
+    var _this = _possibleConstructorReturn(this, (DisplayObject.__proto__ || Object.getPrototypeOf(DisplayObject)).call(this));
+
+    _this.alpha = _this.complexAlpha = _this.scaleX = _this.scaleY = 1;
+    _this.x = _this.y = _this.rotation = _this.skewX = _this.skewY = _this.originX = _this.originY = 0;
+    _this.cursor = null;
+    _this.visible = true;
+    _this._matrix = new _matrix2d2.default();
+    _this._hitMatrix = new _matrix2d2.default();
+    _this.id = _uid2.default.get();
+    _this.clipGraphics = null;
+    _this.clipRuleNonzero = true;
+    _this.fixed = false;
+    _this.shadow = null;
+    _this.compositeOperation = null;
+    _this.absClipGraphics = null;
+    _this.absClipRuleNonzero = true;
+    _this.cacheUpdating = false;
+
+    try {
+      Object.defineProperties(_this, {
+        stage: { get: _this._getStage },
+        scale: {
+          get: function get() {
+            return this.scaleX;
+          },
+          set: function set(scale) {
+            this.scaleX = this.scaleY = scale;
+          }
+        }
+      });
+    } catch (e) {}
+    return _this;
+  }
+
+  _createClass(DisplayObject, [{
+    key: 'isVisible',
+    value: function isVisible() {
+      return this.visible && this.alpha > 0 && this.scaleX !== 0 && this.scaleY !== 0;
+    }
+  }, {
+    key: 'initAABB',
+    value: function initAABB() {
+      if (this.width === undefined || this.height === undefined) {
+        return;
+      }
+
+      var x = void 0,
+          y = void 0,
+          width = this.width,
+          height = this.height,
+          mtx = this._matrix,
+          xA = width * mtx.a,
+          xB = width * mtx.b,
+          yC = height * mtx.c,
+          yD = height * mtx.d,
+          tx = mtx.tx,
+          ty = mtx.ty,
+          minX = tx,
+          maxX = tx,
+          minY = ty,
+          maxY = ty;
+
+      if ((x = xA + tx) < minX) {
+        minX = x;
+      } else if (x > maxX) {
+        maxX = x;
+      }
+      if ((x = xA + yC + tx) < minX) {
+        minX = x;
+      } else if (x > maxX) {
+        maxX = x;
+      }
+      if ((x = yC + tx) < minX) {
+        minX = x;
+      } else if (x > maxX) {
+        maxX = x;
+      }
+      if ((y = xB + ty) < minY) {
+        minY = y;
+      } else if (y > maxY) {
+        maxY = y;
+      }
+      if ((y = xB + yD + ty) < minY) {
+        minY = y;
+      } else if (y > maxY) {
+        maxY = y;
+      }
+      if ((y = yD + ty) < minY) {
+        minY = y;
+      } else if (y > maxY) {
+        maxY = y;
+      }
+      this.AABB = [minX, minY, maxX - minX, maxY - minY];
+      this.rectPoints = [{
+        x: tx,
+        y: ty
+      }, {
+        x: xA + tx,
+        y: xB + ty
+      }, {
+        x: xA + yC + tx,
+        y: xB + yD + ty
+      }, {
+        x: yC + tx,
+        y: yD + ty
+      }];
+    }
+  }, {
+    key: 'destroy',
+    value: function destroy() {
+      this.parent.remove(this);
+    }
+  }, {
+    key: 'hover',
+    value: function hover(over, out, move) {
+      this.on('mouseover', over);
+      this.on('mouseout', out);
+      move && this.on('mousemove', move);
+    }
+
+    // https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/clip
+
+  }, {
+    key: 'clip',
+    value: function clip(graphics, notClipRuleNonzero) {
+      this.clipGraphics = graphics;
+      this.clipRuleNonzero = !notClipRuleNonzero;
+    }
+  }, {
+    key: 'unclip',
+    value: function unclip() {
+      this.clipGraphics = null;
+    }
+  }, {
+    key: 'absClip',
+    value: function absClip(graphics, notClipRuleNonzero) {
+      this.absClipGraphics = graphics;
+      this.absClipRuleNonzero = !notClipRuleNonzero;
+    }
+  }, {
+    key: 'unAbsClip',
+    value: function unAbsClip() {
+      this.absClipGraphics = null;
+    }
+  }, {
+    key: 'cache',
+    value: function cache(x, y, width, height, scale, cacheUpdating) {
+      this._cacheData = {
+        x: x || 0,
+        y: y || 0,
+        width: width || this.width,
+        height: height || this.height,
+        scale: scale || 1
+      };
+      this.cacheUpdating = cacheUpdating;
+      if (!this.cacheCanvas) {
+        if (typeof wx !== 'undefined' && wx.createCanvas) {
+          this.cacheCanvas = wx.createCanvas();
+        } else {
+          this.cacheCanvas = document.createElement('canvas');
+        }
+        this.cacheCtx = this.cacheCanvas.getContext('2d');
+      }
+      this.cacheCanvas.width = this._cacheData.width * this._cacheData.scale;
+      this.cacheCanvas.height = this._cacheData.height * this._cacheData.scale;
+
+      // debug cache canvas
+      // this.cacheCtx.fillRect(0,0,1000,1000)
+      this._readyToCache = true;
+    }
+  }, {
+    key: 'uncache',
+    value: function uncache() {
+      this.cacheCanvas = null;
+    }
+  }, {
+    key: 'filter',
+    value: function filter(filterName, filterBox) {
+      filterBox = Object.assign({}, {
+        x: 0,
+        y: 0,
+        width: this.width,
+        height: this.height
+      }, filterBox);
+      this.cache(filterBox.x, filterBox.y, filterBox.width, filterBox.height);
+      this._readyToFilter = true;
+      this._filterName = filterName;
+    }
+  }, {
+    key: 'setTransform',
+    value: function setTransform(x, y, scaleX, scaleY, rotation, skewX, skewY, originX, originY) {
+      this.x = x || 0;
+      this.y = y || 0;
+      this.scaleX = scaleX == null ? 1 : scaleX;
+      this.scaleY = scaleY == null ? 1 : scaleY;
+      this.rotation = rotation || 0;
+      this.skewX = skewX || 0;
+      this.skewY = skewY || 0;
+      this.originX = originX || 0;
+      this.originY = originY || 0;
+    }
+  }, {
+    key: 'setMatrix',
+    value: function setMatrix(a, b, c, d, tx, ty) {
+      _matrix2d2.default.decompose(a, b, c, d, tx, ty, this);
+    }
+  }, {
+    key: 'unfilter',
+    value: function unfilter() {
+      this.uncache();
+    }
+  }, {
+    key: '_getStage',
+    value: function _getStage() {
+      var o = this;
+      while (o.parent) {
+        o = o.parent;
+      }
+      if (o.___instanceof === 'Stage') {
+        return o;
+      }
+      return null;
+    }
+  }]);
+
+  return DisplayObject;
+}(_eventDispatcher2.default);
+
+exports.default = DisplayObject;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _displayObject = __webpack_require__(3);
+
+var _displayObject2 = _interopRequireDefault(_displayObject);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var assMap = {
+  fillStyle: true,
+  strokeStyle: true,
+  lineWidth: true,
+  lineCap: true,
+  lineDashOffset: true,
+  lineJoin: true,
+  miterLimit: true
+};
+
+var Graphics = function (_DisplayObject) {
+  _inherits(Graphics, _DisplayObject);
+
+  function Graphics() {
+    _classCallCheck(this, Graphics);
+
+    var _this = _possibleConstructorReturn(this, (Graphics.__proto__ || Object.getPrototypeOf(Graphics)).call(this));
+
+    _this.cmds = [];
+    _this.currentGradient = null;
+    return _this;
+  }
+
+  _createClass(Graphics, [{
+    key: 'clearRect',
+    value: function clearRect() {
+      this.cmds.push(['clearRect', arguments]);
+      return this;
+    }
+  }, {
+    key: 'rect',
+    value: function rect() {
+      this.cmds.push(['rect', arguments]);
+      return this;
+    }
+  }, {
+    key: 'clear',
+    value: function clear() {
+      this.cmds.length = 0;
+      return this;
+    }
+  }, {
+    key: 'setLineDash',
+    value: function setLineDash() {
+      this.cmds.push(['setLineDash', arguments]);
+      return this;
+    }
+  }, {
+    key: 'strokeRect',
+    value: function strokeRect() {
+      this.cmds.push(['strokeRect', arguments]);
+      return this;
+    }
+  }, {
+    key: 'fillRect',
+    value: function fillRect() {
+      this.cmds.push(['fillRect', arguments]);
+      return this;
+    }
+  }, {
+    key: 'beginPath',
+    value: function beginPath() {
+      this.cmds.push(['beginPath', arguments]);
+      return this;
+    }
+  }, {
+    key: 'arc',
+    value: function arc() {
+      this.cmds.push(['arc', arguments]);
+      return this;
+    }
+  }, {
+    key: 'closePath',
+    value: function closePath() {
+      this.cmds.push(['closePath', arguments]);
+      return this;
+    }
+  }, {
+    key: 'fillStyle',
+    value: function fillStyle() {
+      this.cmds.push(['fillStyle', arguments]);
+      return this;
+    }
+  }, {
+    key: 'fill',
+    value: function fill() {
+      this.cmds.push(['fill', arguments]);
+      return this;
+    }
+  }, {
+    key: 'strokeStyle',
+    value: function strokeStyle() {
+      this.cmds.push(['strokeStyle', arguments]);
+      return this;
+    }
+  }, {
+    key: 'lineWidth',
+    value: function lineWidth() {
+      this.cmds.push(['lineWidth', arguments]);
+      return this;
+    }
+  }, {
+    key: 'lineCap',
+    value: function lineCap() {
+      this.cmds.push(['lineCap', arguments]);
+      return this;
+    }
+  }, {
+    key: 'lineDashOffset',
+    value: function lineDashOffset() {
+      this.cmds.push(['lineDashOffset', arguments]);
+      return this;
+    }
+  }, {
+    key: 'lineJoin',
+    value: function lineJoin() {
+      this.cmds.push(['lineJoin', arguments]);
+      return this;
+    }
+  }, {
+    key: 'miterLimit',
+    value: function miterLimit() {
+      this.cmds.push(['miterLimit', arguments]);
+      return this;
+    }
+  }, {
+    key: 'stroke',
+    value: function stroke() {
+      this.cmds.push(['stroke', arguments]);
+      return this;
+    }
+  }, {
+    key: 'moveTo',
+    value: function moveTo() {
+      this.cmds.push(['moveTo', arguments]);
+      return this;
+    }
+  }, {
+    key: 'lineTo',
+    value: function lineTo() {
+      this.cmds.push(['lineTo', arguments]);
+      return this;
+    }
+  }, {
+    key: 'bezierCurveTo',
+    value: function bezierCurveTo() {
+      this.cmds.push(['bezierCurveTo', arguments]);
+      return this;
+    }
+  }, {
+    key: 'quadraticCurveTo',
+    value: function quadraticCurveTo() {
+      this.cmds.push(['quadraticCurveTo', arguments]);
+      return this;
+    }
+  }, {
+    key: 'createRadialGradient',
+    value: function createRadialGradient() {
+      this.cmds.push(['createRadialGradient', arguments]);
+      return this;
+    }
+  }, {
+    key: 'createLinearGradient',
+    value: function createLinearGradient() {
+      this.cmds.push(['createLinearGradient', arguments]);
+      return this;
+    }
+  }, {
+    key: 'addColorStop',
+    value: function addColorStop() {
+      this.cmds.push(['addColorStop', arguments]);
+      return this;
+    }
+  }, {
+    key: 'fillGradient',
+    value: function fillGradient() {
+      this.cmds.push(['fillGradient']);
+      return this;
+    }
+  }, {
+    key: 'arcTo',
+    value: function arcTo() {
+      this.cmds.push(['arcTo', arguments]);
+      return this;
+    }
+  }, {
+    key: 'render',
+    value: function render(ctx) {
+      var _this2 = this;
+
+      this.cmds.forEach(function (cmd) {
+        var methodName = cmd[0];
+        if (assMap[methodName]) {
+          ctx[methodName] = cmd[1][0];
+        } else if (methodName === 'addColorStop') {
+          _this2.currentGradient && _this2.currentGradient.addColorStop(cmd[1][0], cmd[1][1]);
+        } else if (methodName === 'fillGradient') {
+          ctx.fillStyle = _this2.currentGradient;
+        } else {
+          var result = ctx[methodName].apply(ctx, Array.prototype.slice.call(cmd[1]));
+          if (methodName === 'createRadialGradient' || methodName === 'createLinearGradient') {
+            _this2.currentGradient = result;
+          }
+        }
+      });
+    }
+  }]);
+
+  return Graphics;
+}(_displayObject2.default);
+
+exports.default = Graphics;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _displayObject = __webpack_require__(3);
+
+var _displayObject2 = _interopRequireDefault(_displayObject);
+
+var _util = __webpack_require__(9);
+
+var _util2 = _interopRequireDefault(_util);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var measureCtx = void 0;
+
+if (_util2.default.isWeapp) {
+  measureCtx = wx.createCanvasContext('measure0');
+} else if (typeof document !== 'undefined') {
+  measureCtx = document.createElement('canvas').getContext('2d');
+}
+
+var Text = function (_DisplayObject) {
+  _inherits(Text, _DisplayObject);
+
+  function Text(text, option) {
+    _classCallCheck(this, Text);
+
+    var _this = _possibleConstructorReturn(this, (Text.__proto__ || Object.getPrototypeOf(Text)).call(this));
+
+    _this.text = text;
+    option = option || {};
+    _this.font = option.font || '10px sans-serif';
+    _this.color = option.color || 'black';
+    _this.textAlign = option.textAlign || 'left';
+    _this.baseline = option.baseline || 'top';
+    return _this;
+  }
+
+  _createClass(Text, [{
+    key: 'getWidth',
+    value: function getWidth() {
+      if (!measureCtx) {
+        if (_util2.default.isWegame) {
+          measureCtx = wx.createCanvas().getContext('2d');
+        }
+      }
+
+      if (this.font) {
+        measureCtx.font = this.font;
+      }
+      return measureCtx.measureText(this.text).width;
+    }
+  }]);
+
+  return Text;
+}(_displayObject2.default);
+
+exports.default = Text;
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _displayObject = __webpack_require__(3);
+
+var _displayObject2 = _interopRequireDefault(_displayObject);
+
+var _util = __webpack_require__(9);
+
+var _util2 = _interopRequireDefault(_util);
+
+var _bitmap = __webpack_require__(2);
+
+var _bitmap2 = _interopRequireDefault(_bitmap);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Sprite = function (_DisplayObject) {
+  _inherits(Sprite, _DisplayObject);
+
+  function Sprite(option) {
+    _classCallCheck(this, Sprite);
+
+    var _this = _possibleConstructorReturn(this, (Sprite.__proto__ || Object.getPrototypeOf(Sprite)).call(this));
+
+    _this.option = option;
+    var len = _this.option.imgs.length;
+    var count = 0;
+    var firstImg = _this.option.imgs[0];
+    _this.imgMap = {};
+
+    if (_util2.default.isWeapp) {
+      _this.option.imgs.forEach(function (img) {
+        _util2.default.getImageInWx(img, function (result) {
+          _this.imgMap[img] = result.img;
+          count++;
+          if (count === len) {
+            _this.img = _this.imgMap[firstImg];
+            _this.rect = [0, 0, 0, 0];
+          }
+        });
+      });
+    } else {
+      if (typeof firstImg === 'string') {
+        var _len = _this.option.imgs.length;
+        var loadedCount = 0;
+        _this.option.imgs.forEach(function (src) {
+          if (_bitmap2.default.cache[src]) {
+            _this.imgMap[src] = _bitmap2.default.cache[src];
+            loadedCount++;
+            if (loadedCount === _len) {
+              _this.img = _this.imgMap[firstImg];
+              _this.rect = [0, 0, 0, 0];
+            }
+          } else {
+            var img = _util2.default.isWegame ? wx.createImage() : new window.Image();
+            img.onload = function () {
+              _this.imgMap[src] = img;
+              loadedCount++;
+              if (loadedCount === _len) {
+                _this.img = _this.imgMap[firstImg];
+                _this.rect = [0, 0, 0, 0];
+              }
+              _bitmap2.default.cache[src] = img;
+            };
+            img.src = src;
+          }
+        });
+      } else if (firstImg instanceof _bitmap2.default) {
+        _this.rect = [0, 0, 0, 0];
+        _this.img = firstImg.img;
+      } else {
+        _this.rect = [0, 0, 0, 0];
+        _this.img = firstImg;
+      }
+    }
+
+    _this.x = option.x || 0;
+    _this.y = option.y || 0;
+    _this.currentFrameIndex = 0;
+    _this.animationFrameIndex = 0;
+    _this.currentAnimation = option.currentAnimation || null;
+
+    _this.interval = 1e3 / option.framerate;
+
+    _this.paused = false;
+    _this.animationEnd = option.animationEnd || function () {};
+    if (_this.currentAnimation) {
+      if (option.playOnce) {
+        _this.gotoAndPlayOnce(_this.currentAnimation);
+      } else {
+        _this.gotoAndPlay(_this.currentAnimation);
+      }
+    }
+    return _this;
+  }
+
+  _createClass(Sprite, [{
+    key: 'play',
+    value: function play() {
+      this.paused = false;
+    }
+  }, {
+    key: 'pause',
+    value: function pause() {
+      this.paused = true;
+    }
+  }, {
+    key: 'reset',
+    value: function reset() {
+      this.currentFrameIndex = 0;
+      this.animationFrameIndex = 0;
+    }
+  }, {
+    key: 'updateFrame',
+    value: function updateFrame() {
+      if (!this.paused) {
+        var opt = this.option;
+        this.dt = Date.now() - this.startTime;
+        var frames = opt.animations[this.currentAnimation].frames;
+        var len = frames.length;
+        var index = Math.floor(this.dt / this.interval % len);
+        this.rect = opt.frames[frames[index]];
+        var rectLen = this.rect.length;
+
+        rectLen > 4 && (this.originX = this.rect[2] * this.rect[4]);
+        rectLen > 5 && (this.originY = this.rect[3] * this.rect[5]);
+        if (rectLen > 6) {
+          var img = this.option.imgs[this.rect[6]];
+          this.img = typeof img === 'string' ? this.imgMap[img] : img;
+        }
+
+        if (index === len - 1 && (!this.endTime || Date.now() - this.endTime > this.interval)) {
+          this.endTime = Date.now();
+          this.animationEnd();
+          if (this._willDestroy) {
+            this.destroy();
+          }
+        }
+      }
+    }
+  }, {
+    key: 'gotoAndPlay',
+    value: function gotoAndPlay(animation) {
+      this.paused = false;
+      this.reset();
+      this.currentAnimation = animation;
+      this.startTime = Date.now();
+    }
+  }, {
+    key: 'gotoAndStop',
+    value: function gotoAndStop(animation) {
+      this.reset();
+      this.paused = true;
+      this.currentAnimation = animation;
+      var opt = this.option;
+      var frames = opt.animations[this.currentAnimation].frames;
+      this.rect = opt.frames[frames[this.animationFrameIndex]];
+      var rect = this.rect;
+      this.width = rect[2];
+      this.height = rect[3];
+      var rectLen = rect.length;
+      rectLen > 4 && (this.originX = rect[2] * rect[4]);
+      rectLen > 5 && (this.originY = rect[3] * rect[5]);
+      if (rectLen > 6) {
+        var img = this.option.imgs[rect[6]];
+        this.img = typeof img === 'string' ? this.imgMap[img] : img;
+      }
+    }
+  }, {
+    key: 'gotoAndPlayOnce',
+    value: function gotoAndPlayOnce(animation) {
+      this.gotoAndPlay(animation);
+      this._willDestroy = true;
+    }
+  }]);
+
+  return Sprite;
+}(_displayObject2.default);
+
+exports.default = Sprite;
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Event = function () {
+  function Event() {
+    _classCallCheck(this, Event);
+
+    this.propagationStopped = false;
+    this.stageX = null;
+    this.stageY = null;
+    this.pureEvent = null;
+  }
+
+  _createClass(Event, [{
+    key: "stopPropagation",
+    value: function stopPropagation() {
+      this.propagationStopped = true;
+    }
+  }, {
+    key: "preventDefault",
+    value: function preventDefault() {
+      this.pureEvent.preventDefault();
+    }
+  }]);
+
+  return Event;
+}();
+
+exports.default = Event;
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Render = function () {
+  function Render() {
+    _classCallCheck(this, Render);
+  }
+
+  _createClass(Render, [{
+    key: "render",
+    value: function render() {}
+  }, {
+    key: "renderGraphics",
+    value: function renderGraphics() {}
+  }, {
+    key: "clear",
+    value: function clear() {}
+  }]);
+
+  return Render;
+}();
+
+exports.default = Render;
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+exports.getImageInWx = getImageInWx;
+function getImageInWx(img, callback) {
+  if (img.indexOf('https://') === -1 && img.indexOf('http://') === -1 || img.indexOf('http://tmp/') === 0) {
+    wx.getImageInfo({
+      src: img,
+      success: function success(info) {
+        callback({
+          img: img,
+          width: info.width,
+          height: info.height
+        });
+      }
+    });
+  } else {
+    wx.downloadFile({
+      url: img,
+      success: function success(res) {
+        if (res.statusCode === 200) {
+          wx.getImageInfo({
+            src: res.tempFilePath,
+            success: function success(info) {
+              callback({
+                img: res.tempFilePath,
+                width: info.width,
+                height: info.height
+              });
+            }
+          });
+        }
+      }
+    });
+  }
+}
+
+function getGlobal() {
+  if ((typeof global === 'undefined' ? 'undefined' : _typeof(global)) !== 'object' || !global || global.Math !== Math || global.Array !== Array) {
+    if (typeof self !== 'undefined') {
+      return self;
+    } else if (typeof window !== 'undefined') {
+      return window;
+    } else if (typeof global !== 'undefined') {
+      return global;
+    }
+    return function () {
+      return this;
+    }();
+  }
+  return global;
+}
+
+var root = getGlobal();
+
+exports.default = {
+  getImageInWx: getImageInWx,
+  root: root,
+  isWeapp: typeof wx !== 'undefined' && !wx.createCanvas && wx.createCanvasContext,
+  isWegame: typeof wx !== 'undefined' && wx.createCanvas
+};
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(25)))
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+/**
+ * Tween.js - Licensed under the MIT license
+ * https://github.com/tweenjs/tween.js
+ * ----------------------------------------------
+ *
+ * See https://github.com/tweenjs/tween.js/graphs/contributors for the full list of contributors.
+ * Thank you all, you're awesome!
+ */
+
+var _Group = function _Group() {
+  this._tweens = {};
+  this._tweensAddedDuringUpdate = {};
+};
+
+_Group.prototype = {
+  getAll: function getAll() {
+    return Object.keys(this._tweens).map(function (tweenId) {
+      return this._tweens[tweenId];
+    }.bind(this));
+  },
+
+  removeAll: function removeAll() {
+    this._tweens = {};
+  },
+
+  add: function add(tween) {
+    this._tweens[tween.getId()] = tween;
+    this._tweensAddedDuringUpdate[tween.getId()] = tween;
+  },
+
+  remove: function remove(tween) {
+    delete this._tweens[tween.getId()];
+    delete this._tweensAddedDuringUpdate[tween.getId()];
+  },
+
+  update: function update(time, preserve) {
+    var tweenIds = Object.keys(this._tweens);
+
+    if (tweenIds.length === 0) {
+      return false;
+    }
+
+    time = time !== undefined ? time : TWEEN.now();
+
+    // Tweens are updated in "batches". If you add a new tween during an update, then the
+    // new tween will be updated in the next batch.
+    // If you remove a tween during an update, it may or may not be updated. However,
+    // if the removed tween was added during the current batch, then it will not be updated.
+    while (tweenIds.length > 0) {
+      this._tweensAddedDuringUpdate = {};
+
+      for (var i = 0; i < tweenIds.length; i++) {
+        var tween = this._tweens[tweenIds[i]];
+
+        if (tween && tween.update(time) === false) {
+          tween._isPlaying = false;
+
+          if (!preserve) {
+            delete this._tweens[tweenIds[i]];
+          }
+        }
+      }
+
+      tweenIds = Object.keys(this._tweensAddedDuringUpdate);
+    }
+
+    return true;
+  }
+};
+
+var TWEEN = new _Group();
+
+TWEEN.Group = _Group;
+TWEEN._nextId = 0;
+TWEEN.nextId = function () {
+  return TWEEN._nextId++;
+};
+
+// Include a performance.now polyfill.
+// In node.js, use process.hrtime.
+if (typeof window === 'undefined' && typeof process !== 'undefined') {
+  if (typeof wx !== 'undefined') {
+    TWEEN.now = Date.now;
+  } else {
+    TWEEN.now = function () {
+      var time = process.hrtime();
+
+      // Convert [seconds, nanoseconds] to milliseconds.
+      return time[0] * 1000 + time[1] / 1000000;
+    };
+  }
+} else if (typeof window !== 'undefined' &&
+// In a browser, use window.performance.now if it is available.
+window.performance !== undefined && window.performance.now !== undefined) {
+  // This must be bound, because directly assigning this function
+  // leads to an invocation exception in Chrome.
+  TWEEN.now = window.performance.now.bind(window.performance);
+} else if (Date.now !== undefined) {
+  // Use Date.now if it is available.
+  TWEEN.now = Date.now;
+} else {
+  // Otherwise, use 'new Date().getTime()'.
+  TWEEN.now = function () {
+    return new Date().getTime();
+  };
+}
+
+TWEEN.Tween = function (object, group) {
+  this._object = object;
+  this._valuesStart = {};
+  this._valuesEnd = {};
+  this._valuesStartRepeat = {};
+  this._duration = 1000;
+  this._repeat = 0;
+  this._repeatDelayTime = undefined;
+  this._yoyo = false;
+  this._isPlaying = false;
+  this._reversed = false;
+  this._delayTime = 0;
+  this._startTime = null;
+  this._easingFunction = TWEEN.Easing.Linear.None;
+  this._interpolationFunction = TWEEN.Interpolation.Linear;
+  this._chainedTweens = [];
+  this._onStartCallback = null;
+  this._onStartCallbackFired = false;
+  this._onUpdateCallback = null;
+  this._onCompleteCallback = null;
+  this._onStopCallback = null;
+  this._group = group || TWEEN;
+  this._id = TWEEN.nextId();
+
+  this._paused = false;
+  this._passTime = null;
+};
+
+TWEEN.Tween.prototype = {
+  getId: function getId() {
+    return this._id;
+  },
+
+  toggle: function toggle() {
+    if (this._paused) {
+      this.play();
+    } else {
+      this.pause();
+    }
+  },
+
+
+  pause: function pause() {
+    this._paused = true;
+    var pauseTime = TWEEN.now();
+    this._passTime = pauseTime - this._startTime;
+  },
+
+  play: function play() {
+    this._paused = false;
+    var nowTime = TWEEN.now();
+    this._startTime = nowTime - this._passTime;
+  },
+
+  isPlaying: function isPlaying() {
+    return this._isPlaying;
+  },
+
+  to: function to(properties, duration) {
+    this._valuesEnd = properties;
+
+    if (duration !== undefined) {
+      this._duration = duration;
+    }
+
+    return this;
+  },
+
+  start: function start(time) {
+    this._group.add(this);
+
+    this._isPlaying = true;
+
+    this._onStartCallbackFired = false;
+
+    this._startTime = time !== undefined ? typeof time === 'string' ? TWEEN.now() + parseFloat(time) : time : TWEEN.now();
+    this._startTime += this._delayTime;
+
+    for (var property in this._valuesEnd) {
+      // Check if an Array was provided as property value
+      if (this._valuesEnd[property] instanceof Array) {
+        if (this._valuesEnd[property].length === 0) {
+          continue;
+        }
+
+        // Create a local copy of the Array with the start value at the front
+        this._valuesEnd[property] = [this._object[property]].concat(this._valuesEnd[property]);
+      }
+
+      // If `to()` specifies a property that doesn't exist in the source object,
+      // we should not set that property in the object
+      if (this._object[property] === undefined) {
+        continue;
+      }
+
+      // Save the starting value.
+      this._valuesStart[property] = this._object[property];
+
+      if (this._valuesStart[property] instanceof Array === false) {
+        this._valuesStart[property] *= 1.0; // Ensures we're using numbers, not strings
+      }
+
+      this._valuesStartRepeat[property] = this._valuesStart[property] || 0;
+    }
+
+    return this;
+  },
+
+  stop: function stop() {
+    if (!this._isPlaying) {
+      return this;
+    }
+
+    this._group.remove(this);
+    this._isPlaying = false;
+
+    if (this._onStopCallback !== null) {
+      this._onStopCallback(this._object);
+    }
+
+    this.stopChainedTweens();
+    return this;
+  },
+
+  end: function end() {
+    this.update(this._startTime + this._duration);
+    return this;
+  },
+
+  stopChainedTweens: function stopChainedTweens() {
+    for (var i = 0, numChainedTweens = this._chainedTweens.length; i < numChainedTweens; i++) {
+      this._chainedTweens[i].stop();
+    }
+  },
+
+  group: function group(group) {
+    this._group = group;
+    return this;
+  },
+
+  delay: function delay(amount) {
+    this._delayTime = amount;
+    return this;
+  },
+
+  repeat: function repeat(times) {
+    this._repeat = times;
+    return this;
+  },
+
+  repeatDelay: function repeatDelay(amount) {
+    this._repeatDelayTime = amount;
+    return this;
+  },
+
+  yoyo: function yoyo(yy) {
+    this._yoyo = yy;
+    return this;
+  },
+
+  easing: function easing(eas) {
+    this._easingFunction = eas;
+    return this;
+  },
+
+  interpolation: function interpolation(inter) {
+    this._interpolationFunction = inter;
+    return this;
+  },
+
+  chain: function chain() {
+    this._chainedTweens = arguments;
+    return this;
+  },
+
+  onStart: function onStart(callback) {
+    this._onStartCallback = callback;
+    return this;
+  },
+
+  onUpdate: function onUpdate(callback) {
+    this._onUpdateCallback = callback;
+    return this;
+  },
+
+  onComplete: function onComplete(callback) {
+    this._onCompleteCallback = callback;
+    return this;
+  },
+
+  onStop: function onStop(callback) {
+    this._onStopCallback = callback;
+    return this;
+  },
+
+  update: function update(time) {
+    if (this._paused) return true;
+    var property;
+    var elapsed;
+    var value;
+
+    if (time < this._startTime) {
+      return true;
+    }
+
+    if (this._onStartCallbackFired === false) {
+      if (this._onStartCallback !== null) {
+        this._onStartCallback(this._object);
+      }
+
+      this._onStartCallbackFired = true;
+    }
+
+    elapsed = (time - this._startTime) / this._duration;
+    elapsed = this._duration === 0 || elapsed > 1 ? 1 : elapsed;
+
+    value = this._easingFunction(elapsed);
+
+    for (property in this._valuesEnd) {
+      // Don't update properties that do not exist in the source object
+      if (this._valuesStart[property] === undefined) {
+        continue;
+      }
+
+      var start = this._valuesStart[property] || 0;
+      var end = this._valuesEnd[property];
+
+      if (end instanceof Array) {
+        this._object[property] = this._interpolationFunction(end, value);
+      } else {
+        // Parses relative end values with start as base (e.g.: +10, -3)
+        if (typeof end === 'string') {
+          if (end.charAt(0) === '+' || end.charAt(0) === '-') {
+            end = start + parseFloat(end);
+          } else {
+            end = parseFloat(end);
+          }
+        }
+
+        // Protect against non numeric properties.
+        if (typeof end === 'number') {
+          this._object[property] = start + (end - start) * value;
+        }
+      }
+    }
+
+    if (this._onUpdateCallback !== null) {
+      this._onUpdateCallback(this._object);
+    }
+
+    if (elapsed === 1) {
+      if (this._repeat > 0) {
+        if (isFinite(this._repeat)) {
+          this._repeat--;
+        }
+
+        // Reassign starting values, restart by making startTime = now
+        for (property in this._valuesStartRepeat) {
+          if (typeof this._valuesEnd[property] === 'string') {
+            this._valuesStartRepeat[property] = this._valuesStartRepeat[property] + parseFloat(this._valuesEnd[property]);
+          }
+
+          if (this._yoyo) {
+            var tmp = this._valuesStartRepeat[property];
+
+            this._valuesStartRepeat[property] = this._valuesEnd[property];
+            this._valuesEnd[property] = tmp;
+          }
+
+          this._valuesStart[property] = this._valuesStartRepeat[property];
+        }
+
+        if (this._yoyo) {
+          this._reversed = !this._reversed;
+        }
+
+        if (this._repeatDelayTime !== undefined) {
+          this._startTime = time + this._repeatDelayTime;
+        } else {
+          this._startTime = time + this._delayTime;
+        }
+
+        return true;
+      } else {
+        if (this._onCompleteCallback !== null) {
+          this._onCompleteCallback(this._object);
+        }
+
+        for (var i = 0, numChainedTweens = this._chainedTweens.length; i < numChainedTweens; i++) {
+          // Make the chained tweens start exactly at the time they should,
+          // even if the `update()` method was called way past the duration of the tween
+          this._chainedTweens[i].start(this._startTime + this._duration);
+        }
+
+        return false;
+      }
+    }
+
+    return true;
+  }
+};
+
+TWEEN.Easing = {
+
+  Linear: {
+
+    None: function None(k) {
+      return k;
+    }
+
+  },
+
+  Quadratic: {
+
+    In: function In(k) {
+      return k * k;
+    },
+
+    Out: function Out(k) {
+      return k * (2 - k);
+    },
+
+    InOut: function InOut(k) {
+      if ((k *= 2) < 1) {
+        return 0.5 * k * k;
+      }
+
+      return -0.5 * (--k * (k - 2) - 1);
+    }
+
+  },
+
+  Cubic: {
+
+    In: function In(k) {
+      return k * k * k;
+    },
+
+    Out: function Out(k) {
+      return --k * k * k + 1;
+    },
+
+    InOut: function InOut(k) {
+      if ((k *= 2) < 1) {
+        return 0.5 * k * k * k;
+      }
+
+      return 0.5 * ((k -= 2) * k * k + 2);
+    }
+
+  },
+
+  Quartic: {
+
+    In: function In(k) {
+      return k * k * k * k;
+    },
+
+    Out: function Out(k) {
+      return 1 - --k * k * k * k;
+    },
+
+    InOut: function InOut(k) {
+      if ((k *= 2) < 1) {
+        return 0.5 * k * k * k * k;
+      }
+
+      return -0.5 * ((k -= 2) * k * k * k - 2);
+    }
+
+  },
+
+  Quintic: {
+
+    In: function In(k) {
+      return k * k * k * k * k;
+    },
+
+    Out: function Out(k) {
+      return --k * k * k * k * k + 1;
+    },
+
+    InOut: function InOut(k) {
+      if ((k *= 2) < 1) {
+        return 0.5 * k * k * k * k * k;
+      }
+
+      return 0.5 * ((k -= 2) * k * k * k * k + 2);
+    }
+
+  },
+
+  Sinusoidal: {
+
+    In: function In(k) {
+      return 1 - Math.cos(k * Math.PI / 2);
+    },
+
+    Out: function Out(k) {
+      return Math.sin(k * Math.PI / 2);
+    },
+
+    InOut: function InOut(k) {
+      return 0.5 * (1 - Math.cos(Math.PI * k));
+    }
+
+  },
+
+  Exponential: {
+
+    In: function In(k) {
+      return k === 0 ? 0 : Math.pow(1024, k - 1);
+    },
+
+    Out: function Out(k) {
+      return k === 1 ? 1 : 1 - Math.pow(2, -10 * k);
+    },
+
+    InOut: function InOut(k) {
+      if (k === 0) {
+        return 0;
+      }
+
+      if (k === 1) {
+        return 1;
+      }
+
+      if ((k *= 2) < 1) {
+        return 0.5 * Math.pow(1024, k - 1);
+      }
+
+      return 0.5 * (-Math.pow(2, -10 * (k - 1)) + 2);
+    }
+
+  },
+
+  Circular: {
+
+    In: function In(k) {
+      return 1 - Math.sqrt(1 - k * k);
+    },
+
+    Out: function Out(k) {
+      return Math.sqrt(1 - --k * k);
+    },
+
+    InOut: function InOut(k) {
+      if ((k *= 2) < 1) {
+        return -0.5 * (Math.sqrt(1 - k * k) - 1);
+      }
+
+      return 0.5 * (Math.sqrt(1 - (k -= 2) * k) + 1);
+    }
+
+  },
+
+  Elastic: {
+
+    In: function In(k) {
+      if (k === 0) {
+        return 0;
+      }
+
+      if (k === 1) {
+        return 1;
+      }
+
+      return -Math.pow(2, 10 * (k - 1)) * Math.sin((k - 1.1) * 5 * Math.PI);
+    },
+
+    Out: function Out(k) {
+      if (k === 0) {
+        return 0;
+      }
+
+      if (k === 1) {
+        return 1;
+      }
+
+      return Math.pow(2, -10 * k) * Math.sin((k - 0.1) * 5 * Math.PI) + 1;
+    },
+
+    InOut: function InOut(k) {
+      if (k === 0) {
+        return 0;
+      }
+
+      if (k === 1) {
+        return 1;
+      }
+
+      k *= 2;
+
+      if (k < 1) {
+        return -0.5 * Math.pow(2, 10 * (k - 1)) * Math.sin((k - 1.1) * 5 * Math.PI);
+      }
+
+      return 0.5 * Math.pow(2, -10 * (k - 1)) * Math.sin((k - 1.1) * 5 * Math.PI) + 1;
+    }
+
+  },
+
+  Back: {
+
+    In: function In(k) {
+      var s = 1.70158;
+
+      return k * k * ((s + 1) * k - s);
+    },
+
+    Out: function Out(k) {
+      var s = 1.70158;
+
+      return --k * k * ((s + 1) * k + s) + 1;
+    },
+
+    InOut: function InOut(k) {
+      var s = 1.70158 * 1.525;
+
+      if ((k *= 2) < 1) {
+        return 0.5 * (k * k * ((s + 1) * k - s));
+      }
+
+      return 0.5 * ((k -= 2) * k * ((s + 1) * k + s) + 2);
+    }
+
+  },
+
+  Bounce: {
+
+    In: function In(k) {
+      return 1 - TWEEN.Easing.Bounce.Out(1 - k);
+    },
+
+    Out: function Out(k) {
+      if (k < 1 / 2.75) {
+        return 7.5625 * k * k;
+      } else if (k < 2 / 2.75) {
+        return 7.5625 * (k -= 1.5 / 2.75) * k + 0.75;
+      } else if (k < 2.5 / 2.75) {
+        return 7.5625 * (k -= 2.25 / 2.75) * k + 0.9375;
+      } else {
+        return 7.5625 * (k -= 2.625 / 2.75) * k + 0.984375;
+      }
+    },
+
+    InOut: function InOut(k) {
+      if (k < 0.5) {
+        return TWEEN.Easing.Bounce.In(k * 2) * 0.5;
+      }
+
+      return TWEEN.Easing.Bounce.Out(k * 2 - 1) * 0.5 + 0.5;
+    }
+
+  }
+
+};
+
+TWEEN.Interpolation = {
+
+  Linear: function Linear(v, k) {
+    var m = v.length - 1;
+    var f = m * k;
+    var i = Math.floor(f);
+    var fn = TWEEN.Interpolation.Utils.Linear;
+
+    if (k < 0) {
+      return fn(v[0], v[1], f);
+    }
+
+    if (k > 1) {
+      return fn(v[m], v[m - 1], m - f);
+    }
+
+    return fn(v[i], v[i + 1 > m ? m : i + 1], f - i);
+  },
+
+  Bezier: function Bezier(v, k) {
+    var b = 0;
+    var n = v.length - 1;
+    var pw = Math.pow;
+    var bn = TWEEN.Interpolation.Utils.Bernstein;
+
+    for (var i = 0; i <= n; i++) {
+      b += pw(1 - k, n - i) * pw(k, i) * v[i] * bn(n, i);
+    }
+
+    return b;
+  },
+
+  CatmullRom: function CatmullRom(v, k) {
+    var m = v.length - 1;
+    var f = m * k;
+    var i = Math.floor(f);
+    var fn = TWEEN.Interpolation.Utils.CatmullRom;
+
+    if (v[0] === v[m]) {
+      if (k < 0) {
+        i = Math.floor(f = m * (1 + k));
+      }
+
+      return fn(v[(i - 1 + m) % m], v[i], v[(i + 1) % m], v[(i + 2) % m], f - i);
+    } else {
+      if (k < 0) {
+        return v[0] - (fn(v[0], v[0], v[1], v[1], -f) - v[0]);
+      }
+
+      if (k > 1) {
+        return v[m] - (fn(v[m], v[m], v[m - 1], v[m - 1], f - m) - v[m]);
+      }
+
+      return fn(v[i ? i - 1 : 0], v[i], v[m < i + 1 ? m : i + 1], v[m < i + 2 ? m : i + 2], f - i);
+    }
+  },
+
+  Utils: {
+
+    Linear: function Linear(p0, p1, t) {
+      return (p1 - p0) * t + p0;
+    },
+
+    Bernstein: function Bernstein(n, i) {
+      var fc = TWEEN.Interpolation.Utils.Factorial;
+
+      return fc(n) / fc(i) / fc(n - i);
+    },
+
+    Factorial: function () {
+      var a = [1];
+
+      return function (n) {
+        var s = 1;
+
+        if (a[n]) {
+          return a[n];
+        }
+
+        for (var i = n; i > 1; i--) {
+          s *= i;
+        }
+
+        a[n] = s;
+        return s;
+      };
+    }(),
+
+    CatmullRom: function CatmullRom(p0, p1, p2, p3, t) {
+      var v0 = (p2 - p0) * 0.5;
+      var v1 = (p3 - p1) * 0.5;
+      var t2 = t * t;
+      var t3 = t * t2;
+
+      return (2 * p1 - 2 * p2 + v0 + v1) * t3 + (-3 * p1 + 3 * p2 - 2 * v0 - v1) * t2 + v0 * t + p1;
+    }
+
+  }
+
+};
+
+// UMD (Universal Module Definition)
+(function (root) {
+  if (typeof module !== 'undefined' && ( false ? undefined : _typeof(exports)) === 'object') {
+    // Node.js
+    module.exports = TWEEN;
+  } else if (root !== undefined) {
+    // Global variable
+    root.TWEEN = TWEEN;
+  }
+})(undefined);
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _tween = __webpack_require__(10);
+
+var _tween2 = _interopRequireDefault(_tween);
+
+var _rafInterval = __webpack_require__(12);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var To = function () {
+  function To(element) {
+    _classCallCheck(this, To);
+
+    this.element = element;
+    this.cmds = [];
+    this.index = 0;
+    this.tweens = [];
+    this._pause = false;
+    this.loop = (0, _rafInterval.setRafInterval)(function () {
+      _tween2.default.update();
+    }, 15);
+    this.cycleCount = 0;
+  }
+
+  _createClass(To, [{
+    key: 'to',
+    value: function to(target, duration, easing) {
+      this.cmds.push(['to']);
+      if (arguments.length !== 0) {
+        for (var key in target) {
+          this.set(key, target[key], duration || 0, easing);
+        }
+      }
+      return this;
+    }
+  }, {
+    key: 'set',
+    value: function set(prop, value, duration, easing) {
+      this.cmds[this.cmds.length - 1].push([prop, [value, duration, easing]]);
+      return this;
+    }
+  }, {
+    key: 'x',
+    value: function x() {
+      this.cmds[this.cmds.length - 1].push(['x', arguments]);
+      return this;
+    }
+  }, {
+    key: 'y',
+    value: function y() {
+      this.cmds[this.cmds.length - 1].push(['y', arguments]);
+      return this;
+    }
+  }, {
+    key: 'z',
+    value: function z() {
+      this.cmds[this.cmds.length - 1].push(['z', arguments]);
+      return this;
+    }
+  }, {
+    key: 'rotation',
+    value: function rotation() {
+      this.cmds[this.cmds.length - 1].push(['rotation', arguments]);
+      return this;
+    }
+  }, {
+    key: 'scaleX',
+    value: function scaleX() {
+      this.cmds[this.cmds.length - 1].push(['scaleX', arguments]);
+      return this;
+    }
+  }, {
+    key: 'scaleY',
+    value: function scaleY() {
+      this.cmds[this.cmds.length - 1].push(['scaleY', arguments]);
+      return this;
+    }
+  }, {
+    key: 'skewX',
+    value: function skewX() {
+      this.cmds[this.cmds.length - 1].push(['skewX', arguments]);
+      return this;
+    }
+  }, {
+    key: 'skewY',
+    value: function skewY() {
+      this.cmds[this.cmds.length - 1].push(['skewY', arguments]);
+      return this;
+    }
+  }, {
+    key: 'originX',
+    value: function originX() {
+      this.cmds[this.cmds.length - 1].push(['originX', arguments]);
+      return this;
+    }
+  }, {
+    key: 'originY',
+    value: function originY() {
+      this.cmds[this.cmds.length - 1].push(['originY', arguments]);
+      return this;
+    }
+  }, {
+    key: 'alpha',
+    value: function alpha() {
+      this.cmds[this.cmds.length - 1].push(['alpha', arguments]);
+      return this;
+    }
+  }, {
+    key: 'begin',
+    value: function begin(fn) {
+      this.cmds[this.cmds.length - 1].begin = fn;
+      return this;
+    }
+  }, {
+    key: 'progress',
+    value: function progress(fn) {
+      this.cmds[this.cmds.length - 1].progress = fn;
+      return this;
+    }
+  }, {
+    key: 'end',
+    value: function end(fn) {
+      this.cmds[this.cmds.length - 1].end = fn;
+      return this;
+    }
+  }, {
+    key: 'wait',
+    value: function wait() {
+      this.cmds.push(['wait', arguments]);
+      return this;
+    }
+  }, {
+    key: 'then',
+    value: function then() {
+      this.cmds.push(['then', arguments]);
+      return this;
+    }
+  }, {
+    key: 'cycle',
+    value: function cycle() {
+      this.cmds.push(['cycle', arguments]);
+      return this;
+    }
+  }, {
+    key: 'start',
+    value: function start() {
+      if (this._pause) return;
+      var len = this.cmds.length;
+      if (this.index < len) {
+        this.exec(this.cmds[this.index], this.index === len - 1);
+      } else {
+        (0, _rafInterval.clearRafInterval)(this.loop);
+      }
+      return this;
+    }
+  }, {
+    key: 'pause',
+    value: function pause() {
+      this._pause = true;
+      for (var i = 0, len = this.tweens.length; i < len; i++) {
+        this.tweens[i].pause();
+      }
+      if (this.currentTask === 'wait') {
+        this.timeout -= new Date() - this.currentTaskBegin;
+        this.currentTaskBegin = new Date();
+      }
+    }
+  }, {
+    key: 'toggle',
+    value: function toggle() {
+      if (this._pause) {
+        this.play();
+      } else {
+        this.pause();
+      }
+    }
+  }, {
+    key: 'play',
+    value: function play() {
+      this._pause = false;
+      for (var i = 0, len = this.tweens.length; i < len; i++) {
+        this.tweens[i].play();
+      }
+      var self = this;
+      if (this.currentTask === 'wait') {
+        setTimeout(function () {
+          if (self._pause) return;
+          self.index++;
+          self.start();
+          if (self.index === self.cmds.length && self.complete) self.complete();
+        }, this.timeout);
+      }
+    }
+  }, {
+    key: 'stop',
+    value: function stop() {
+      for (var i = 0, len = this.tweens.length; i < len; i++) {
+        this.tweens[i].stop();
+      }
+      this.cmds.length = 0;
+    }
+  }, {
+    key: 'animate',
+    value: function animate(name) {
+      this.cmds = this.cmds.concat(To.animationMap[name] || []);
+      return this;
+    }
+  }, {
+    key: 'exec',
+    value: function exec(cmd, last) {
+      var len = cmd.length,
+          self = this;
+      this.currentTask = cmd[0];
+      switch (this.currentTask) {
+        case 'to':
+          self.stepCompleteCount = 0;
+          for (var i = 1; i < len; i++) {
+            var task = cmd[i];
+            var ease = task[1][2];
+            var target = {};
+            var prop = task[0];
+            target[prop] = task[1][0];
+
+            var t = new _tween2.default.Tween(this.element).to(target, task[1][1]).onStart(function () {
+              if (cmd.begin) cmd.begin.call(self.element, self.element);
+            }).onUpdate(function () {
+              if (cmd.progress) cmd.progress.call(self.element, self.element);
+              // self.element[prop] = this[prop];
+            }).easing(ease || _tween2.default.Easing.Linear.None).onComplete(function () {
+              self.stepCompleteCount++;
+              if (self.stepCompleteCount === len - 1) {
+                if (cmd.end) cmd.end.call(self.element, self.element);
+                if (last && self.complete) self.complete();
+                self.index++;
+                self.start();
+              }
+            }).start();
+            this.tweens.push(t);
+          }
+          break;
+        case 'wait':
+          this.currentTaskBegin = new Date();
+          this.timeout = cmd[1][0];
+          setTimeout(function () {
+            if (self._pause) return;
+            self.index++;
+            self.start();
+            if (cmd.end) cmd.end.call(self.element, self.element);
+            if (last && self.complete) self.complete();
+          }, cmd[1][0]);
+          break;
+        case 'then':
+          var arg = cmd[1][0];
+          arg.index = 0;
+          arg.complete = function () {
+            self.index++;
+            self.start();
+            if (last && self.complete) self.complete();
+          };
+          arg.start();
+          break;
+        case 'cycle':
+          var count = cmd[1][1];
+          if (count === undefined) {
+            self.index = cmd[1][0] || 0;
+            self.start();
+          } else {
+            if (count && self.cycleCount === count) {
+              self.index++;
+              self.start();
+              if (last && self.complete) self.complete();
+            } else {
+              self.cycleCount++;
+              self.index = cmd[1][0];
+              self.start();
+            }
+          }
+          break;
+      }
+    }
+  }]);
+
+  return To;
+}();
+
+To.get = function (element) {
+  var to = new To(element);
+  return to;
+};
+
+To.animationMap = {};
+To.extend = function (animationName, cmds) {
+  To.animationMap[animationName] = cmds;
+};
+
+exports.default = To;
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.setRafInterval = setRafInterval;
+exports.clearRafInterval = clearRafInterval;
+/*!
+ *  raf-interval v0.3.0 By dntzhang
+ *  Github: https://github.com/dntzhang/raf-interval
+ *  MIT Licensed.
+ */
+
+if (!Date.now) {
+  Date.now = function now() {
+    return new Date().getTime();
+  };
+}
+
+var queue = [],
+    id = -1,
+    ticking = false,
+    tickId = null,
+    now = Date.now,
+    lastTime = 0,
+    vendors = ['ms', 'moz', 'webkit', 'o'],
+    x = 0,
+    isWeapp = typeof wx !== 'undefined' && !wx.createCanvas,
+    isWegame = typeof wx !== 'undefined' && wx.createCanvas,
+    isBrowser = typeof window !== 'undefined';
+
+var raf = isBrowser ? window.requestAnimationFrame : null;
+var caf = isBrowser ? window.cancelAnimationFrame : null;
+
+function mockRaf(callback, element) {
+  var currTime = now();
+  var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+  var id = setTimeout(function () {
+    callback(currTime + timeToCall);
+  }, timeToCall);
+  lastTime = currTime + timeToCall;
+  return id;
+}
+
+function mockCaf(id) {
+  clearTimeout(id);
+}
+
+if (isBrowser) {
+  window.setRafInterval = setRafInterval;
+  window.clearRafInterval = clearRafInterval;
+
+  for (; x < vendors.length && !window.requestAnimationFrame; ++x) {
+    window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
+    window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame'] || window[vendors[x] + 'CancelRequestAnimationFrame'];
+  }
+
+  if (!raf) {
+    raf = mockRaf;
+    caf = mockCaf;
+    window.requestAnimationFrame = raf;
+    window.cancelAnimationFrame = caf;
+  }
+} else if (isWeapp) {
+  raf = mockRaf;
+  caf = mockCaf;
+} else if (isWegame) {
+  raf = requestAnimationFrame;
+  caf = cancelAnimationFrame;
+}
+
+function setRafInterval(fn, interval) {
+  id++;
+  queue.push({ id: id, fn: fn, interval: interval, lastTime: now() });
+  if (!ticking) {
+    var tick = function tick() {
+      tickId = raf(tick);
+      each(queue, function (item) {
+        if (item.interval < 17 || now() - item.lastTime >= item.interval) {
+          item.fn();
+          item.lastTime = now();
+        }
+      });
+    };
+    ticking = true;
+    tick();
+  }
+  return id;
+}
+
+function clearRafInterval(id) {
+  var i = 0,
+      len = queue.length;
+
+  for (; i < len; i++) {
+    if (id === queue[i].id) {
+      queue.splice(i, 1);
+      break;
+    }
+  }
+
+  if (queue.length === 0) {
+    caf(tickId);
+    ticking = false;
+  }
+}
+
+function each(arr, fn) {
+  if (Array.prototype.forEach) {
+    arr.forEach(fn);
+  } else {
+    var i = 0,
+        len = arr.length;
+    for (; i < len; i++) {
+      fn(arr[i], i);
+    }
+  }
+}
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _canvasRender = __webpack_require__(24);
+
+var _canvasRender2 = _interopRequireDefault(_canvasRender);
+
+var _group = __webpack_require__(1);
+
+var _group2 = _interopRequireDefault(_group);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Renderer = function () {
+  function Renderer(canvasOrContext, width, height) {
+    _classCallCheck(this, Renderer);
+
+    this.renderList = [];
+    if (arguments.length === 3) {
+      this.renderer = new _canvasRender2.default(canvasOrContext, width, height);
+      this.width = width;
+      this.height = height;
+    } else {
+      this.renderer = new _canvasRender2.default(canvasOrContext);
+      this.width = canvasOrContext.width;
+      this.height = canvasOrContext.height;
+    }
+    this.ctx = this.renderer.ctx;
+  }
+
+  _createClass(Renderer, [{
+    key: 'update',
+    value: function update(stage) {
+      this.renderer.clear(this.ctx, this.width, this.height);
+      this.renderer.render(this.ctx, stage);
+      this.ctx.draw && this.ctx.draw();
+    }
+  }, {
+    key: 'getHitRenderList',
+    value: function getHitRenderList(stage) {
+      var objs = this.renderList;
+      objs.length = 0;
+      this.computeMatrix(stage);
+      return objs;
+    }
+  }, {
+    key: 'computeMatrix',
+    value: function computeMatrix(stage) {
+      for (var i = 0, len = stage.children.length; i < len; i++) {
+        this._computeMatrix(stage.children[i]);
+      }
+    }
+  }, {
+    key: 'initComplex',
+    value: function initComplex(o) {
+      o.complexCompositeOperation = this._getCompositeOperation(o);
+      o.complexAlpha = this._getAlpha(o, 1);
+    }
+  }, {
+    key: '_computeMatrix',
+    value: function _computeMatrix(o, mtx) {
+      if (!o.isVisible()) {
+        return;
+      }
+      if (mtx && !o.fixed) {
+        o._matrix.initialize(mtx.a, mtx.b, mtx.c, mtx.d, mtx.tx, mtx.ty);
+      } else {
+        o._matrix.initialize(1, 0, 0, 1, 0, 0);
+      }
+
+      o._matrix.appendTransform(o.x, o.y, o.scaleX, o.scaleY, o.rotation, o.skewX, o.skewY, o.originX, o.originY);
+
+      if (o instanceof _group2.default) {
+        var list = o.children,
+            len = list.length,
+            i = 0;
+        for (; i < len; i++) {
+          this._computeMatrix(list[i], o._matrix);
+        }
+      } else {
+        // if (o instanceof Graphics) {
+        //   this.renderList.push(o)
+        //   this.initComplex(o)
+        // } else {
+        o.initAABB();
+        // if (this.isInStage(o)) {
+        this.renderList.push(o);
+        this.initComplex(o);
+        // }
+        // }
+      }
+    }
+  }, {
+    key: '_getCompositeOperation',
+    value: function _getCompositeOperation(o) {
+      if (o.compositeOperation) return o.compositeOperation;
+      if (o.parent) return this._getCompositeOperation(o.parent);
+    }
+  }, {
+    key: '_getAlpha',
+    value: function _getAlpha(o, alpha) {
+      var result = o.alpha * alpha;
+      if (o.parent) {
+        return this._getAlpha(o.parent, result);
+      }
+      return result;
+    }
+  }, {
+    key: 'isInStage',
+    value: function isInStage(o) {
+      return this.collisionBetweenAABB(o.AABB, this.stage.AABB);
+    }
+  }, {
+    key: 'collisionBetweenAABB',
+    value: function collisionBetweenAABB(AABB1, AABB2) {
+      var maxX = AABB1[0] + AABB1[2];
+      if (maxX < AABB2[0]) return false;
+      var minX = AABB1[0];
+      if (minX > AABB2[0] + AABB2[2]) return false;
+      var maxY = AABB1[1] + AABB1[3];
+      if (maxY < AABB2[1]) return false;
+      var minY = AABB1[1];
+      if (minY > AABB2[1] + AABB2[3]) return false;
+      return true;
+    }
+  }]);
+
+  return Renderer;
+}();
+
+exports.default = Renderer;
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _group = __webpack_require__(1);
+
+var _group2 = _interopRequireDefault(_group);
+
+var _renderer = __webpack_require__(13);
+
+var _renderer2 = _interopRequireDefault(_renderer);
+
+var _wxHitRender = __webpack_require__(38);
+
+var _wxHitRender2 = _interopRequireDefault(_wxHitRender);
+
+var _event = __webpack_require__(7);
+
+var _event2 = _interopRequireDefault(_event);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var WeStage = function (_Group) {
+  _inherits(WeStage, _Group);
+
+  function WeStage(width, height, id, page) {
+    _classCallCheck(this, WeStage);
+
+    var _this = _possibleConstructorReturn(this, (WeStage.__proto__ || Object.getPrototypeOf(WeStage)).call(this));
+
+    var component = page.selectComponent('#' + id);
+    component.setData({
+      width: width,
+      height: height
+    });
+    component.stage = _this;
+    var canvasId = component.getCaxCanvasId();
+
+    var ctx = wx.createCanvasContext(canvasId, component);
+    var hitCtx = wx.createCanvasContext(canvasId + 'Hit', component);
+    _this.renderer = new _renderer2.default(ctx, width, height);
+    _this._hitRender = new _wxHitRender2.default(hitCtx, component, canvasId);
+    _this._overObject = null;
+    _this.ctx = ctx;
+    _this.hitAABB = true;
+    _this.width = width;
+    _this.height = height;
+    return _this;
+  }
+
+  _createClass(WeStage, [{
+    key: 'touchStartHandler',
+    value: function touchStartHandler(evt) {
+      var _this2 = this;
+
+      var p1 = evt.changedTouches[0];
+
+      evt.stageX = Math.round(p1.x * this.scaleX);
+      evt.stageY = Math.round(p1.y * this.scaleY);
+
+      this._getObjectUnderPoint(evt, function (obj) {
+        _this2.willDragObject = obj;
+        _this2._mouseDownX = evt.stageX;
+        _this2._mouseDownY = evt.stageY;
+        _this2.preStageX = evt.stageX;
+        _this2.preStageY = evt.stageY;
+      });
+    }
+  }, {
+    key: 'touchMoveHandler',
+    value: function touchMoveHandler(evt) {
+      var _this3 = this;
+
+      var p1 = evt.changedTouches[0];
+
+      evt.stageX = Math.round(p1.x * this.scaleX);
+      evt.stageY = Math.round(p1.y * this.scaleY);
+
+      this._getObjectUnderPoint(evt, function (obj) {
+        var mockEvt = new _event2.default();
+        mockEvt.stageX = evt.stageX;
+        mockEvt.stageY = evt.stageY;
+        mockEvt.pureEvent = evt;
+
+        if (_this3.willDragObject) {
+          mockEvt.type = 'drag';
+          mockEvt.dx = mockEvt.stageX - _this3.preStageX;
+          mockEvt.dy = mockEvt.stageY - _this3.preStageY;
+          _this3.preStageX = mockEvt.stageX;
+          _this3.preStageY = mockEvt.stageY;
+          _this3.willDragObject.dispatchEvent(mockEvt);
+        }
+
+        if (obj) {
+          if (_this3._overObject === null) {
+            _this3._overObject = obj;
+          } else {
+            if (obj.id !== _this3._overObject.id) {
+              _this3._overObject = obj;
+            } else {
+              mockEvt.type = 'touchmove';
+              obj.dispatchEvent(mockEvt);
+            }
+          }
+        } else if (_this3._overObject) {
+          _this3._overObject = null;
+        }
+      });
+    }
+  }, {
+    key: 'touchEndHandler',
+    value: function touchEndHandler(evt) {
+      var _this4 = this;
+
+      var p1 = evt.changedTouches[0];
+
+      evt.stageX = Math.round(p1.x * this.scaleX);
+      evt.stageY = Math.round(p1.y * this.scaleY);
+
+      var mockEvt = new _event2.default();
+      mockEvt.stageX = evt.stageX;
+      mockEvt.stageY = evt.stageY;
+
+      mockEvt.pureEvent = evt;
+
+      this._getObjectUnderPoint(evt, function (obj) {
+        _this4._mouseUpX = evt.stageX;
+        _this4._mouseUpY = evt.stageY;
+
+        _this4.willDragObject = null;
+        _this4.preStageX = null;
+        _this4.preStageY = null;
+
+        if (obj && Math.abs(_this4._mouseDownX - _this4._mouseUpX) < 30 && Math.abs(_this4._mouseDownY - _this4._mouseUpY) < 30) {
+          mockEvt.type = 'tap';
+          obj.dispatchEvent(mockEvt);
+        }
+      });
+    }
+  }, {
+    key: '_handleMouseOut',
+    value: function _handleMouseOut(evt) {
+      this.dispatchEvent({
+        pureEvent: evt,
+        type: 'mouseout',
+        stageX: evt.stageX,
+        stageY: evt.stageY
+      });
+    }
+  }, {
+    key: '_getObjectUnderPoint',
+    value: function _getObjectUnderPoint(evt, cb) {
+      var list = this.renderer.getHitRenderList(this);
+      if (this.hitAABB) {
+        return this._hitRender.hitAABB(list, evt, cb);
+      } else {
+        this._hitRender.clear();
+        this._hitRender.hit(list, evt, cb, list.length - 1);
+      }
+    }
+  }, {
+    key: 'on',
+    value: function on(type, cb) {
+      switch (type) {
+        case 'touchstart':
+          this.touchStart = cb;
+          break;
+        case 'touchmove':
+          this.touchMove = cb;
+          break;
+        case 'touchend':
+          this.touchEnd = cb;
+          break;
+      }
+    }
+  }, {
+    key: 'update',
+    value: function update() {
+      this.renderer.update(this);
+    }
+  }]);
+
+  return WeStage;
+}(_group2.default);
+
+exports.default = WeStage;
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _shape = __webpack_require__(0);
+
+var _shape2 = _interopRequireDefault(_shape);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var RoundedRect = function (_Shape) {
+  _inherits(RoundedRect, _Shape);
+
+  function RoundedRect(width, height, r, option) {
+    _classCallCheck(this, RoundedRect);
+
+    var _this = _possibleConstructorReturn(this, (RoundedRect.__proto__ || Object.getPrototypeOf(RoundedRect)).call(this));
+
+    _this.option = Object.assign({
+      lineWidth: 1,
+      lt: true,
+      rt: true,
+      lb: true,
+      rb: true
+    }, option);
+    _this.r = r || 0;
+    _this.width = width;
+    _this.height = height;
+    return _this;
+  }
+
+  _createClass(RoundedRect, [{
+    key: 'draw',
+    value: function draw() {
+      var width = this.width,
+          height = this.height,
+          r = this.r;
+
+      var ax = r,
+          ay = 0,
+          bx = width,
+          by = 0,
+          cx = width,
+          cy = height,
+          dx = 0,
+          dy = height,
+          ex = 0,
+          ey = 0;
+
+      this.beginPath();
+
+      this.moveTo(ax, ay);
+      if (this.option.rt) {
+        this.arcTo(bx, by, cx, cy, r);
+      } else {
+        this.lineTo(bx, by);
+      }
+
+      if (this.option.rb) {
+        this.arcTo(cx, cy, dx, dy, r);
+      } else {
+        this.lineTo(cx, cy);
+      }
+
+      if (this.option.lb) {
+        this.arcTo(dx, dy, ex, ey, r);
+      } else {
+        this.lineTo(dx, dy);
+      }
+
+      if (this.option.lt) {
+        this.arcTo(ex, ey, ax, ay, r);
+      } else {
+        this.lineTo(ex, ey);
+      }
+
+      if (this.option.fillStyle) {
+        this.closePath();
+        this.fillStyle(this.option.fillStyle);
+        this.fill();
+      }
+
+      if (this.option.strokeStyle) {
+        this.lineWidth(this.option.lineWidth);
+        this.strokeStyle(this.option.strokeStyle);
+        this.stroke();
+      }
+    }
+  }]);
+
+  return RoundedRect;
+}(_shape2.default);
+
+exports.default = RoundedRect;
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _tween = __webpack_require__(10);
+
+var _tween2 = _interopRequireDefault(_tween);
+
+var _to = __webpack_require__(11);
+
+var _to2 = _interopRequireDefault(_to);
+
+__webpack_require__(18);
+
+var _stage = __webpack_require__(19);
+
+var _stage2 = _interopRequireDefault(_stage);
+
+var _weStage = __webpack_require__(14);
+
+var _weStage2 = _interopRequireDefault(_weStage);
+
+var _graphics = __webpack_require__(4);
+
+var _graphics2 = _interopRequireDefault(_graphics);
+
+var _bitmap = __webpack_require__(2);
+
+var _bitmap2 = _interopRequireDefault(_bitmap);
+
+var _text = __webpack_require__(5);
+
+var _text2 = _interopRequireDefault(_text);
+
+var _group = __webpack_require__(1);
+
+var _group2 = _interopRequireDefault(_group);
+
+var _sprite = __webpack_require__(6);
+
+var _sprite2 = _interopRequireDefault(_sprite);
+
+var _shape = __webpack_require__(0);
+
+var _shape2 = _interopRequireDefault(_shape);
+
+var _roundedRect = __webpack_require__(15);
+
+var _roundedRect2 = _interopRequireDefault(_roundedRect);
+
+var _arrowPath = __webpack_require__(39);
+
+var _arrowPath2 = _interopRequireDefault(_arrowPath);
+
+var _ellipse = __webpack_require__(40);
+
+var _ellipse2 = _interopRequireDefault(_ellipse);
+
+var _path = __webpack_require__(41);
+
+var _path2 = _interopRequireDefault(_path);
+
+var _button = __webpack_require__(44);
+
+var _button2 = _interopRequireDefault(_button);
+
+var _rect = __webpack_require__(45);
+
+var _rect2 = _interopRequireDefault(_rect);
+
+var _circle = __webpack_require__(46);
+
+var _circle2 = _interopRequireDefault(_circle);
+
+var _polygon = __webpack_require__(47);
+
+var _polygon2 = _interopRequireDefault(_polygon);
+
+var _equilateralPolygon = __webpack_require__(48);
+
+var _equilateralPolygon2 = _interopRequireDefault(_equilateralPolygon);
+
+var _rafInterval = __webpack_require__(12);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_to2.default.easing = {
+  linear: _tween2.default.Easing.Linear.None
+};
+
+var cax = {
+  easing: {
+    linear: _tween2.default.Easing.Linear.None
+  },
+  util: {
+    randomInt: function randomInt(min, max) {
+      return min + Math.floor(Math.random() * (max - min + 1));
+    }
+  },
+
+  Stage: _stage2.default,
+  WeStage: _weStage2.default,
+  Graphics: _graphics2.default,
+  Bitmap: _bitmap2.default,
+  Text: _text2.default,
+  Group: _group2.default,
+  Sprite: _sprite2.default,
+  Shape: _shape2.default,
+
+  ArrowPath: _arrowPath2.default,
+  Ellipse: _ellipse2.default,
+  Path: _path2.default,
+
+  Button: _button2.default,
+
+  RoundedRect: _roundedRect2.default,
+  Rect: _rect2.default,
+  Circle: _circle2.default,
+  Polygon: _polygon2.default,
+  EquilateralPolygon: _equilateralPolygon2.default,
+
+  setInterval: _rafInterval.setRafInterval,
+  clearInterval: _rafInterval.clearRafInterval,
+  tick: function tick(fn) {
+    return (0, _rafInterval.setRafInterval)(fn, 16);
+  },
+  untick: function untick(tickId) {
+    (0, _rafInterval.clearRafInterval)(tickId);
+  },
+
+  caxCanvasId: 0,
+  TWEEN: _tween2.default,
+  To: _to2.default
+};
+
+['Quadratic', 'Cubic', 'Quartic', 'Quintic', 'Sinusoidal', 'Exponential', 'Circular', 'Elastic', 'Back', 'Bounce'].forEach(function (item) {
+  var itemLower = item.toLowerCase();
+  cax.easing[itemLower + 'In'] = _tween2.default.Easing[item].In;
+  cax.easing[itemLower + 'Out'] = _tween2.default.Easing[item].Out;
+  cax.easing[itemLower + 'InOut'] = _tween2.default.Easing[item].InOut;
+
+  _to2.default.easing[itemLower + 'In'] = _tween2.default.Easing[item].In;
+  _to2.default.easing[itemLower + 'Out'] = _tween2.default.Easing[item].Out;
+  _to2.default.easing[itemLower + 'InOut'] = _tween2.default.Easing[item].InOut;
+});
+
+var isWegame = typeof wx !== 'undefined' && wx.createCanvas;
+
+cax.loadImg = function (option) {
+  var img = isWegame ? wx.createImage() : new Image();
+  img.onload = function () {
+    option.complete(this);
+  };
+  img.src = option.img;
+};
+
+cax.loadImgs = function (option) {
+  var result = [];
+  var loaded = 0;
+  var len = option.imgs.length;
+  option.imgs.forEach(function (src, index) {
+    var img = isWegame ? wx.createImage() : new Image();
+    img.onload = function (i, img) {
+      return function () {
+        result[i] = img;
+        loaded++;
+        option.progress && option.progress(loaded / len, loaded, i, img, result);
+        if (loaded === len) {
+          option.complete && option.complete(result);
+        }
+      };
+    }(index, img);
+    img.src = src;
+  });
+};
+
+module.exports = cax;
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports) {
+
+// shim for using process in browser
+var process = module.exports = {};
+
+// cached from whatever global is present so that test runners that stub it
+// don't break things.  But we need to wrap it in a try catch in case it is
+// wrapped in strict mode code which doesn't define any globals.  It's inside a
+// function because try/catches deoptimize in certain engines.
+
+var cachedSetTimeout;
+var cachedClearTimeout;
+
+function defaultSetTimout() {
+    throw new Error('setTimeout has not been defined');
+}
+function defaultClearTimeout () {
+    throw new Error('clearTimeout has not been defined');
+}
+(function () {
+    try {
+        if (typeof setTimeout === 'function') {
+            cachedSetTimeout = setTimeout;
+        } else {
+            cachedSetTimeout = defaultSetTimout;
+        }
+    } catch (e) {
+        cachedSetTimeout = defaultSetTimout;
+    }
+    try {
+        if (typeof clearTimeout === 'function') {
+            cachedClearTimeout = clearTimeout;
+        } else {
+            cachedClearTimeout = defaultClearTimeout;
+        }
+    } catch (e) {
+        cachedClearTimeout = defaultClearTimeout;
+    }
+} ())
+function runTimeout(fun) {
+    if (cachedSetTimeout === setTimeout) {
+        //normal enviroments in sane situations
+        return setTimeout(fun, 0);
+    }
+    // if setTimeout wasn't available but was latter defined
+    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+        cachedSetTimeout = setTimeout;
+        return setTimeout(fun, 0);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedSetTimeout(fun, 0);
+    } catch(e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+            return cachedSetTimeout.call(null, fun, 0);
+        } catch(e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+            return cachedSetTimeout.call(this, fun, 0);
+        }
+    }
+
+
+}
+function runClearTimeout(marker) {
+    if (cachedClearTimeout === clearTimeout) {
+        //normal enviroments in sane situations
+        return clearTimeout(marker);
+    }
+    // if clearTimeout wasn't available but was latter defined
+    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+        cachedClearTimeout = clearTimeout;
+        return clearTimeout(marker);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedClearTimeout(marker);
+    } catch (e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+            return cachedClearTimeout.call(null, marker);
+        } catch (e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+            return cachedClearTimeout.call(this, marker);
+        }
+    }
+
+
+
+}
+var queue = [];
+var draining = false;
+var currentQueue;
+var queueIndex = -1;
+
+function cleanUpNextTick() {
+    if (!draining || !currentQueue) {
+        return;
+    }
+    draining = false;
+    if (currentQueue.length) {
+        queue = currentQueue.concat(queue);
+    } else {
+        queueIndex = -1;
+    }
+    if (queue.length) {
+        drainQueue();
+    }
+}
+
+function drainQueue() {
+    if (draining) {
+        return;
+    }
+    var timeout = runTimeout(cleanUpNextTick);
+    draining = true;
+
+    var len = queue.length;
+    while(len) {
+        currentQueue = queue;
+        queue = [];
+        while (++queueIndex < len) {
+            if (currentQueue) {
+                currentQueue[queueIndex].run();
+            }
+        }
+        queueIndex = -1;
+        len = queue.length;
+    }
+    currentQueue = null;
+    draining = false;
+    runClearTimeout(timeout);
+}
+
+process.nextTick = function (fun) {
+    var args = new Array(arguments.length - 1);
+    if (arguments.length > 1) {
+        for (var i = 1; i < arguments.length; i++) {
+            args[i - 1] = arguments[i];
+        }
+    }
+    queue.push(new Item(fun, args));
+    if (queue.length === 1 && !draining) {
+        runTimeout(drainQueue);
+    }
+};
+
+// v8 likes predictible objects
+function Item(fun, array) {
+    this.fun = fun;
+    this.array = array;
+}
+Item.prototype.run = function () {
+    this.fun.apply(null, this.array);
+};
+process.title = 'browser';
+process.browser = true;
+process.env = {};
+process.argv = [];
+process.version = ''; // empty string to avoid regexp issues
+process.versions = {};
+
+function noop() {}
+
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+process.prependListener = noop;
+process.prependOnceListener = noop;
+
+process.listeners = function (name) { return [] }
+
+process.binding = function (name) {
+    throw new Error('process.binding is not supported');
+};
+
+process.cwd = function () { return '/' };
+process.chdir = function (dir) {
+    throw new Error('process.chdir is not supported');
+};
+process.umask = function() { return 0; };
+
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _to = __webpack_require__(11);
+
+var _to2 = _interopRequireDefault(_to);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_to2.default.extend('rubber', [['to', ['scaleX', {
+  '0': 1.25,
+  '1': 300
+}], ['scaleY', {
+  '0': 0.75,
+  '1': 300
+}]], ['to', ['scaleX', {
+  '0': 0.75,
+  '1': 100
+}], ['scaleY', {
+  '0': 1.25,
+  '1': 100
+}]], ['to', ['scaleX', {
+  '0': 1.15,
+  '1': 100
+}], ['scaleY', {
+  '0': 0.85,
+  '1': 100
+}]], ['to', ['scaleX', {
+  '0': 0.95,
+  '1': 150
+}], ['scaleY', {
+  '0': 1.05,
+  '1': 150
+}]], ['to', ['scaleX', {
+  '0': 1.05,
+  '1': 100
+}], ['scaleY', {
+  '0': 0.95,
+  '1': 100
+}]], ['to', ['scaleX', {
+  '0': 1,
+  '1': 250
+}], ['scaleY', {
+  '0': 1,
+  '1': 250
+}]]]);
+
+_to2.default.extend('bounceIn', [['to', ['scaleX', {
+  '0': 0,
+  '1': 0
+}], ['scaleY', {
+  '0': 0,
+  '1': 0
+}]], ['to', ['scaleX', {
+  '0': 1.35,
+  '1': 200
+}], ['scaleY', {
+  '0': 1.35,
+  '1': 200
+}]], ['to', ['scaleX', {
+  '0': 0.9,
+  '1': 100
+}], ['scaleY', {
+  '0': 0.9,
+  '1': 100
+}]], ['to', ['scaleX', {
+  '0': 1.1,
+  '1': 100
+}], ['scaleY', {
+  '0': 1.1,
+  '1': 100
+}]], ['to', ['scaleX', {
+  '0': 0.95,
+  '1': 100
+}], ['scaleY', {
+  '0': 0.95,
+  '1': 100
+}]], ['to', ['scaleX', {
+  '0': 1,
+  '1': 100
+}], ['scaleY', {
+  '0': 1,
+  '1': 100
+}]]]);
+
+_to2.default.extend('flipInX', [['to', ['rotateX', {
+  '0': -90,
+  '1': 0
+}]], ['to', ['rotateX', {
+  '0': 20,
+  '1': 300
+}]], ['to', ['rotateX', {
+  '0': -20,
+  '1': 300
+}]], ['to', ['rotateX', {
+  '0': 10,
+  '1': 300
+}]], ['to', ['rotateX', {
+  '0': -5,
+  '1': 300
+}]], ['to', ['rotateX', {
+  '0': 0,
+  '1': 300
+}]]]);
+
+_to2.default.extend('zoomOut', [['to', ['scaleX', {
+  '0': 0,
+  '1': 400
+}], ['scaleY', {
+  '0': 0,
+  '1': 400
+}]]]);
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _wegameCanvas = __webpack_require__(20);
+
+var _wegameCanvas2 = _interopRequireDefault(_wegameCanvas);
+
+var _group = __webpack_require__(1);
+
+var _group2 = _interopRequireDefault(_group);
+
+var _renderer = __webpack_require__(13);
+
+var _renderer2 = _interopRequireDefault(_renderer);
+
+var _hitRender = __webpack_require__(37);
+
+var _hitRender2 = _interopRequireDefault(_hitRender);
+
+var _event = __webpack_require__(7);
+
+var _event2 = _interopRequireDefault(_event);
+
+var _weStage = __webpack_require__(14);
+
+var _weStage2 = _interopRequireDefault(_weStage);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Stage = function (_Group) {
+  _inherits(Stage, _Group);
+
+  function Stage(width, height, renderTo) {
+    _classCallCheck(this, Stage);
+
+    var _this = _possibleConstructorReturn(this, (Stage.__proto__ || Object.getPrototypeOf(Stage)).call(this));
+
+    var len = arguments.length;
+    _this.isWegame = typeof wx !== 'undefined' && wx.createCanvas;
+    _this.moveDetectionInterval = 0;
+    if (len === 0) {
+      // wegame
+      _this.canvas = _wegameCanvas2.default;
+      _this.disableMoveDetection = true;
+      _this.moveDetectionInterval = 500;
+    } else if (len === 4) {
+      var _ret;
+
+      // weapp
+      return _ret = new _weStage2.default(arguments[0], arguments[1], arguments[2], arguments[3]), _possibleConstructorReturn(_this, _ret);
+    } else {
+      if (len === 1) {
+        _this.canvas = typeof width === 'string' ? document.querySelector(width) : width;
+      } else {
+        _this.renderTo = typeof renderTo === 'string' ? document.querySelector(renderTo) : renderTo;
+        if (_this.renderTo.tagName === 'CANVAS') {
+          _this.canvas = _this.renderTo;
+          _this.canvas.width = width;
+          _this.canvas.height = height;
+        } else {
+          _this.canvas = document.createElement('canvas');
+          _this.canvas.width = width;
+          _this.canvas.height = height;
+          _this.renderTo.appendChild(_this.canvas);
+        }
+      }
+      // get rect again when trigger onscroll onresize event!?
+      _this._boundingClientRect = _this.canvas.getBoundingClientRect();
+
+      _this.offset = _this._getOffset(_this.canvas);
+    }
+    _this.renderer = new _renderer2.default(_this.canvas);
+    if (_this.isWegame) {
+      // wx.onTouchStart(evt => this._handleMouseDown(evt))
+
+      // wx.onTouchMove(evt => this._handleMouseMove(evt))
+
+      // wx.onTouchEnd(evt => this._handleMouseUp(evt))
+    } else {
+      _this.canvas.addEventListener('click', function (evt) {
+        return _this._handleClick(evt);
+      });
+      _this.canvas.addEventListener('mousedown', function (evt) {
+        return _this._handleMouseDown(evt);
+      });
+      _this.canvas.addEventListener('mousemove', function (evt) {
+        return _this._handleMouseMove(evt);
+      });
+      _this.canvas.addEventListener('mouseup', function (evt) {
+        return _this._handleMouseUp(evt);
+      });
+      _this.canvas.addEventListener('mouseout', function (evt) {
+        return _this._handleMouseOut(evt);
+      });
+      _this.canvas.addEventListener('touchstart', function (evt) {
+        return _this._handleMouseDown(evt);
+      });
+      _this.canvas.addEventListener('touchmove', function (evt) {
+        return _this._handleMouseMove(evt);
+      });
+      _this.canvas.addEventListener('touchend', function (evt) {
+        return _this._handleMouseUp(evt);
+      });
+
+      _this.canvas.addEventListener('dblclick', function (evt) {
+        return _this._handleDblClick(evt);
+      });
+      // this.addEvent(this.canvas, "mousewheel", this._handleMouseWheel.bind(this));
+
+      document.addEventListener('contextmenu', function (evt) {
+        return _this._handleContextmenu(evt);
+      });
+    }
+
+    _this.borderTopWidth = 0;
+    _this.borderLeftWidth = 0;
+
+    _this.hitAABB = false;
+    _this._hitRender = new _hitRender2.default();
+
+    _this._overObject = null;
+
+    _this._scaleX = 1;
+    _this._scaleY = 1;
+
+    _this._mouseDownX = 0;
+    _this._mouseDownY = 0;
+
+    _this._mouseUpX = 0;
+    _this._mouseUpY = 0;
+
+    _this.willDragObject = null;
+    _this.preStageX = null;
+    _this.preStageY = null;
+
+    _this.width = _this.canvas.width;
+    _this.height = _this.canvas.height;
+
+    _this.___instanceof = 'Stage';
+
+    _this._moveDetectionTime = Date.now();
+    return _this;
+  }
+
+  _createClass(Stage, [{
+    key: '_handleContextmenu',
+    value: function _handleContextmenu(evt) {
+      this._getObjectUnderPoint(evt);
+    }
+  }, {
+    key: '_handleDblClick',
+    value: function _handleDblClick(evt) {
+      this._getObjectUnderPoint(evt);
+    }
+  }, {
+    key: '_handleClick',
+    value: function _handleClick(evt) {
+      if (Math.abs(this._mouseDownX - this._mouseUpX) < 20 && Math.abs(this._mouseDownY - this._mouseUpY) < 20) {
+        this._getObjectUnderPoint(evt);
+      }
+    }
+  }, {
+    key: '_handleMouseDown',
+    value: function _handleMouseDown(evt) {
+      console.log(evt);
+      if (this.isWegame) {
+        evt.type = 'touchstart';
+      }
+      this.offset = this._getOffset(this.canvas);
+      var obj = this._getObjectUnderPoint(evt);
+      this.willDragObject = obj;
+      this._mouseDownX = evt.stageX;
+      this._mouseDownY = evt.stageY;
+      this.preStageX = evt.stageX;
+      this.preStageY = evt.stageY;
+    }
+  }, {
+    key: 'scaleEventPoint',
+    value: function scaleEventPoint(x, y) {
+      this._scaleX = x;
+      this._scaleY = y;
+    }
+  }, {
+    key: '_handleMouseUp',
+    value: function _handleMouseUp(evt) {
+      if (this.isWegame) {
+        evt.type = 'touchend';
+      }
+      var obj = this._getObjectUnderPoint(evt);
+      this._mouseUpX = evt.stageX;
+      this._mouseUpY = evt.stageY;
+
+      var mockEvt = new _event2.default();
+      mockEvt.stageX = evt.stageX;
+      mockEvt.stageY = evt.stageY;
+      mockEvt.pureEvent = evt;
+
+      this.willDragObject = null;
+      this.preStageX = null;
+      this.preStageY = null;
+
+      if (obj && evt.type === 'touchend' && Math.abs(this._mouseDownX - this._mouseUpX) < 30 && Math.abs(this._mouseDownY - this._mouseUpY) < 30) {
+        mockEvt.type = 'tap';
+        obj.dispatchEvent(mockEvt);
+      }
+    }
+  }, {
+    key: '_handleMouseOut',
+    value: function _handleMouseOut(evt) {
+      this._computeStageXY(evt);
+      this.dispatchEvent({
+        pureEvent: evt,
+        type: 'mouseout',
+        stageX: evt.stageX,
+        stageY: evt.stageY
+      });
+    }
+  }, {
+    key: '_handleMouseMove',
+    value: function _handleMouseMove(evt) {
+      if (Date.now() - this._moveDetectionTime < this.moveDetectionInterval) {
+        return;
+      }
+      this._moveDetectionTime = Date.now();
+
+      if (this.isWegame) {
+        evt.type = 'touchmove';
+      }
+      if (this.disableMoveDetection) return;
+      var obj = this._getObjectUnderPoint(evt);
+      var mockEvt = new _event2.default();
+      mockEvt.stageX = evt.stageX;
+      mockEvt.stageY = evt.stageY;
+      mockEvt.pureEvent = evt;
+
+      if (this.willDragObject) {
+        mockEvt.type = 'drag';
+        mockEvt.dx = mockEvt.stageX - this.preStageX;
+        mockEvt.dy = mockEvt.stageY - this.preStageY;
+        this.preStageX = mockEvt.stageX;
+        this.preStageY = mockEvt.stageY;
+        this.willDragObject.dispatchEvent(mockEvt);
+      }
+
+      if (obj) {
+        if (this._overObject === null) {
+          mockEvt.type = 'mouseover';
+          obj.dispatchEvent(mockEvt);
+          this._overObject = obj;
+          this._setCursor(obj);
+        } else {
+          if (obj.id !== this._overObject.id) {
+            this._overObject.dispatchEvent({
+              pureEvent: evt,
+              type: 'mouseout',
+              stageX: evt.stageX,
+              stageY: evt.stageY
+            });
+            mockEvt.type = 'mouseover';
+            obj.dispatchEvent(mockEvt);
+            this._setCursor(obj);
+            this._overObject = obj;
+          } else {
+            mockEvt.type = 'mousemove';
+            obj.dispatchEvent(mockEvt);
+            mockEvt.type = 'touchmove';
+            obj.dispatchEvent(mockEvt);
+          }
+        }
+      } else if (this._overObject) {
+        mockEvt.type = 'mouseout';
+        this._overObject.dispatchEvent(mockEvt);
+        this._overObject = null;
+        this._setCursor({ cursor: 'default' });
+      }
+    }
+  }, {
+    key: '_setCursor',
+    value: function _setCursor(obj) {
+      if (!this.canvas.style) {
+        return;
+      }
+      if (obj.cursor) {
+        this.canvas.style.cursor = obj.cursor;
+      } else if (obj.parent) {
+        this._setCursor(obj.parent);
+      } else {
+        this._setCursor({ cursor: 'default' });
+      }
+    }
+  }, {
+    key: '_getObjectUnderPoint',
+    value: function _getObjectUnderPoint(evt) {
+      this._computeStageXY(evt);
+      if (this.hitAABB) {
+        return this._hitRender.hitAABB(this, evt);
+      } else {
+        return this._hitRender.hitPixel(this, evt);
+      }
+    }
+  }, {
+    key: '_computeStageXY',
+    value: function _computeStageXY(evt) {
+      this._boundingClientRect = this.isWegame ? { left: 0, top: 0 } : this.canvas.getBoundingClientRect();
+      if (evt.touches || evt.changedTouches) {
+        var firstTouch = evt.touches[0] || evt.changedTouches[0];
+        if (firstTouch) {
+          evt.stageX = (firstTouch.pageX - this.offset[0]) / this._scaleX;
+          evt.stageY = (firstTouch.pageY - this.offset[1]) / this._scaleY;
+        }
+      } else {
+        evt.stageX = (evt.clientX - this._boundingClientRect.left - this.borderLeftWidth) / this._scaleX;
+        evt.stageY = (evt.clientY - this._boundingClientRect.top - this.borderTopWidth) / this._scaleY;
+      }
+    }
+  }, {
+    key: '_getOffset',
+    value: function _getOffset(el) {
+      if (this.isWegame) {
+        return [0, 0];
+      }
+      var _t = 0,
+          _l = 0;
+      if (document.documentElement.getBoundingClientRect && el.getBoundingClientRect) {
+        var box = el.getBoundingClientRect();
+        _l = box.left;
+        _t = box.top;
+      } else {
+        while (el.offsetParent) {
+          _t += el.offsetTop;
+          _l += el.offsetLeft;
+          el = el.offsetParent;
+        }
+        return [_l, _t];
+      }
+      return [_l + Math.max(document.documentElement.scrollLeft, document.body.scrollLeft), _t + Math.max(document.documentElement.scrollTop, document.body.scrollTop)];
+    }
+  }, {
+    key: 'update',
+    value: function update() {
+      this.renderer.update(this);
+    }
+  }, {
+    key: 'on',
+    value: function on(type, fn) {
+      var _this2 = this;
+
+      this.canvas.addEventListener(type, function (evt) {
+        _this2._computeStageXY(evt);
+        fn(evt);
+      });
+    }
+  }, {
+    key: 'off',
+    value: function off(type, fn) {
+      this.canvas.removeEventListener(type, fn);
+    }
+  }]);
+
+  return Stage;
+}(_group2.default);
+
+exports.default = Stage;
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var wegameCanvas = null;
+if (typeof wx !== 'undefined') {
+  // 在开放数据域的环境下，用`wx.getSharedCanvas`创建canvas
+  if (wx.getSharedCanvas) {
+    wegameCanvas = wx.getSharedCanvas();
+  } else if (wx.createCanvas) {
+    wegameCanvas = wx.createCanvas();
+  }
+}
+
+exports.default = wegameCanvas;
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var DEG_TO_RAD = 0.017453292519943295;
+var PI_2 = Math.PI * 2;
+
+var Matrix2D = function () {
+  function Matrix2D(a, b, c, d, tx, ty) {
+    _classCallCheck(this, Matrix2D);
+
+    this.a = a == null ? 1 : a;
+    this.b = b || 0;
+    this.c = c || 0;
+    this.d = d == null ? 1 : d;
+    this.tx = tx || 0;
+    this.ty = ty || 0;
+    return this;
+  }
+
+  _createClass(Matrix2D, [{
+    key: "identity",
+    value: function identity() {
+      this.a = this.d = 1;
+      this.b = this.c = this.tx = this.ty = 0;
+      return this;
+    }
+  }, {
+    key: "appendTransform",
+    value: function appendTransform(x, y, scaleX, scaleY, rotation, skewX, skewY, originX, originY) {
+      if (rotation % 360) {
+        var r = rotation * DEG_TO_RAD;
+        var cos = Math.cos(r);
+        var sin = Math.sin(r);
+      } else {
+        cos = 1;
+        sin = 0;
+      }
+      if (skewX || skewY) {
+        skewX *= DEG_TO_RAD;
+        skewY *= DEG_TO_RAD;
+        this.append(Math.cos(skewY), Math.sin(skewY), -Math.sin(skewX), Math.cos(skewX), x, y);
+        this.append(cos * scaleX, sin * scaleX, -sin * scaleY, cos * scaleY, 0, 0);
+      } else {
+        this.append(cos * scaleX, sin * scaleX, -sin * scaleY, cos * scaleY, x, y);
+      }
+      if (originX || originY) {
+        this.tx -= originX * this.a + originY * this.c;
+        this.ty -= originX * this.b + originY * this.d;
+      }
+      return this;
+    }
+  }, {
+    key: "append",
+    value: function append(a, b, c, d, tx, ty) {
+      var a1 = this.a;
+      var b1 = this.b;
+      var c1 = this.c;
+      var d1 = this.d;
+      this.a = a * a1 + b * c1;
+      this.b = a * b1 + b * d1;
+      this.c = c * a1 + d * c1;
+      this.d = c * b1 + d * d1;
+      this.tx = tx * a1 + ty * c1 + this.tx;
+      this.ty = tx * b1 + ty * d1 + this.ty;
+      return this;
+    }
+  }, {
+    key: "initialize",
+    value: function initialize(a, b, c, d, tx, ty) {
+      this.a = a;
+      this.b = b;
+      this.c = c;
+      this.d = d;
+      this.tx = tx;
+      this.ty = ty;
+      return this;
+    }
+  }, {
+    key: "setValues",
+    value: function setValues(a, b, c, d, tx, ty) {
+      this.a = a == null ? 1 : a;
+      this.b = b || 0;
+      this.c = c || 0;
+      this.d = d == null ? 1 : d;
+      this.tx = tx || 0;
+      this.ty = ty || 0;
+      return this;
+    }
+  }, {
+    key: "invert",
+    value: function invert() {
+      var a1 = this.a;
+      var b1 = this.b;
+      var c1 = this.c;
+      var d1 = this.d;
+      var tx1 = this.tx;
+      var n = a1 * d1 - b1 * c1;
+
+      this.a = d1 / n;
+      this.b = -b1 / n;
+      this.c = -c1 / n;
+      this.d = a1 / n;
+      this.tx = (c1 * this.ty - d1 * tx1) / n;
+      this.ty = -(a1 * this.ty - b1 * tx1) / n;
+      return this;
+    }
+  }, {
+    key: "copy",
+    value: function copy(matrix) {
+      return this.setValues(matrix.a, matrix.b, matrix.c, matrix.d, matrix.tx, matrix.ty);
+    }
+  }]);
+
+  return Matrix2D;
+}();
+
+Matrix2D.decompose = function (a, b, c, d, tx, ty, transform) {
+  var skewX = -Math.atan2(-c, d);
+  var skewY = Math.atan2(b, a);
+
+  var delta = Math.abs(skewX + skewY);
+
+  if (delta < 0.00001 || Math.abs(PI_2 - delta) < 0.00001) {
+    transform.rotation = skewY;
+
+    if (a < 0 && d >= 0) {
+      transform.rotation += transform.rotation <= 0 ? Math.PI : -Math.PI;
+    }
+
+    transform.skewX = transform.skewY = 0;
+  } else {
+    transform.rotation = 0;
+    transform.skewX = skewX;
+    transform.skewY = skewY;
+  }
+
+  // next set scale
+  transform.scaleX = Math.sqrt(a * a + b * b);
+  transform.scaleY = Math.sqrt(c * c + d * d);
+
+  // next set position
+  transform.x = tx;
+  transform.y = ty;
+};
+
+exports.default = Matrix2D;
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var EventDispatcher = function () {
+  function EventDispatcher() {
+    _classCallCheck(this, EventDispatcher);
+
+    this._listeners = null;
+    this._captureListeners = null;
+  }
+
+  _createClass(EventDispatcher, [{
+    key: "addEventListener",
+    value: function addEventListener(type, listener, useCapture) {
+      var listeners;
+      if (useCapture) {
+        listeners = this._captureListeners = this._captureListeners || {};
+      } else {
+        listeners = this._listeners = this._listeners || {};
+      }
+      var arr = listeners[type];
+      if (arr) {
+        this.removeEventListener(type, listener, useCapture);
+      }
+      arr = listeners[type]; // remove may have deleted the array
+      if (!arr) {
+        listeners[type] = [listener];
+      } else {
+        arr.push(listener);
+      }
+      return listener;
+    }
+  }, {
+    key: "removeEventListener",
+    value: function removeEventListener(type, listener, useCapture) {
+      var listeners = useCapture ? this._captureListeners : this._listeners;
+      if (!listeners) {
+        return;
+      }
+      var arr = listeners[type];
+      if (!arr) {
+        return;
+      }
+
+      arr.every(function (item, index) {
+        if (item === listener) {
+          arr.splice(index, 1);
+          return false;
+        }
+        return true;
+      });
+    }
+  }, {
+    key: "on",
+    value: function on(type, listener, useCapture) {
+      this.addEventListener(type, listener, useCapture);
+    }
+  }, {
+    key: "off",
+    value: function off(type, listener, useCapture) {
+      this.removeEventListener(type, listener, useCapture);
+    }
+  }, {
+    key: "dispatchEvent",
+    value: function dispatchEvent(evt) {
+
+      var top = this,
+          list = [top];
+      while (top.parent) {
+        list.push(top = top.parent);
+      }
+      var i,
+          l = list.length;
+
+      // capture & atTarget
+      for (i = l - 1; i >= 0 && !evt.propagationStopped; i--) {
+        list[i]._dispatchEvent(evt, 0);
+      }
+      // bubbling
+      for (i = 0; i < l && !evt.propagationStopped; i++) {
+        list[i]._dispatchEvent(evt, 1);
+      }
+    }
+  }, {
+    key: "_dispatchEvent",
+    value: function _dispatchEvent(evt, type) {
+      var _this = this;
+
+      evt.target = this;
+      if (this._captureListeners && type === 0) {
+        var cls = this._captureListeners[evt.type];
+        cls && cls.forEach(function (fn) {
+          fn.call(_this, evt);
+        });
+      }
+
+      if (this._listeners && type === 1) {
+        var ls = this._listeners[evt.type];
+        ls && ls.forEach(function (fn) {
+          fn.call(_this, evt);
+        });
+      }
+    }
+  }]);
+
+  return EventDispatcher;
+}();
+
+exports.default = EventDispatcher;
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var UID = {};
+
+UID._nextID = 0;
+
+UID.get = function () {
+  return UID._nextID++;
+};
+
+exports.default = UID;
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _group = __webpack_require__(1);
+
+var _group2 = _interopRequireDefault(_group);
+
+var _graphics = __webpack_require__(4);
+
+var _graphics2 = _interopRequireDefault(_graphics);
+
+var _render2 = __webpack_require__(8);
+
+var _render3 = _interopRequireDefault(_render2);
+
+var _sprite = __webpack_require__(6);
+
+var _sprite2 = _interopRequireDefault(_sprite);
+
+var _bitmap = __webpack_require__(2);
+
+var _bitmap2 = _interopRequireDefault(_bitmap);
+
+var _text = __webpack_require__(5);
+
+var _text2 = _interopRequireDefault(_text);
+
+var _index = __webpack_require__(26);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var CanvasRender = function (_Render) {
+  _inherits(CanvasRender, _Render);
+
+  function CanvasRender(canvasOrContext, width, height) {
+    _classCallCheck(this, CanvasRender);
+
+    var _this = _possibleConstructorReturn(this, (CanvasRender.__proto__ || Object.getPrototypeOf(CanvasRender)).call(this));
+
+    if (arguments.length === 3) {
+      _this.ctx = canvasOrContext;
+      _this.width = width;
+      _this.height = height;
+    } else {
+      _this.ctx = canvasOrContext.getContext('2d');
+      _this.width = canvasOrContext.width;
+      _this.height = canvasOrContext.height;
+    }
+    return _this;
+  }
+
+  _createClass(CanvasRender, [{
+    key: 'clear',
+    value: function clear(ctx, width, height) {
+      ctx.clearRect(0, 0, width, height);
+    }
+  }, {
+    key: 'render',
+    value: function render(ctx, o, cacheData) {
+      var mtx = o._matrix;
+      if (o.children) {
+        var list = o.children.slice(0),
+            l = list.length;
+        for (var i = 0; i < l; i++) {
+          var child = list[i];
+          mtx.initialize(1, 0, 0, 1, 0, 0);
+          mtx.appendTransform(o.x, o.y, o.scaleX, o.scaleY, o.rotation, o.skewX, o.skewY, o.originX, o.originY);
+          // if (!this.checkBoundEvent(child)) continue
+          ctx.save();
+          this._render(ctx, child, cacheData ? null : mtx, cacheData, true);
+          ctx.restore();
+        }
+      } else {
+        this._render(ctx, o, cacheData ? null : mtx, cacheData);
+      }
+    }
+  }, {
+    key: '_render',
+    value: function _render(ctx, o, mtx, cacheData, inGroup) {
+      if (!o.isVisible()) return;
+      if (mtx && !o.fixed) {
+        o._matrix.initialize(mtx.a, mtx.b, mtx.c, mtx.d, mtx.tx, mtx.ty);
+      } else if (cacheData && !o.fixed) {
+        o._matrix.initialize(cacheData.scale, 0, 0, cacheData.scale, cacheData.x * -1, cacheData.y * -1);
+      } else {
+        o._matrix.initialize(1, 0, 0, 1, 0, 0);
+      }
+      mtx = o._matrix;
+
+      // group 进行 cache canvas 内部的子元素需要进行appendTransform
+      // cache canvas 渲染不叠加自身的 transform，因为进入主渲染会进行appendTransform
+      if (inGroup || !cacheData) {
+        mtx.appendTransform(o.x, o.y, o.scaleX, o.scaleY, o.rotation, o.skewX, o.skewY, o.originX, o.originY);
+      }
+      var ocg = o.clipGraphics;
+      if (ocg) {
+        ctx.beginPath();
+        ocg._matrix.copy(mtx);
+        ocg._matrix.appendTransform(ocg.x, ocg.y, ocg.scaleX, ocg.scaleY, ocg.rotation, ocg.skewX, ocg.skewY, ocg.originX, ocg.originY);
+        ctx.setTransform(ocg._matrix.a, ocg._matrix.b, ocg._matrix.c, ocg._matrix.d, ocg._matrix.tx, ocg._matrix.ty);
+        ocg.render(ctx);
+        ctx.clip(o.clipRuleNonzero ? 'nonzero' : 'evenodd');
+      }
+
+      var oacg = o.absClipGraphics;
+      if (oacg) {
+        ctx.beginPath();
+        oacg._matrix.initialize(1, 0, 0, 1, 0, 0);
+        oacg._matrix.appendTransform(oacg.x, oacg.y, oacg.scaleX, oacg.scaleY, oacg.rotation, oacg.skewX, oacg.skewY, oacg.originX, oacg.originY);
+        ctx.setTransform(oacg._matrix.a, oacg._matrix.b, oacg._matrix.c, oacg._matrix.d, oacg._matrix.tx, oacg._matrix.ty);
+        oacg.render(ctx);
+        ctx.clip(o.absClipRuleNonzero ? 'nonzero' : 'evenodd');
+      }
+
+      // if(!cacheData){
+      ctx.setTransform(mtx.a, mtx.b, mtx.c, mtx.d, mtx.tx, mtx.ty);
+      // }
+      if (o._readyToCache || o.cacheUpdating) {
+        this.setComplexProps(ctx, o);
+        o._readyToCache = false;
+        o.cacheCtx.clearRect(0, 0, o.cacheCanvas.width, o.cacheCanvas.height);
+        o.cacheCtx.save();
+        this.render(o.cacheCtx, o, o._cacheData);
+        o.cacheCtx.restore();
+        // debug cacheCanvas
+        // document.body.appendChild(o.cacheCanvas)
+        if (o._readyToFilter) {
+          o.cacheCtx.putImageData((0, _index.filter)(o.cacheCtx.getImageData(0, 0, o.cacheCanvas.width, o.cacheCanvas.height), o._filterName), 0, 0);
+          this._readyToFilter = false;
+        }
+
+        ctx.drawImage(o.cacheCanvas, o._cacheData.x, o._cacheData.y);
+      } else if (o.cacheCanvas && !cacheData) {
+        this.setComplexProps(ctx, o);
+        ctx.drawImage(o.cacheCanvas, o._cacheData.x, o._cacheData.y);
+      } else if (o instanceof _group2.default) {
+        var list = o.children.slice(0),
+            l = list.length;
+        for (var i = 0; i < l; i++) {
+          ctx.save();
+          this._render(ctx, list[i], mtx);
+          ctx.restore();
+        }
+      } else if (o instanceof _graphics2.default) {
+        this.setComplexProps(ctx, o);
+        o.render(ctx);
+      } else if (o instanceof _sprite2.default && o.rect) {
+        this.setComplexProps(ctx, o);
+        o.updateFrame();
+        var rect = o.rect;
+        ctx.drawImage(o.img, rect[0], rect[1], rect[2], rect[3], 0, 0, rect[2], rect[3]);
+      } else if (o instanceof _bitmap2.default && o.rect) {
+        this.setComplexProps(ctx, o);
+        var bRect = o.rect;
+        ctx.drawImage(o.img, bRect[0], bRect[1], bRect[2], bRect[3], 0, 0, bRect[2], bRect[3]);
+      } else if (o instanceof _text2.default) {
+        this.setComplexProps(ctx, o);
+        ctx.font = o.font;
+        ctx.fillStyle = o.color;
+        ctx.textAlign = o.textAlign;
+        ctx.textBaseline = o.baseline;
+        ctx.fillText(o.text, 0, 0);
+      }
+    }
+  }, {
+    key: 'setComplexProps',
+    value: function setComplexProps(ctx, o) {
+      o.complexCompositeOperation = ctx.globalCompositeOperation = this.getCompositeOperation(o);
+      o.complexAlpha = ctx.globalAlpha = this.getAlpha(o, 1);
+
+      o.complexShadow = this.getShadow(o);
+      if (o.complexShadow) {
+        ctx.shadowColor = o.complexShadow.color;
+        ctx.shadowOffsetX = o.complexShadow.offsetX;
+        ctx.shadowOffsetY = o.complexShadow.offsetY;
+        ctx.shadowBlur = o.complexShadow.blur;
+      }
+    }
+  }, {
+    key: 'getCompositeOperation',
+    value: function getCompositeOperation(o) {
+      if (o.compositeOperation) return o.compositeOperation;
+      if (o.parent) return this.getCompositeOperation(o.parent);
+    }
+  }, {
+    key: 'getAlpha',
+    value: function getAlpha(o, alpha) {
+      var result = o.alpha * alpha;
+      if (o.parent) {
+        return this.getAlpha(o.parent, result);
+      }
+      return result;
+    }
+  }, {
+    key: 'getShadow',
+    value: function getShadow(o) {
+      if (o.shadow) return o.shadow;
+      if (o.parent) return this.getShadow(o.parent);
+    }
+  }]);
+
+  return CanvasRender;
+}(_render3.default);
+
+exports.default = CanvasRender;
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1,eval)("this");
+} catch(e) {
+	// This works if the window reference is available
+	if(typeof window === "object")
+		g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.filter = filter;
+
+var _invert = __webpack_require__(27);
+
+var _blur = __webpack_require__(28);
+
+var _brightness = __webpack_require__(30);
+
+var _contrast = __webpack_require__(31);
+
+var _grayscale = __webpack_require__(32);
+
+var _sepia = __webpack_require__(33);
+
+var _threshold = __webpack_require__(34);
+
+var _gamma = __webpack_require__(35);
+
+var _colorize = __webpack_require__(36);
+
+function filter(pixels, name) {
+  if (typeof name === 'string') {
+    var type = name.split('(')[0];
+    var num = getNumber(name);
+    switch (type) {
+      case 'invert':
+        return (0, _invert.invert)(pixels, num);
+      case 'brightness':
+        return (0, _brightness.brightness)(pixels, -255 + num * 255);
+      case 'blur':
+        return (0, _blur.blur)(pixels, num);
+      case 'contrast':
+        return (0, _contrast.contrast)(pixels, -255 + num * 255);
+      case 'grayscale':
+        return (0, _grayscale.grayscale)(pixels, num);
+      case 'sepia':
+        return (0, _sepia.sepia)(pixels, num);
+      case 'threshold':
+        return (0, _threshold.threshold)(pixels, num);
+      case 'gamma':
+        return (0, _gamma.gamma)(pixels, num);
+    }
+  } else {
+    switch (name.type) {
+      case 'colorize':
+        return (0, _colorize.colorize)(pixels, name);
+    }
+  }
+}
+
+function getNumber(str) {
+  str = str.replace(/(invert)|(brightness)|(blur)|(contrast)|(grayscale)|(sepia)|(threshold)|(gamma)?\(/g, '').replace(')', '');
+  if (str.indexOf('%') !== -1) {
+    return Number(str.replace('%', '')) / 100;
+  } else if (str.indexOf('px') !== -1) {
+    return Number(str.replace('px', ''));
+  } else {
+    return Number(str);
+  }
+}
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.invert = invert;
+function invert(pixels, ratio) {
+  var d = pixels.data;
+  ratio = ratio === undefined ? 1 : ratio;
+  for (var i = 0; i < d.length; i += 4) {
+    d[i] = d[i] + ratio * (255 - 2 * d[i]);
+    d[i + 1] = d[i + 1] + ratio * (255 - 2 * d[i + 1]);
+    d[i + 2] = d[i + 2] + ratio * (255 - 2 * d[i + 2]);
+  }
+  return pixels;
+}
+
+/***/ }),
+/* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.blur = blur;
+
+var _createImageData = __webpack_require__(29);
+
+function blur(pixels, diameter) {
+  diameter = Math.abs(diameter);
+  if (diameter <= 1) return pixels;
+  var radius = diameter / 2;
+  var len = Math.ceil(diameter) + (1 - Math.ceil(diameter) % 2);
+  var weights = new Float32Array(len);
+  var rho = (radius + 0.5) / 3;
+  var rhoSq = rho * rho;
+  var gaussianFactor = 1 / Math.sqrt(2 * Math.PI * rhoSq);
+  var rhoFactor = -1 / (2 * rho * rho);
+  var wsum = 0;
+  var middle = Math.floor(len / 2);
+  for (var i = 0; i < len; i++) {
+    var x = i - middle;
+    var gx = gaussianFactor * Math.exp(x * x * rhoFactor);
+    weights[i] = gx;
+    wsum += gx;
+  }
+  for (var i = 0; i < weights.length; i++) {
+    weights[i] /= wsum;
+  }
+  return separableConvolve(pixels, weights, weights, false);
+}
+
+function separableConvolve(pixels, horizWeights, vertWeights, opaque) {
+  return horizontalConvolve(verticalConvolve(pixels, vertWeights, opaque), horizWeights, opaque);
+}
+
+function horizontalConvolve(pixels, weightsVector, opaque) {
+  var side = weightsVector.length;
+  var halfSide = Math.floor(side / 2);
+
+  var src = pixels.data;
+  var sw = pixels.width;
+  var sh = pixels.height;
+
+  var w = sw;
+  var h = sh;
+  var output = (0, _createImageData.createImageData)(w, h);
+  var dst = output.data;
+
+  var alphaFac = opaque ? 1 : 0;
+
+  for (var y = 0; y < h; y++) {
+    for (var x = 0; x < w; x++) {
+      var sy = y;
+      var sx = x;
+      var dstOff = (y * w + x) * 4;
+      var r = 0,
+          g = 0,
+          b = 0,
+          a = 0;
+      for (var cx = 0; cx < side; cx++) {
+        var scy = sy;
+        var scx = Math.min(sw - 1, Math.max(0, sx + cx - halfSide));
+        var srcOff = (scy * sw + scx) * 4;
+        var wt = weightsVector[cx];
+        r += src[srcOff] * wt;
+        g += src[srcOff + 1] * wt;
+        b += src[srcOff + 2] * wt;
+        a += src[srcOff + 3] * wt;
+      }
+      dst[dstOff] = r;
+      dst[dstOff + 1] = g;
+      dst[dstOff + 2] = b;
+      dst[dstOff + 3] = a + alphaFac * (255 - a);
+    }
+  }
+  return output;
+}
+
+function verticalConvolve(pixels, weightsVector, opaque) {
+  var side = weightsVector.length;
+  var halfSide = Math.floor(side / 2);
+
+  var src = pixels.data;
+  var sw = pixels.width;
+  var sh = pixels.height;
+
+  var w = sw;
+  var h = sh;
+  var output = (0, _createImageData.createImageData)(w, h);
+  var dst = output.data;
+
+  var alphaFac = opaque ? 1 : 0;
+
+  for (var y = 0; y < h; y++) {
+    for (var x = 0; x < w; x++) {
+      var sy = y;
+      var sx = x;
+      var dstOff = (y * w + x) * 4;
+      var r = 0,
+          g = 0,
+          b = 0,
+          a = 0;
+      for (var cy = 0; cy < side; cy++) {
+        var scy = Math.min(sh - 1, Math.max(0, sy + cy - halfSide));
+        var scx = sx;
+        var srcOff = (scy * sw + scx) * 4;
+        var wt = weightsVector[cy];
+        r += src[srcOff] * wt;
+        g += src[srcOff + 1] * wt;
+        b += src[srcOff + 2] * wt;
+        a += src[srcOff + 3] * wt;
+      }
+      dst[dstOff] = r;
+      dst[dstOff + 1] = g;
+      dst[dstOff + 2] = b;
+      dst[dstOff + 3] = a + alphaFac * (255 - a);
+    }
+  }
+  return output;
+};
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.createImageData = createImageData;
+var tmpCtx = null;
+
+if (typeof document !== 'undefined') {
+  tmpCtx = document.createElement('canvas').getContext('2d');
+} else if (typeof wx !== 'undefined' && wx.createCanvas) {
+  tmpCtx = wx.createCanvas().getContext('2d');
+}
+
+function createImageData(w, h) {
+  return tmpCtx.createImageData(w, h);
+}
+
+/***/ }),
+/* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.brightness = brightness;
+function brightness(pixels, adjustment) {
+  var data = pixels.data;
+  var length = data.length;
+  for (var i = 0; i < length; i += 4) {
+    data[i] += adjustment;
+    data[i + 1] += adjustment;
+    data[i + 2] += adjustment;
+  }
+  return pixels;
+}
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.contrast = contrast;
+function contrast(pixels, contrast) {
+  var data = pixels.data;
+  var length = data.length;
+  var factor = 259 * (contrast + 255) / (255 * (259 - contrast));
+
+  for (var i = 0; i < length; i += 4) {
+    data[i] = factor * (data[i] - 128) + 128;
+    data[i + 1] = factor * (data[i + 1] - 128) + 128;
+    data[i + 2] = factor * (data[i + 2] - 128) + 128;
+  }
+
+  return pixels;
+};
+
+/***/ }),
+/* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.grayscale = grayscale;
+function grayscale(pixels, adjustment) {
+  var data = pixels.data;
+  var length = data.length;
+  for (var i = 0; i < length; i += 4) {
+    var r = data[i];
+    var g = data[i + 1];
+    var b = data[i + 2];
+
+    // CIE luminance for the RGB
+    // The human eye is bad at seeing red and blue, so we de-emphasize them.
+    var v = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+    data[i] = r + (v - r) * adjustment;
+    data[i + 1] = g + (v - g) * adjustment;
+    data[i + 2] = b + (v - b) * adjustment;
+  }
+  return pixels;
+};
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.sepia = sepia;
+function sepia(pixels, adjustment) {
+  var data = pixels.data;
+  var length = data.length;
+  for (var i = 0; i < length; i += 4) {
+    var r = data[i];
+    var g = data[i + 1];
+    var b = data[i + 2];
+
+    var sr = r * 0.393 + g * 0.769 + b * 0.189;
+    var sg = r * 0.349 + g * 0.686 + b * 0.168;
+    var sb = r * 0.272 + g * 0.534 + b * 0.131;
+
+    data[i] = r + (sr - r) * adjustment;
+    data[i + 1] = g + (sg - g) * adjustment;
+    data[i + 2] = b + (sb - b) * adjustment;
+  }
+
+  return pixels;
+};
+
+/***/ }),
+/* 34 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.threshold = threshold;
+function threshold(pixels, threshold) {
+  var data = pixels.data;
+  var length = data.length;
+  for (var i = 0; i < length; i += 4) {
+    var r = data[i];
+    var g = data[i + 1];
+    var b = data[i + 2];
+    var v = 0.2126 * r + 0.7152 * g + 0.0722 * b >= threshold ? 255 : 0;
+    data[i] = data[i + 1] = data[i + 2] = v;
+  }
+  return pixels;
+};
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.gamma = gamma;
+function gamma(pixels, adjustment) {
+  var data = pixels.data;
+  var length = data.length;
+  for (var i = 0; i < length; i += 4) {
+    data[i] = Math.pow(data[i] / 255, adjustment) * 255;
+    data[i + 1] = Math.pow(data[i + 1] / 255, adjustment) * 255;
+    data[i + 2] = Math.pow(data[i + 2] / 255, adjustment) * 255;
+  }
+  return pixels;
+};
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.colorize = colorize;
+function colorize(pixels, option) {
+  var data = pixels.data;
+  var length = data.length;
+  var hex = option.color.charAt(0) === '#' ? option.color.substr(1) : option.color;
+  var colorRGB = {
+    r: parseInt(hex.substr(0, 2), 16),
+    g: parseInt(hex.substr(2, 2), 16),
+    b: parseInt(hex.substr(4, 2), 16)
+  };
+
+  for (var i = 0; i < length; i += 4) {
+    data[i] -= (data[i] - colorRGB.r) * option.amount;
+    data[i + 1] -= (data[i + 1] - colorRGB.g) * option.amount;
+    data[i + 2] -= (data[i + 2] - colorRGB.b) * option.amount;
+  }
+
+  return pixels;
+};
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _group = __webpack_require__(1);
+
+var _group2 = _interopRequireDefault(_group);
+
+var _graphics = __webpack_require__(4);
+
+var _graphics2 = _interopRequireDefault(_graphics);
+
+var _render = __webpack_require__(8);
+
+var _render2 = _interopRequireDefault(_render);
+
+var _event = __webpack_require__(7);
+
+var _event2 = _interopRequireDefault(_event);
+
+var _sprite = __webpack_require__(6);
+
+var _sprite2 = _interopRequireDefault(_sprite);
+
+var _bitmap = __webpack_require__(2);
+
+var _bitmap2 = _interopRequireDefault(_bitmap);
+
+var _text = __webpack_require__(5);
+
+var _text2 = _interopRequireDefault(_text);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var HitRender = function (_Render) {
+  _inherits(HitRender, _Render);
+
+  function HitRender() {
+    _classCallCheck(this, HitRender);
+
+    var _this = _possibleConstructorReturn(this, (HitRender.__proto__ || Object.getPrototypeOf(HitRender)).call(this));
+
+    if (typeof wx !== 'undefined' && wx.createCanvas) {
+      _this.canvas = wx.createCanvas();
+    } else {
+      _this.canvas = document.createElement('canvas');
+    }
+
+    _this.canvas.width = 1;
+    _this.canvas.height = 1;
+    _this.ctx = _this.canvas.getContext('2d');
+
+    // debug event
+    // this.canvas.width = 441
+    // this.canvas.height = 441
+    // this.ctx = this.canvas.getContext('2d')
+    // document.body.appendChild(this.canvas)
+
+    _this.disableEvents = ['mouseover', 'mouseout', 'mousemove', 'touchmove'];
+    return _this;
+  }
+
+  _createClass(HitRender, [{
+    key: 'clear',
+    value: function clear() {
+      this.ctx.clearRect(0, 0, this.width, this.height);
+    }
+  }, {
+    key: 'hitAABB',
+    value: function hitAABB(o, evt) {
+      var list = o.children.slice(0),
+          l = list.length;
+      for (var i = l - 1; i >= 0; i--) {
+        var child = list[i];
+        // if (!this.isbindingEvent(child)) continue;
+        var target = this._hitAABB(child, evt);
+        if (target) return target;
+      }
+    }
+  }, {
+    key: '_hitAABB',
+    value: function _hitAABB(o, evt) {
+      if (o.ignoreHit || !o.isVisible()) {
+        return;
+      }
+      if (o instanceof _group2.default) {
+        var list = o.children.slice(0),
+            l = list.length;
+        for (var i = l - 1; i >= 0; i--) {
+          var child = list[i];
+          var target = this._hitAABB(child, evt);
+          if (target) return target;
+        }
+      } else {
+        if (o.AABB && this.checkPointInAABB(evt.stageX, evt.stageY, o.AABB)) {
+          // this._bubbleEvent(o, type, evt);
+          this._dispatchEvent(o, evt);
+          return o;
+        }
+      }
+    }
+  }, {
+    key: 'checkPointInAABB',
+    value: function checkPointInAABB(x, y, AABB) {
+      var minX = AABB[0];
+      if (x < minX) return false;
+      var minY = AABB[1];
+      if (y < minY) return false;
+      var maxX = minX + AABB[2];
+      if (x > maxX) return false;
+      var maxY = minY + AABB[3];
+      if (y > maxY) return false;
+      return true;
+    }
+  }, {
+    key: 'hitPixel',
+    value: function hitPixel(o, evt) {
+      var ctx = this.ctx;
+      ctx.clearRect(0, 0, 2, 2);
+      var mtx = o._hitMatrix;
+      var list = o.children.slice(0),
+          l = list.length;
+      for (var i = l - 1; i >= 0; i--) {
+        var child = list[i];
+        mtx.initialize(1, 0, 0, 1, 0, 0);
+        mtx.appendTransform(o.x - evt.stageX, o.y - evt.stageY, o.scaleX, o.scaleY, o.rotation, o.skewX, o.skewY, o.originX, o.originY);
+        // if (!this.checkBoundEvent(child)) continue
+        ctx.save();
+        var target = this._hitPixel(child, evt, mtx);
+        ctx.restore();
+        if (target) return target;
+      }
+    }
+  }, {
+    key: '_hitPixel',
+    value: function _hitPixel(o, evt, mtx) {
+      if (o.ignoreHit || !o.isVisible()) return;
+      var ctx = this.ctx;
+      if (mtx && !o.fixed) {
+        o._hitMatrix.initialize(mtx.a, mtx.b, mtx.c, mtx.d, mtx.tx, mtx.ty);
+      } else {
+        o._hitMatrix.initialize(1, 0, 0, 1, 0, 0);
+      }
+      mtx = o._hitMatrix;
+      mtx.appendTransform(o.x, o.y, o.scaleX, o.scaleY, o.rotation, o.skewX, o.skewY, o.originX, o.originY);
+
+      var ocg = o.clipGraphics;
+      if (ocg) {
+        ctx.beginPath();
+        ocg._matrix.copy(mtx);
+        ocg._matrix.appendTransform(ocg.x, ocg.y, ocg.scaleX, ocg.scaleY, ocg.rotation, ocg.skewX, ocg.skewY, ocg.originX, ocg.originY);
+        ctx.setTransform(ocg._matrix.a, ocg._matrix.b, ocg._matrix.c, ocg._matrix.d, ocg._matrix.tx, ocg._matrix.ty);
+        ocg.render(ctx);
+        ctx.clip(o.clipRuleNonzero ? 'nonzero' : 'evenodd');
+      }
+
+      var oacg = o.absClipGraphics;
+      if (oacg) {
+        ctx.beginPath();
+        oacg._matrix.initialize(1, 0, 0, 1, 0, 0);
+        oacg._matrix.appendTransform(oacg.x, oacg.y, oacg.scaleX, oacg.scaleY, oacg.rotation, oacg.skewX, oacg.skewY, oacg.originX, oacg.originY);
+        ctx.setTransform(oacg._matrix.a, oacg._matrix.b, oacg._matrix.c, oacg._matrix.d, oacg._matrix.tx, oacg._matrix.ty);
+        oacg.render(ctx);
+        ctx.clip(o.absClipRuleNonzero ? 'nonzero' : 'evenodd');
+      }
+
+      if (o.cacheCanvas) {
+        ctx.setTransform(mtx.a, mtx.b, mtx.c, mtx.d, mtx.tx, mtx.ty);
+        ctx.drawImage(o.cacheCanvas, o._cacheData.x, o._cacheData.y);
+      } else if (o instanceof _group2.default) {
+        var list = o.children.slice(0),
+            l = list.length;
+        for (var i = l - 1; i >= 0; i--) {
+          ctx.save();
+          var target = this._hitPixel(list[i], evt, mtx);
+          ctx.restore();
+          if (target) return target;
+        }
+      } else {
+        ctx.setTransform(mtx.a, mtx.b, mtx.c, mtx.d, mtx.tx, mtx.ty);
+        if (o instanceof _graphics2.default) {
+          this.setComplexProps(ctx, o);
+
+          o.render(ctx);
+        } else if (o instanceof _sprite2.default && o.rect) {
+          this.setComplexProps(ctx, o);
+
+          o.updateFrame();
+          var rect = o.rect;
+          ctx.drawImage(o.img, rect[0], rect[1], rect[2], rect[3], 0, 0, rect[2], rect[3]);
+        } else if (o instanceof _bitmap2.default && o.rect) {
+          this.setComplexProps(ctx, o);
+
+          var bRect = o.rect;
+          ctx.drawImage(o.img, bRect[0], bRect[1], bRect[2], bRect[3], 0, 0, bRect[2], bRect[3]);
+        } else if (o instanceof _text2.default) {
+          this.setComplexProps(ctx, o);
+
+          ctx.font = o.font;
+          ctx.fillStyle = o.color;
+          ctx.textAlign = o.textAlign;
+          ctx.textBaseline = o.baseline;
+          ctx.fillText(o.text, 0, 0);
+        }
+      }
+
+      if (ctx.getImageData(0, 0, 1, 1).data[3] > 0) {
+        this._dispatchEvent(o, evt);
+        return o;
+      }
+    }
+  }, {
+    key: 'setComplexProps',
+    value: function setComplexProps(ctx, o) {
+      ctx.globalCompositeOperation = o.complexCompositeOperation;
+      ctx.globalAlpha = o.complexAlpha;
+      // The shadow does not trigger the event, so remove it
+      // if(o.complexShadow){
+      //   ctx.shadowColor = o.complexShadow.color
+      //   ctx.shadowOffsetX = o.complexShadow.offsetX
+      //   ctx.shadowOffsetY = o.complexShadow.offsetY
+      //   ctx.shadowBlur = o.complexShadow.blur
+      // }
+    }
+  }, {
+    key: '_dispatchEvent',
+    value: function _dispatchEvent(obj, evt) {
+      if (this.disableEvents.indexOf(evt.type) !== -1) return;
+      var mockEvt = new _event2.default();
+      mockEvt.stageX = evt.stageX;
+      mockEvt.stageY = evt.stageY;
+      mockEvt.pureEvent = evt;
+      mockEvt.type = evt.type;
+      obj.dispatchEvent(mockEvt);
+    }
+  }]);
+
+  return HitRender;
+}(_render2.default);
+
+exports.default = HitRender;
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _graphics = __webpack_require__(4);
+
+var _graphics2 = _interopRequireDefault(_graphics);
+
+var _render = __webpack_require__(8);
+
+var _render2 = _interopRequireDefault(_render);
+
+var _event = __webpack_require__(7);
+
+var _event2 = _interopRequireDefault(_event);
+
+var _sprite = __webpack_require__(6);
+
+var _sprite2 = _interopRequireDefault(_sprite);
+
+var _bitmap = __webpack_require__(2);
+
+var _bitmap2 = _interopRequireDefault(_bitmap);
+
+var _text = __webpack_require__(5);
+
+var _text2 = _interopRequireDefault(_text);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var WxHitRender = function (_Render) {
+  _inherits(WxHitRender, _Render);
+
+  function WxHitRender(ctx, component, canvasId) {
+    _classCallCheck(this, WxHitRender);
+
+    var _this = _possibleConstructorReturn(this, (WxHitRender.__proto__ || Object.getPrototypeOf(WxHitRender)).call(this));
+
+    _this.ctx = ctx;
+    _this._isWeapp = true;
+    _this._component = component;
+    _this._hitCanvasId = canvasId + 'Hit';
+
+    _this.disableEvents = ['mouseover', 'mouseout', 'mousemove', 'touchmove'];
+    return _this;
+  }
+
+  _createClass(WxHitRender, [{
+    key: 'clear',
+    value: function clear() {
+      this.ctx.clearRect(0, 0, 2, 2);
+    }
+  }, {
+    key: 'hitAABB',
+    value: function hitAABB(list, evt, cb) {
+      var len = list.length;
+      for (var i = len - 1; i >= 0; i--) {
+        var o = list[i];
+
+        if (o.AABB && this.checkPointInAABB(evt.stageX, evt.stageY, o.AABB)) {
+          this._dispatchEvent(o, evt);
+          cb(o);
+          return o;
+        }
+      }
+    }
+  }, {
+    key: 'checkPointInAABB',
+    value: function checkPointInAABB(x, y, AABB) {
+      var minX = AABB[0];
+      if (x < minX) return false;
+      var minY = AABB[1];
+      if (y < minY) return false;
+      var maxX = minX + AABB[2];
+      if (x > maxX) return false;
+      var maxY = minY + AABB[3];
+      if (y > maxY) return false;
+      return true;
+    }
+  }, {
+    key: 'hit',
+    value: function hit(list, evt, cb, current) {
+      var _this2 = this;
+
+      var ctx = this.ctx;
+      var obj = list[current];
+      var mtx = obj._hitMatrix.initialize(1, 0, 0, 1, 0, 0);
+      ctx.save();
+      mtx.appendTransform(obj.x - evt.stageX, obj.y - evt.stageY, obj.scaleX, obj.scaleY, obj.rotation, obj.skewX, obj.skewY, obj.originX, obj.originY);
+      ctx.globalCompositeOperation = obj.complexCompositeOperation;
+      ctx.globalAlpha = obj.complexAlpha;
+      ctx.setTransform(mtx.a, mtx.b, mtx.c, mtx.d, mtx.tx, mtx.ty);
+      if (obj instanceof _graphics2.default) {
+        obj.render(ctx);
+      } else if (obj instanceof _sprite2.default && obj.rect) {
+        obj.updateFrame();
+        var rect = obj.rect;
+        ctx.drawImage(obj.img, rect[0], rect[1], rect[2], rect[3], 0, 0, rect[2], rect[3]);
+      } else if (obj instanceof _bitmap2.default && obj.rect) {
+        var bRect = obj.rect;
+        ctx.drawImage(obj.img, bRect[0], bRect[1], bRect[2], bRect[3], 0, 0, bRect[2], bRect[3]);
+      } else if (obj instanceof _text2.default) {
+        ctx.font = obj.font;
+        ctx.fillStyle = obj.color;
+        ctx.textAlign = obj.textAlign;
+        ctx.fillText(obj.text, 0, 0);
+      }
+      ctx.restore();
+      current--;
+      ctx.draw(false, function () {
+        wx.canvasGetImageData({
+          canvasId: _this2._hitCanvasId,
+          x: 0,
+          y: 0,
+          width: 1,
+          height: 1,
+          success: function success(res) {
+            if (res.data[3] > 1) {
+              _this2._dispatchEvent(obj, evt);
+              cb(obj);
+            } else {
+              if (current > -1) {
+                _this2.hit(list, evt, cb, current);
+              }
+            }
+          }
+        }, _this2._component);
+      });
+    }
+  }, {
+    key: '_dispatchEvent',
+    value: function _dispatchEvent(obj, evt) {
+      if (this.disableEvents.indexOf(evt.type) !== -1) return;
+      var mockEvt = new _event2.default();
+      mockEvt.stageX = evt.stageX;
+      mockEvt.stageY = evt.stageY;
+      mockEvt.pureEvent = evt;
+      mockEvt.type = evt.type;
+      obj.dispatchEvent(mockEvt);
+    }
+  }]);
+
+  return WxHitRender;
+}(_render2.default);
+
+exports.default = WxHitRender;
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _shape = __webpack_require__(0);
+
+var _shape2 = _interopRequireDefault(_shape);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var ArrowPath = function (_Shape) {
+  _inherits(ArrowPath, _Shape);
+
+  function ArrowPath(path, option) {
+    _classCallCheck(this, ArrowPath);
+
+    var _this = _possibleConstructorReturn(this, (ArrowPath.__proto__ || Object.getPrototypeOf(ArrowPath)).call(this));
+
+    _this.path = path;
+    _this.option = Object.assign({
+      strokeStyle: 'black',
+      lineWidth: 1,
+      headSize: 10
+    }, option);
+    return _this;
+  }
+
+  _createClass(ArrowPath, [{
+    key: 'draw',
+    value: function draw() {
+      var path = this.path;
+      this.beginPath();
+      var len = path.length;
+      if (len === 2) {
+        this.drawArrow(path[0].x, path[0].y, path[1].x, path[1].y, 30);
+      } else {
+        this.moveTo(path[0].x, path[0].y);
+        for (var i = 1; i < len - 1; i++) {
+          this.lineTo(path[i].x, path[i].y);
+        }
+        this.drawArrow(path[len - 2].x, path[len - 2].y, path[len - 1].x, path[len - 1].y, 30);
+      }
+
+      this.stroke();
+    }
+  }, {
+    key: 'drawArrow',
+    value: function drawArrow(fromX, fromY, toX, toY, theta) {
+      var angle = Math.atan2(fromY - toY, fromX - toX) * 180 / Math.PI,
+          angle1 = (angle + theta) * Math.PI / 180,
+          angle2 = (angle - theta) * Math.PI / 180,
+          hs = this.option.headSize,
+          topX = hs * Math.cos(angle1),
+          topY = hs * Math.sin(angle1),
+          botX = hs * Math.cos(angle2),
+          botY = hs * Math.sin(angle2);
+
+      var arrowX = fromX - topX,
+          arrowY = fromY - topY;
+
+      this.moveTo(arrowX, arrowY);
+      this.moveTo(fromX, fromY);
+      this.lineTo(toX, toY);
+      arrowX = toX + topX;
+      arrowY = toY + topY;
+      this.moveTo(arrowX, arrowY);
+      this.lineTo(toX, toY);
+      arrowX = toX + botX;
+      arrowY = toY + botY;
+      this.lineTo(arrowX, arrowY);
+      this.strokeStyle(this.option.strokeStyle);
+      this.lineWidth(this.option.lineWidth);
+    }
+  }]);
+
+  return ArrowPath;
+}(_shape2.default);
+
+exports.default = ArrowPath;
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _shape = __webpack_require__(0);
+
+var _shape2 = _interopRequireDefault(_shape);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Ellipse = function (_Shape) {
+  _inherits(Ellipse, _Shape);
+
+  function Ellipse(width, height, option) {
+    _classCallCheck(this, Ellipse);
+
+    var _this = _possibleConstructorReturn(this, (Ellipse.__proto__ || Object.getPrototypeOf(Ellipse)).call(this));
+
+    _this.option = option || {};
+    _this.width = width;
+    _this.height = height;
+    return _this;
+  }
+
+  _createClass(Ellipse, [{
+    key: 'draw',
+    value: function draw() {
+      var w = this.width;
+      var h = this.height;
+      var k = 0.5522848;
+      var ox = w / 2 * k;
+      var oy = h / 2 * k;
+      var xe = w;
+      var ye = h;
+      var xm = w / 2;
+      var ym = h / 2;
+
+      this.beginPath();
+      this.moveTo(0, ym);
+      this.bezierCurveTo(0, ym - oy, xm - ox, 0, xm, 0);
+      this.bezierCurveTo(xm + ox, 0, xe, ym - oy, xe, ym);
+      this.bezierCurveTo(xe, ym + oy, xm + ox, ye, xm, ye);
+      this.bezierCurveTo(xm - ox, ye, 0, ym + oy, 0, ym);
+
+      if (this.option.strokeStyle) {
+        if (this.option.lineWidth !== undefined) {
+          this.lineWidth(this.option.lineWidth);
+        }
+        this.strokeStyle(this.option.strokeStyle);
+        this.stroke();
+      }
+
+      if (this.option.fillStyle) {
+        this.fillStyle(this.option.fillStyle);
+        this.fill();
+      }
+    }
+  }]);
+
+  return Ellipse;
+}(_shape2.default);
+
+exports.default = Ellipse;
+
+/***/ }),
+/* 41 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _pathParser = __webpack_require__(42);
+
+var _pathParser2 = _interopRequireDefault(_pathParser);
+
+var _shape = __webpack_require__(0);
+
+var _shape2 = _interopRequireDefault(_shape);
+
+var _arcToBezier = __webpack_require__(43);
+
+var _arcToBezier2 = _interopRequireDefault(_arcToBezier);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Path = function (_Shape) {
+  _inherits(Path, _Shape);
+
+  function Path(d, option) {
+    _classCallCheck(this, Path);
+
+    var _this = _possibleConstructorReturn(this, (Path.__proto__ || Object.getPrototypeOf(Path)).call(this));
+
+    _this.d = d;
+
+    option = Object.assign({
+      lineWidth: 1
+    }, option);
+    _this.option = option;
+    return _this;
+  }
+
+  _createClass(Path, [{
+    key: 'draw',
+    value: function draw() {
+      var _this2 = this;
+
+      var cmds = (0, _pathParser2.default)(this.d);
+
+      this.beginPath();
+      // https://developer.mozilla.org/zh-CN/docs/Web/SVG/Tutorial/Paths
+      // M = moveto
+      // L = lineto
+      // H = horizontal lineto
+      // V = vertical lineto
+      // C = curveto
+      // S = smooth curveto
+      // Q = quadratic Belzier curve
+      // T = smooth quadratic Belzier curveto
+      // A = elliptical Arc  暂时未实现，用贝塞尔拟合椭圆
+      // Z = closepath
+      // 以上所有命令均允许小写字母。大写表示绝对定位，小写表示相对定位(从上一个点开始)。
+      var preX = void 0,
+          preY = void 0,
+          curves = void 0,
+          lastCurve = void 0;
+
+      // 参考我的 pasition https://github.com/AlloyTeam/pasition/blob/master/src/index.js
+      for (var j = 0, cmdLen = cmds.length; j < cmdLen; j++) {
+        var item = cmds[j];
+        var action = item[0];
+        var preItem = cmds[j - 1];
+
+        switch (action) {
+          case 'M':
+            preX = item[1];
+            preY = item[2];
+            this.moveTo(preX, preY);
+            break;
+          case 'L':
+            preX = item[1];
+            preY = item[2];
+            this.lineTo(preX, preY);
+            break;
+          case 'H':
+            preX = item[1];
+            this.lineTo(preX, preY);
+            break;
+          case 'V':
+            preY = item[1];
+            this.lineTo(preX, preY);
+            break;
+          case 'C':
+            preX = item[5];
+            preY = item[6];
+            this.bezierCurveTo(item[1], item[2], item[3], item[4], preX, preY);
+            break;
+          case 'S':
+
+            if (preItem[0] === 'C' || preItem[0] === 'c') {
+              this.bezierCurveTo(preX + preItem[5] - preItem[3], preY + preItem[6] - preItem[4], item[1], item[2], item[3], item[4]);
+            } else if (preItem[0] === 'S' || preItem[0] === 's') {
+              this.bezierCurveTo(preX + preItem[3] - preItem[1], preY + preItem[4] - preItem[2], item[1], item[2], item[3], item[4]);
+            }
+            preX = item[3];
+            preY = item[4];
+            break;
+
+          case 'Q':
+            preX = item[3];
+            preY = item[4];
+            this.quadraticCurveTo(item[1], item[2], preX, preY);
+            break;
+
+          case 'm':
+            preX += item[1];
+            preY += item[2];
+            this.moveTo(preX, preY);
+            break;
+          case 'l':
+            preX += item[1];
+            preY += item[2];
+            this.lineTo(preX, preY);
+            break;
+          case 'h':
+            preX += item[1];
+            this.lineTo(preX, preY);
+            break;
+          case 'v':
+            preY += item[1];
+            this.lineTo(preX, preY);
+            break;
+          case 'c':
+            this.bezierCurveTo(preX + item[1], preY + item[2], preX + item[3], preY + item[4], preX + item[5], preY + item[6]);
+            preX = preX + item[5];
+            preY = preY + item[6];
+            break;
+          case 's':
+            if (preItem[0] === 'C' || preItem[0] === 'c') {
+              this.bezierCurveTo(preX + preItem[5] - preItem[3], preY + preItem[6] - preItem[4], preX + item[1], preY + item[2], preX + item[3], preY + item[4]);
+            } else if (preItem[0] === 'S' || preItem[0] === 's') {
+              this.bezierCurveTo(preX + preItem[3] - preItem[1], preY + preItem[4] - preItem[2], preX + item[1], preY + item[2], preX + item[3], preY + item[4]);
+            }
+
+            preX += item[3];
+            preY += item[4];
+            break;
+          case 'q':
+
+            this.quadraticCurveTo(preX + item[1], preY + item[2], item[3] + preX, item[4] + preY);
+            preX += item[3];
+            preY += item[4];
+            break;
+          case 'Z':
+            this.closePath();
+            break;
+          case 'z':
+            this.closePath();
+            break;
+
+          case 'a':
+            curves = (0, _arcToBezier2.default)({
+              rx: item[1],
+              ry: item[2],
+              px: preX,
+              py: preY,
+              xAxisRotation: item[3],
+              largeArcFlag: item[4],
+              sweepFlag: item[5],
+              cx: preX + item[6],
+              cy: preX + item[7]
+            });
+            lastCurve = curves[curves.length - 1];
+
+            curves.forEach(function (curve, index) {
+              if (index === 0) {
+                _this2.moveTo(preX, preY);
+                _this2.bezierCurveTo(curve.x1, curve.y1, curve.x2, curve.y2, curve.x, curve.y);
+              } else {
+                //curves[index - 1].x, curves[index - 1].y, 
+                _this2.bezierCurveTo(curve.x1, curve.y1, curve.x2, curve.y2, curve.x, curve.y);
+              }
+            });
+
+            preX = lastCurve.x;
+            preY = lastCurve.y;
+
+            break;
+
+          case 'A':
+
+            curves = (0, _arcToBezier2.default)({
+              rx: item[1],
+              ry: item[2],
+              px: preX,
+              py: preY,
+              xAxisRotation: item[3],
+              largeArcFlag: item[4],
+              sweepFlag: item[5],
+              cx: item[6],
+              cy: item[7]
+            });
+            lastCurve = curves[curves.length - 1];
+
+            curves.forEach(function (curve, index) {
+              if (index === 0) {
+                _this2.moveTo(preX, preY);
+                _this2.bezierCurveTo(curve.x1, curve.y1, curve.x2, curve.y2, curve.x, curve.y);
+              } else {
+                //curves[index - 1].x, curves[index - 1].y
+                _this2.bezierCurveTo(curve.x1, curve.y1, curve.x2, curve.y2, curve.x, curve.y);
+              }
+            });
+
+            preX = lastCurve.x;
+            preY = lastCurve.y;
+
+            break;
+
+          case 'T':
+
+            if (preItem[0] === 'Q' || preItem[0] === 'q') {
+              preCX = preX + preItem[3] - preItem[1];
+              preCY = preY + preItem[4] - preItem[2];
+              this.quadraticCurveTo(preX, preY, preCX, preCY, item[1], item[2]);
+            } else if (preItem[0] === 'T' || preItem[0] === 't') {
+              this.quadraticCurveTo(preX, preY, preX + preX - preCX, preY + preY - preCY, item[1], item[2]);
+              preCX = preX + preX - preCX;
+              preCY = preY + preY - preCY;
+            }
+
+            preX = item[1];
+            preY = item[2];
+            break;
+
+          case 't':
+            if (preItem[0] === 'Q' || preItem[0] === 'q') {
+              preCX = preX + preItem[3] - preItem[1];
+              preCY = preY + preItem[4] - preItem[2];
+              this.quadraticCurveTo(preX, preY, preCX, preCY, preX + item[1], preY + item[2]);
+            } else if (preItem[0] === 'T' || preItem[0] === 't') {
+              this.quadraticCurveTo(preX, preY, preX + preX - preCX, preY + preY - preCY, preX + item[1], preY + item[2]);
+              preCX = preX + preX - preCX;
+              preCY = preY + preY - preCY;
+            }
+
+            preX += item[1];
+            preY += item[2];
+            break;
+        }
+      }
+      if (this.option.fillStyle) {
+        this.fillStyle(this.option.fillStyle);
+        this.fill();
+      }
+
+      if (this.option.strokeStyle) {
+        this.lineWidth(this.option.lineWidth);
+        this.strokeStyle(this.option.strokeStyle);
+        this.stroke();
+      }
+    }
+  }]);
+
+  return Path;
+}(_shape2.default);
+
+exports.default = Path;
+
+/***/ }),
+/* 42 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// https://github.com/jkroso/parse-svg-path/blob/master/index.js
+/**
+ * expected argument lengths
+ * @type {Object}
+ */
+
+var length = { a: 7, c: 6, h: 1, l: 2, m: 2, q: 4, s: 4, t: 2, v: 1, z: 0
+
+  /**
+   * segment pattern
+   * @type {RegExp}
+   */
+
+};var segment = /([astvzqmhlc])([^astvzqmhlc]*)/ig;
+
+/**
+ * parse an svg path data string. Generates an Array
+ * of commands where each command is an Array of the
+ * form `[command, arg1, arg2, ...]`
+ *
+ * @param {String} path
+ * @return {Array}
+ */
+
+function parse(path) {
+  var data = [];
+  path.replace(segment, function (_, command, args) {
+    var type = command.toLowerCase();
+    args = parseValues(args);
+
+    // overloaded moveTo
+    if (type === 'm' && args.length > 2) {
+      data.push([command].concat(args.splice(0, 2)));
+      type = 'l';
+      command = command === 'm' ? 'l' : 'L';
+    }
+
+    while (true) {
+      if (args.length === length[type]) {
+        args.unshift(command);
+        return data.push(args);
+      }
+      if (args.length < length[type]) throw new Error('malformed path data');
+      data.push([command].concat(args.splice(0, length[type])));
+    }
+  });
+  return data;
+}
+
+var number = /-?[0-9]*\.?[0-9]+(?:e[-+]?\d+)?/ig;
+
+function parseValues(args) {
+  var numbers = args.match(number);
+  return numbers ? numbers.map(Number) : [];
+}
+
+exports.default = parse;
+
+/***/ }),
+/* 43 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
+// https://github.com/colinmeinke/svg-arc-to-cubic-bezier
+
+var TAU = Math.PI * 2;
+
+var mapToEllipse = function mapToEllipse(_ref, rx, ry, cosphi, sinphi, centerx, centery) {
+  var x = _ref.x,
+      y = _ref.y;
+
+  x *= rx;
+  y *= ry;
+
+  var xp = cosphi * x - sinphi * y;
+  var yp = sinphi * x + cosphi * y;
+
+  return {
+    x: xp + centerx,
+    y: yp + centery
+  };
+};
+
+var approxUnitArc = function approxUnitArc(ang1, ang2) {
+  var a = 4 / 3 * Math.tan(ang2 / 4);
+
+  var x1 = Math.cos(ang1);
+  var y1 = Math.sin(ang1);
+  var x2 = Math.cos(ang1 + ang2);
+  var y2 = Math.sin(ang1 + ang2);
+
+  return [{
+    x: x1 - y1 * a,
+    y: y1 + x1 * a
+  }, {
+    x: x2 + y2 * a,
+    y: y2 - x2 * a
+  }, {
+    x: x2,
+    y: y2
+  }];
+};
+
+var vectorAngle = function vectorAngle(ux, uy, vx, vy) {
+  var sign = ux * vy - uy * vx < 0 ? -1 : 1;
+  var umag = Math.sqrt(ux * ux + uy * uy);
+  var vmag = Math.sqrt(ux * ux + uy * uy);
+  var dot = ux * vx + uy * vy;
+
+  var div = dot / (umag * vmag);
+
+  if (div > 1) {
+    div = 1;
+  }
+
+  if (div < -1) {
+    div = -1;
+  }
+
+  return sign * Math.acos(div);
+};
+
+var getArcCenter = function getArcCenter(px, py, cx, cy, rx, ry, largeArcFlag, sweepFlag, sinphi, cosphi, pxp, pyp) {
+  var rxsq = Math.pow(rx, 2);
+  var rysq = Math.pow(ry, 2);
+  var pxpsq = Math.pow(pxp, 2);
+  var pypsq = Math.pow(pyp, 2);
+
+  var radicant = rxsq * rysq - rxsq * pypsq - rysq * pxpsq;
+
+  if (radicant < 0) {
+    radicant = 0;
+  }
+
+  radicant /= rxsq * pypsq + rysq * pxpsq;
+  radicant = Math.sqrt(radicant) * (largeArcFlag === sweepFlag ? -1 : 1);
+
+  var centerxp = radicant * rx / ry * pyp;
+  var centeryp = radicant * -ry / rx * pxp;
+
+  var centerx = cosphi * centerxp - sinphi * centeryp + (px + cx) / 2;
+  var centery = sinphi * centerxp + cosphi * centeryp + (py + cy) / 2;
+
+  var vx1 = (pxp - centerxp) / rx;
+  var vy1 = (pyp - centeryp) / ry;
+  var vx2 = (-pxp - centerxp) / rx;
+  var vy2 = (-pyp - centeryp) / ry;
+
+  var ang1 = vectorAngle(1, 0, vx1, vy1);
+  var ang2 = vectorAngle(vx1, vy1, vx2, vy2);
+
+  if (sweepFlag === 0 && ang2 > 0) {
+    ang2 -= TAU;
+  }
+
+  if (sweepFlag === 1 && ang2 < 0) {
+    ang2 += TAU;
+  }
+
+  return [centerx, centery, ang1, ang2];
+};
+
+var arcToBezier = function arcToBezier(_ref2) {
+  var px = _ref2.px,
+      py = _ref2.py,
+      cx = _ref2.cx,
+      cy = _ref2.cy,
+      rx = _ref2.rx,
+      ry = _ref2.ry,
+      _ref2$xAxisRotation = _ref2.xAxisRotation,
+      xAxisRotation = _ref2$xAxisRotation === undefined ? 0 : _ref2$xAxisRotation,
+      _ref2$largeArcFlag = _ref2.largeArcFlag,
+      largeArcFlag = _ref2$largeArcFlag === undefined ? 0 : _ref2$largeArcFlag,
+      _ref2$sweepFlag = _ref2.sweepFlag,
+      sweepFlag = _ref2$sweepFlag === undefined ? 0 : _ref2$sweepFlag;
+
+  var curves = [];
+
+  if (rx === 0 || ry === 0) {
+    return [];
+  }
+
+  var sinphi = Math.sin(xAxisRotation * TAU / 360);
+  var cosphi = Math.cos(xAxisRotation * TAU / 360);
+
+  var pxp = cosphi * (px - cx) / 2 + sinphi * (py - cy) / 2;
+  var pyp = -sinphi * (px - cx) / 2 + cosphi * (py - cy) / 2;
+
+  if (pxp === 0 && pyp === 0) {
+    return [];
+  }
+
+  rx = Math.abs(rx);
+  ry = Math.abs(ry);
+
+  var lambda = Math.pow(pxp, 2) / Math.pow(rx, 2) + Math.pow(pyp, 2) / Math.pow(ry, 2);
+
+  if (lambda > 1) {
+    rx *= Math.sqrt(lambda);
+    ry *= Math.sqrt(lambda);
+  }
+
+  var _getArcCenter = getArcCenter(px, py, cx, cy, rx, ry, largeArcFlag, sweepFlag, sinphi, cosphi, pxp, pyp),
+      _getArcCenter2 = _slicedToArray(_getArcCenter, 4),
+      centerx = _getArcCenter2[0],
+      centery = _getArcCenter2[1],
+      ang1 = _getArcCenter2[2],
+      ang2 = _getArcCenter2[3];
+
+  var segments = Math.max(Math.ceil(Math.abs(ang2) / (TAU / 4)), 1);
+
+  ang2 /= segments;
+
+  for (var i = 0; i < segments; i++) {
+    curves.push(approxUnitArc(ang1, ang2));
+    ang1 += ang2;
+  }
+
+  return curves.map(function (curve) {
+    var _mapToEllipse = mapToEllipse(curve[0], rx, ry, cosphi, sinphi, centerx, centery),
+        x1 = _mapToEllipse.x,
+        y1 = _mapToEllipse.y;
+
+    var _mapToEllipse2 = mapToEllipse(curve[1], rx, ry, cosphi, sinphi, centerx, centery),
+        x2 = _mapToEllipse2.x,
+        y2 = _mapToEllipse2.y;
+
+    var _mapToEllipse3 = mapToEllipse(curve[2], rx, ry, cosphi, sinphi, centerx, centery),
+        x = _mapToEllipse3.x,
+        y = _mapToEllipse3.y;
+
+    return { x1: x1, y1: y1, x2: x2, y2: y2, x: x, y: y };
+  });
+};
+
+exports.default = arcToBezier;
+
+/***/ }),
+/* 44 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _group = __webpack_require__(1);
+
+var _group2 = _interopRequireDefault(_group);
+
+var _text = __webpack_require__(5);
+
+var _text2 = _interopRequireDefault(_text);
+
+var _roundedRect = __webpack_require__(15);
+
+var _roundedRect2 = _interopRequireDefault(_roundedRect);
+
+var _bitmap2 = __webpack_require__(2);
+
+var _bitmap3 = _interopRequireDefault(_bitmap2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+/*
+Options
+  font:
+  text: 
+  textColor:
+  image: [path, width, height]
+  bgColor: 
+  bgImage: [path, width, height]
+  borderRadius:
+  borderColor:
+*/
+
+var Button = function (_Group) {
+  _inherits(Button, _Group);
+
+  function Button(option) {
+    _classCallCheck(this, Button);
+
+    var _this = _possibleConstructorReturn(this, (Button.__proto__ || Object.getPrototypeOf(Button)).call(this));
+
+    _this.width = option.width;
+    _this.height = option.height;
+    _this.x = option.x;
+    _this.y = option.y;
+
+    var textHeight = 0;
+    var textGroup;
+
+    if (option.text) {
+      textGroup = new _group2.default();
+      _this.text = new _text2.default(option.text, {
+        font: option.font,
+        color: option.color
+      });
+      var textWidth = _this.text.getWidth();
+
+      if (textWidth > option.width) {
+        var step = Math.round(option.text.length * option.width / textWidth / 2);
+
+        var textList = _this.stringSplit(option.text, step);
+        var lineHeight = option.lineHeight || 12;
+        textHeight = textList.length * lineHeight + 6;
+
+        textList.forEach(function (text, index) {
+          _this.text = new _text2.default(text, {
+            font: option.font,
+            color: option.color
+          });
+
+          _this.text.x = option.width / 2 - _this.text.getWidth() / 2 * _this.text.scaleX + (option.textX || 0);
+          _this.text.y = Math.max(textHeight, option.height) / 2 - 10 + 5 * _this.text.scaleY + (option.textY || 0) + index * 12 - textHeight / 2 + lineHeight / 2;
+          textGroup.add(_this.text);
+        });
+      } else {
+        _this.text.x = option.width / 2 - _this.text.getWidth() / 2 * _this.text.scaleX + (option.textX || 0);
+        _this.text.y = option.height / 2 - 10 + 5 * _this.text.scaleY + (option.textY || 0);
+        textGroup.add(_this.text);
+      }
+    }
+
+    if (option.bgImage) {
+      var ratio = SCALE_RATIO;
+      var bitmap = new _bitmap3.default(option.bgImage[0]);
+      bitmap.scaleX = ratio;
+      bitmap.scaleY = ratio;
+      bitmap.width = option.bgImage[1];
+      bitmap.height = option.bgImage[2];
+      bitmap.x = (_this.width - bitmap.width) / 2;
+      bitmap.y = (_this.height - bitmap.height) / 2;
+      _this.add(bitmap);
+    } else if (option.bgColor || option.borderColor) {
+      _this.roundedRect = new _roundedRect2.default(option.width, option.autoHeight ? Math.max(textHeight, option.height) : option.height, option.borderRadius, {
+        strokeStyle: option.borderColor || 'black',
+        fillStyle: option.bgColor || '#F5F5F5'
+      });
+      _this.add(_this.roundedRect);
+    }
+
+    if (option.image) {
+      var ratio = SCALE_RATIO;
+      var _bitmap = new _bitmap3.default(option.image[0]);
+      _bitmap.scaleX = ratio;
+      _bitmap.scaleY = ratio;
+      _bitmap.width = option.image[1];
+      _bitmap.height = option.image[2];
+      _bitmap.x = (_this.width - _bitmap.width) / 2;
+      _bitmap.y = (_this.height - _bitmap.height) / 2;
+      _this.add(_bitmap);
+    }
+
+    if (textGroup) {
+      _this.add(textGroup);
+    }
+    return _this;
+  }
+
+  _createClass(Button, [{
+    key: 'stringSplit',
+    value: function stringSplit(str, len) {
+      var arr = [],
+          offset = 0,
+          char_length = 0;
+      for (var i = 0; i < str.length; i++) {
+        var son_str = str.charAt(i);
+        encodeURI(son_str).length > 2 ? char_length += 1 : char_length += 0.5;
+        if (char_length >= len || char_length < len && i === str.length - 1) {
+          var sub_len = char_length == len ? i + 1 : i;
+          arr.push(str.substr(offset, sub_len - offset + (char_length < len && i === str.length - 1 ? 1 : 0)));
+          offset = i + 1;
+          char_length = 0;
+        }
+      }
+      return arr;
+    }
+  }]);
+
+  return Button;
+}(_group2.default);
+
+exports.default = Button;
+
+/***/ }),
+/* 45 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _shape = __webpack_require__(0);
+
+var _shape2 = _interopRequireDefault(_shape);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Rect = function (_Shape) {
+  _inherits(Rect, _Shape);
+
+  function Rect(width, height, option) {
+    _classCallCheck(this, Rect);
+
+    var _this = _possibleConstructorReturn(this, (Rect.__proto__ || Object.getPrototypeOf(Rect)).call(this));
+
+    _this.width = width;
+    _this.height = height;
+    _this.option = option || {};
+    return _this;
+  }
+
+  _createClass(Rect, [{
+    key: 'draw',
+    value: function draw() {
+      if (this.option.fillStyle) {
+        this.fillStyle(this.option.fillStyle);
+        this.fillRect(0, 0, this.width, this.height);
+      }
+
+      if (this.option.strokeStyle) {
+        this.strokeStyle(this.option.strokeStyle);
+        if (typeof this.option.lineWidth === 'number') {
+          this.lineWidth(this.option.lineWidth);
+        }
+        this.strokeRect(0, 0, this.width, this.height);
+      }
+    }
+  }]);
+
+  return Rect;
+}(_shape2.default);
+
+exports.default = Rect;
+
+/***/ }),
+/* 46 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _shape = __webpack_require__(0);
+
+var _shape2 = _interopRequireDefault(_shape);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Circle = function (_Shape) {
+  _inherits(Circle, _Shape);
+
+  function Circle(r, option) {
+    _classCallCheck(this, Circle);
+
+    var _this = _possibleConstructorReturn(this, (Circle.__proto__ || Object.getPrototypeOf(Circle)).call(this));
+
+    _this.option = option || {};
+    _this.r = r;
+
+    _this._dp = Math.PI * 2;
+    return _this;
+  }
+
+  _createClass(Circle, [{
+    key: 'draw',
+    value: function draw() {
+      this.beginPath();
+      this.arc(0, 0, this.r, 0, this._dp, false);
+
+      if (this.option.strokeStyle) {
+        if (this.option.lineWidth !== undefined) {
+          this.lineWidth(this.option.lineWidth);
+        }
+        this.strokeStyle(this.option.strokeStyle);
+        this.stroke();
+      }
+
+      if (this.option.fillStyle) {
+        this.fillStyle(this.option.fillStyle);
+        this.fill();
+      }
+    }
+  }]);
+
+  return Circle;
+}(_shape2.default);
+
+exports.default = Circle;
+
+/***/ }),
+/* 47 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _shape = __webpack_require__(0);
+
+var _shape2 = _interopRequireDefault(_shape);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Polygon = function (_Shape) {
+  _inherits(Polygon, _Shape);
+
+  function Polygon(vertex, options) {
+    _classCallCheck(this, Polygon);
+
+    var _this = _possibleConstructorReturn(this, (Polygon.__proto__ || Object.getPrototypeOf(Polygon)).call(this));
+
+    _this.vertex = vertex || [];
+    _this.options = options || {};
+    _this.strokeColor = _this.options.strokeColor;
+    _this.fillColor = _this.options.fillColor;
+    return _this;
+  }
+
+  _createClass(Polygon, [{
+    key: 'draw',
+    value: function draw() {
+      this.clear().beginPath();
+      this.strokeStyle(this.strokeColor);
+      this.moveTo(this.vertex[0][0], this.vertex[0][1]);
+
+      for (var i = 1, len = this.vertex.length; i < len; i++) {
+        this.lineTo(this.vertex[i][0], this.vertex[i][1]);
+      }
+      this.closePath();
+      // 路径闭合
+      //  if (this.options.strokeStyle) {
+      //    this.strokeStyle = strokeStyle;
+      // this.lineWidth(this.options.width);
+      // this.lineJoin('round');
+      // this.stroke();
+      //  }
+      if (this.strokeColor) {
+        this.strokeStyle(this.strokeColor);
+        this.stroke();
+      }
+      if (this.fillColor) {
+        this.fillStyle(this.fillColor);
+        this.fill();
+      }
+    }
+  }]);
+
+  return Polygon;
+}(_shape2.default);
+
+exports.default = Polygon;
+
+/***/ }),
+/* 48 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _shape = __webpack_require__(0);
+
+var _shape2 = _interopRequireDefault(_shape);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var EquilateralPolygon = function (_Shape) {
+  _inherits(EquilateralPolygon, _Shape);
+
+  function EquilateralPolygon(num, r, options) {
+    _classCallCheck(this, EquilateralPolygon);
+
+    var _this = _possibleConstructorReturn(this, (EquilateralPolygon.__proto__ || Object.getPrototypeOf(EquilateralPolygon)).call(this));
+
+    _this.num = num;
+    _this.r = r;
+    _this.options = options || {};
+
+    _this.vertex = [];
+    _this.initVertex();
+    return _this;
+  }
+
+  _createClass(EquilateralPolygon, [{
+    key: 'initVertex',
+    value: function initVertex() {
+      this.vertex.length = [];
+      var num = this.num;
+      var r = this.r;
+      var i = void 0,
+          startX = void 0,
+          startY = void 0,
+          newX = void 0,
+          newY = void 0;
+
+      if (num % 2 === 0) {
+        startX = r * Math.cos(2 * Math.PI * 0 / num);
+        startY = r * Math.sin(2 * Math.PI * 0 / num);
+
+        this.vertex.push([startX, startY]);
+        for (i = 1; i < num; i++) {
+          newX = r * Math.cos(2 * Math.PI * i / num);
+          newY = r * Math.sin(2 * Math.PI * i / num);
+
+          this.vertex.push([newX, newY]);
+        }
+      } else {
+        startX = r * Math.cos(2 * Math.PI * 0 / num - Math.PI / 2);
+        startY = r * Math.sin(2 * Math.PI * 0 / num - Math.PI / 2);
+
+        this.vertex.push([startX, startY]);
+        for (i = 1; i < num; i++) {
+          newX = r * Math.cos(2 * Math.PI * i / num - Math.PI / 2);
+          newY = r * Math.sin(2 * Math.PI * i / num - Math.PI / 2);
+
+          this.vertex.push([newX, newY]);
+        }
+      }
+    }
+  }, {
+    key: 'draw',
+    value: function draw() {
+      this.beginPath();
+
+      this.moveTo(this.vertex[0][0], this.vertex[0][1]);
+
+      for (var i = 1, len = this.vertex.length; i < len; i++) {
+        this.lineTo(this.vertex[i][0], this.vertex[i][1]);
+      }
+      this.closePath();
+
+      if (this.options.fillStyle) {
+        this.fillStyle(this.options.fillStyle);
+        this.fill();
+      }
+
+      if (this.options.strokeStyle) {
+        this.strokeStyle(this.options.strokeStyle);
+        if (typeof this.options.lineWidth === 'number') {
+          this.lineWidth(this.options.lineWidth);
+        }
+        this.stroke();
+      }
+    }
+  }]);
+
+  return EquilateralPolygon;
+}(_shape2.default);
+
+exports.default = EquilateralPolygon;
+
+/***/ })
+/******/ ]);
+});
 
 /***/ }),
 
@@ -7832,6 +14260,26 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/openDataContext/commandType.ts":
+/*!********************************************!*\
+  !*** ./src/openDataContext/commandType.ts ***!
+  \********************************************/
+/*! exports provided: CommandType */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CommandType", function() { return CommandType; });
+var CommandType = /*#__PURE__*/function (CommandType) {
+  CommandType["RANK_RENDER"] = "rank-render";
+  CommandType["RANK_DESTROY"] = "rank-destroy";
+  CommandType["SETTLEMENT_RENDER"] = "settlement-render";
+  CommandType["SETTLEMENT_DESTROY"] = "settlement-destroy";
+  return CommandType;
+}({});
+
+/***/ }),
+
 /***/ "./src/preload/index.ts":
 /*!******************************!*\
   !*** ./src/preload/index.ts ***!
@@ -7842,121 +14290,94 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "preload", function() { return preload; });
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/asyncToGenerator.js");
-/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__);
-
+/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/asyncToGenerator.js");
+/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
 
 
 /** 音乐文件 */
-var loadAudio = function loadAudio() {
-  var load = function load(url) {
-    return new Promise(function (resolve) {
-      var audio = wx.createInnerAudioContext();
-      audio.src = url;
-      audio.onCanplay(function () {
-        resolve(audio);
-      });
-    });
-  };
 
-  return new Promise(
-  /*#__PURE__*/
-  function () {
-    var _ref = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()(
-    /*#__PURE__*/
-    _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(resolve) {
-      var audios;
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-        while (1) {
-          switch (_context.prev = _context.next) {
-            case 0:
-              _context.next = 2;
-              return Promise.all([load('assets/audio/begin.mp3'), load('assets/audio/bgm.mp3')]);
-
-            case 2:
-              audios = _context.sent;
-              resolve({
-                begin: audios[0],
-                bgm: audios[1]
+var loadAudio = /*#__PURE__*/function () {
+  var _ref = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
+    var load, audios;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
+      while (1) switch (_context.prev = _context.next) {
+        case 0:
+          load = function load(url) {
+            return new Promise(function (resolve) {
+              var audio = wx.createInnerAudioContext();
+              audio.src = url;
+              audio.onCanplay(function () {
+                resolve(audio);
               });
+            });
+          };
+          _context.next = 3;
+          return Promise.all([load('assets/audio/begin.mp3'), load('assets/audio/bgm.mp3')]);
+        case 3:
+          audios = _context.sent;
+          return _context.abrupt("return", {
+            begin: audios[0],
+            bgm: audios[1]
+          });
+        case 5:
+        case "end":
+          return _context.stop();
+      }
+    }, _callee);
+  }));
+  return function loadAudio() {
+    return _ref.apply(this, arguments);
+  };
+}();
 
-            case 4:
-            case "end":
-              return _context.stop();
-          }
-        }
-      }, _callee, this);
-    }));
-
-    return function (_x) {
-      return _ref.apply(this, arguments);
-    };
-  }());
-};
 /** 音频解析文件 */
 
-
-var loadAudioJson = function loadAudioJson() {
-  var load = function load(url) {
-    return new Promise(function (resolve) {
-      var wxfile = wx.getFileSystemManager();
-      wxfile.readFile({
-        filePath: url,
-        encoding: 'utf-8',
-        success: function success(res) {
-          resolve(JSON.parse(res.data));
-        }
-      });
-    });
-  };
-
-  return new Promise(
-  /*#__PURE__*/
-  function () {
-    var _ref2 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()(
-    /*#__PURE__*/
-    _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2(resolve) {
-      var jsons;
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
-        while (1) {
-          switch (_context2.prev = _context2.next) {
-            case 0:
-              _context2.next = 2;
-              return Promise.all([load('assets/audio/begin.json'), load('assets/audio/bgm.json')]);
-
-            case 2:
-              jsons = _context2.sent;
-              resolve({
-                begin: jsons[0],
-                bgm: jsons[1]
+var loadAudioJson = /*#__PURE__*/function () {
+  var _ref2 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2() {
+    var load, jsons;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee2$(_context2) {
+      while (1) switch (_context2.prev = _context2.next) {
+        case 0:
+          load = function load(url) {
+            return new Promise(function (resolve) {
+              var wxfile = wx.getFileSystemManager();
+              wxfile.readFile({
+                filePath: url,
+                encoding: 'utf-8',
+                success: function success(res) {
+                  resolve(JSON.parse(res.data));
+                }
               });
+            });
+          };
+          _context2.next = 3;
+          return Promise.all([load('assets/audio/begin.json'), load('assets/audio/bgm.json')]);
+        case 3:
+          jsons = _context2.sent;
+          return _context2.abrupt("return", {
+            begin: jsons[0],
+            bgm: jsons[1]
+          });
+        case 5:
+        case "end":
+          return _context2.stop();
+      }
+    }, _callee2);
+  }));
+  return function loadAudioJson() {
+    return _ref2.apply(this, arguments);
+  };
+}();
 
-            case 4:
-            case "end":
-              return _context2.stop();
-          }
-        }
-      }, _callee2, this);
-    }));
-
-    return function (_x2) {
-      return _ref2.apply(this, arguments);
-    };
-  }());
-};
 /** 加载字体文件 */
-
-
 var loadFont = function loadFont() {
   if (wx.getSystemInfoSync().platform === 'devtools') {
     return Promise.resolve('arial');
   }
-
   return new Promise(function (resolve, reject) {
     var font = wx.loadFont('assets/font/iconfont.ttf');
-
     if (font) {
       resolve(font);
     } else {
@@ -7964,55 +14385,56 @@ var loadFont = function loadFont() {
     }
   });
 };
+
 /** 资源加载 */
+var preload = /*#__PURE__*/function () {
+  var _ref3 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee3() {
+    var audioList, audioListJson, font;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee3$(_context3) {
+      while (1) switch (_context3.prev = _context3.next) {
+        case 0:
+          _context3.next = 2;
+          return loadAudio();
+        case 2:
+          audioList = _context3.sent;
+          _context3.next = 5;
+          return loadAudioJson();
+        case 5:
+          audioListJson = _context3.sent;
+          _context3.next = 8;
+          return loadFont();
+        case 8:
+          font = _context3.sent;
+          return _context3.abrupt("return", {
+            audioList: audioList,
+            audioListJson: audioListJson,
+            font: font
+          });
+        case 10:
+        case "end":
+          return _context3.stop();
+      }
+    }, _callee3);
+  }));
+  return function preload() {
+    return _ref3.apply(this, arguments);
+  };
+}();
 
+/***/ }),
 
-var preload = function preload() {
-  return new Promise(
-  /*#__PURE__*/
-  function () {
-    var _ref3 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()(
-    /*#__PURE__*/
-    _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3(resolve) {
-      var audioList, audioListJson, font;
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
-        while (1) {
-          switch (_context3.prev = _context3.next) {
-            case 0:
-              _context3.next = 2;
-              return loadAudio();
+/***/ 0:
+/*!**********************************************************************************************************!*\
+  !*** multi ./src/lib/threejs-shim ./src/lib/weapp-adapter ./src/lib/weapp-adapter-extend ./src/index.ts ***!
+  \**********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
-            case 2:
-              audioList = _context3.sent;
-              _context3.next = 5;
-              return loadAudioJson();
+__webpack_require__(/*! ./src/lib/threejs-shim */"./src/lib/threejs-shim.js");
+__webpack_require__(/*! ./src/lib/weapp-adapter */"./src/lib/weapp-adapter.js");
+__webpack_require__(/*! ./src/lib/weapp-adapter-extend */"./src/lib/weapp-adapter-extend/index.js");
+module.exports = __webpack_require__(/*! ./src/index.ts */"./src/index.ts");
 
-            case 5:
-              audioListJson = _context3.sent;
-              _context3.next = 8;
-              return loadFont();
-
-            case 8:
-              font = _context3.sent;
-              resolve({
-                audioList: audioList,
-                audioListJson: audioListJson,
-                font: font
-              });
-
-            case 10:
-            case "end":
-              return _context3.stop();
-          }
-        }
-      }, _callee3, this);
-    }));
-
-    return function (_x3) {
-      return _ref3.apply(this, arguments);
-    };
-  }());
-};
 
 /***/ })
 
