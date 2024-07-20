@@ -2,13 +2,13 @@
   "name": "supersonic",
   "version": "1.0.0",
   "description": "the run game of music.",
-  "homepage": "https://github.com/narol1024/running-game#readme",
+  "homepage": "https://github.com/narol1024/supersonic#readme",
   "bugs": {
-    "url": "https://github.com/narol1024/running-game/issues"
+    "url": "https://github.com/narol1024/supersonic/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/narol1024/running-game.git"
+    "url": "git+https://github.com/narol1024/supersonic.git"
   },
   "funding": "https://github.com/sponsors/narol1024",
   "license": "MIT",
