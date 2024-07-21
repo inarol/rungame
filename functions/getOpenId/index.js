@@ -10,9 +10,9 @@ exports.main = async () => {
     return {
       status: 200,
       data: {
-        OPENID,
-        APPID,
-        UNIONID,
+        openId: OPENID,
+        appId: APPID,
+        unionId: UNIONID,
       },
     };
   } catch (error) {

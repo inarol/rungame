@@ -24,9 +24,10 @@ export default class Pool implements IPool {
    * 获取对应的对象池
    */
   getPoolBySign(name) {
-    const sign = this[__.poolDic][name];
+    let sign = this[__.poolDic][name];
     if (!sign) {
       this[__.poolDic][name] = [];
+      sign = [];
     }
     return sign;
   }

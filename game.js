@@ -4491,6 +4491,7 @@ var Pool = /*#__PURE__*/function () {
       var sign = this[__.poolDic][name];
       if (!sign) {
         this[__.poolDic][name] = [];
+        sign = [];
       }
       return sign;
     }
@@ -4660,7 +4661,7 @@ var Rank = /*#__PURE__*/function () {
         var material = this.mesh.material;
         material.map = texture;
       }
-      this.aniId = window.requestAnimationFrame(this.update.bind(this));
+      this.aniId = requestAnimationFrame(this.update.bind(this));
     }
     /** 渲染 */
   }, {
@@ -5964,7 +5965,7 @@ scene.fog = new three__WEBPACK_IMPORTED_MODULE_0__["Fog"](_constant__WEBPACK_IMP
 /*!********************************!*\
   !*** ./src/Game/util/index.ts ***!
   \********************************/
-/*! exports provided: rnd, normalizeFontText, isDevTools, getVisibleSize, canvas2image, sendCommandToOpenDataContext */
+/*! exports provided: rnd, normalizeFontText, isDevTools, getVisibleSize, canvas2image, sendCommandToOpenDataContext, get2DPositionAndSize */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5975,7 +5976,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getVisibleSize", function() { return getVisibleSize; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "canvas2image", function() { return canvas2image; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sendCommandToOpenDataContext", function() { return sendCommandToOpenDataContext; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "get2DPositionAndSize", function() { return get2DPositionAndSize; });
 /* harmony import */ var _constant__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constant */ "./src/Game/constant.ts");
+/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.min.js");
+/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(three__WEBPACK_IMPORTED_MODULE_1__);
+
 
 
 /** 产生随机数 */
@@ -6018,6 +6023,43 @@ var sendCommandToOpenDataContext = function sendCommandToOpenDataContext(message
   var openDataContext = wx.getOpenDataContext();
   openDataContext.postMessage(message);
 };
+function get2DPositionAndSize(mesh, camera) {
+  // 获取 mesh 的位置
+  var position = mesh.position.clone();
+  var vector = position.project(camera);
+
+  // 将3D坐标转换为2D坐标
+  var x = (vector.x * 0.5 + 0.5) * window.innerWidth;
+  var y = (vector.y * -0.5 + 0.5) * window.innerHeight;
+
+  // 获取 mesh 的包围盒
+  var boundingBox = new three__WEBPACK_IMPORTED_MODULE_1__["Box3"]().setFromObject(mesh);
+
+  // 获取包围盒的最小和最大顶点
+  var min = boundingBox.min.clone();
+  var max = boundingBox.max.clone();
+
+  // 投影包围盒的顶点到2D屏幕坐标
+  var minVector = min.project(camera);
+  var maxVector = max.project(camera);
+  var minX = (minVector.x * 0.5 + 0.5) * window.innerWidth;
+  var minY = (minVector.y * -0.5 + 0.5) * window.innerHeight;
+  var maxX = (maxVector.x * 0.5 + 0.5) * window.innerWidth;
+  var maxY = (maxVector.y * -0.5 + 0.5) * window.innerHeight;
+  // 计算2D尺寸
+  var width = Math.abs(maxX - minX);
+  var height = Math.abs(maxY - minY);
+  return {
+    position: {
+      x: x,
+      y: y
+    },
+    size: {
+      width: width,
+      height: height
+    }
+  };
+}
 
 /***/ }),
 
@@ -6082,7 +6124,7 @@ function _main() {
             /** 字体文件 */
             font: font
           });
-          _context.t0 = wx.getStorageSync('openid');
+          _context.t0 = wx.getStorageSync('openId');
           if (_context.t0) {
             _context.next = 14;
             break;
@@ -6092,7 +6134,7 @@ function _main() {
           return getOpenId();
         case 12:
           _context.t2 = _context.sent;
-          _context.t0 = _context.t1.setStorageSync.call(_context.t1, 'openid', _context.t2);
+          _context.t0 = _context.t1.setStorageSync.call(_context.t1, 'openId', _context.t2);
         case 14:
           game.openId = _context.t0;
           wx.onShow(function () {

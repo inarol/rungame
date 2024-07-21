@@ -29,7 +29,7 @@ async function main() {
     /** 字体文件 */
     font,
   });
-  game.openId = wx.getStorageSync('openid') || wx.setStorageSync('openid', await getOpenId());
+  game.openId = wx.getStorageSync('openId') || wx.setStorageSync('openId', await getOpenId());
   wx.onShow(() => {
     game.audio.play();
   });

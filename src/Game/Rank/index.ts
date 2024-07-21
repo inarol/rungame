@@ -40,7 +40,7 @@ export default class Rank implements IRank {
       const material = this.mesh.material as THREE.MeshStandardMaterial;
       material.map = texture;
     }
-    this.aniId = window.requestAnimationFrame(this.update.bind(this));
+    this.aniId = requestAnimationFrame(this.update.bind(this));
   }
   /** 渲染 */
   private render() {
